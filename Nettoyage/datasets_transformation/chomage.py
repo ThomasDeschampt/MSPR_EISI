@@ -19,6 +19,7 @@ def nettoyer_chomage(fichier_entree,dossier_sortie):
         # On récupère l'année sans le trimestre
         df['Année'] = df['Période'].str.extract(r'(\d{4})').astype(int)
 
+        # On garde seulement les années après 2002
         df = df[df['Année'] >= 2002]
         
         # Moyenne par année
