@@ -13,6 +13,8 @@ def nettoyer_chomage(fichier_entree,dossier_sortie):
         # Supprimer les caractères indésirables (comme (SD) ou (A))
         df['taux de chomage'] = df['taux de chomage'].str.replace(r'[^0-9,]', '', regex=True)
 
+        df = df[df['Année'] >= 2002]
+
         # Remplacer les virgules par des points pour la conversion en float
         df['taux de chomage'] = df['taux de chomage'].str.replace(',', '.').astype(float)
 
