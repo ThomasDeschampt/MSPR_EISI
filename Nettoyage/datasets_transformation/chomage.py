@@ -5,23 +5,34 @@ def nettoyer_chomage(fichier_entree,dossier_sortie):
     try:
 
         df = pd.read_csv(fichier_entree, delimiter = ';' , dtype = str)
-
-        df['taux de chommage'] = df ['taux de chommage'].str.replace(r'\(.*?\)', '', regex = True)
-        df['taux de chomage'] = df['taux de chomage'].str.replace(',', '.').astype(float)
-
-        df_moyenne = df.groupby('Année')['taux de chommage'].str.replace(',','.').astype(float)        
         print(df.info())
         df = df.dropna()
         df = df.drop_duplicates()
 
+        # Nettoyer la colonne 'taux de chomage'
+        # Supprimer les caractères indésirables (comme (SD) ou (A))
+        df['taux de chomage'] = df['taux de chomage'].str.replace(r'[^0-9,]', '', regex=True)
+
+        # Remplacer les virgules par des points pour la conversion en float
+        df['taux de chomage'] = df['taux de chomage'].str.replace(',', '.').astype(float)
+
+        # Extraire l'année de la colonne 'Période'
+        df['Année'] = df['Période'].str.extract(r'(\d{4})').astype(int)
+
+        # Calculer la moyenne du taux de chômage par année
+        moyenne_par_annee = df.groupby('Année')['taux de chomage'].mean().reset_index()
+
+        # Afficher le résultat
+        print(moyenne_par_annee)
+
+        # Sauvegarder le résultat dans un nouveau fichier CSV
         dossier_sortie = "Nettoyage/datasets_nettoyer"
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)
 
         nom_fichier = "chomage_nettoyer.csv"
         chemin_sortie = os.path.join(dossier_sortie,nom_fichier)
+        moyenne_par_annee.to_csv(chemin_sortie, index=False)
 
-        df_moyenne.to_csv(chemin_sortie, index = False, sep = ';')
-        print("caca")
     except Exception as e:
         print(e)
