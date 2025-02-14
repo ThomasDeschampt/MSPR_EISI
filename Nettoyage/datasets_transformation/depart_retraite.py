@@ -22,8 +22,12 @@ def nettoyer_depart_retraite(fichier_entree, dossier_sortie):
             'Proportion de personnes limitées, mais pas fortement au cours de la première année de retraite (%)': 'Proportion_limitees',
             'Proportion de retraités à 61 ans': 'Proportion_retraites_61ans',
             'Durée moyenne en emploi (hors cumul)': 'Duree_emploi',
-            'Durée moyenne sans emploi ni retraite': 'Duree_sans_emploi'
+            'Durée moyenne sans emploi ni retraite': 'Duree_sans_emploi',
+            'annee': 'Annee'
         }, inplace=True)
+        
+        # Supprimer les doublons avant toute conversion
+        df.drop_duplicates(inplace=True)
         
         # Convertir les valeurs numériques en float
         colonnes_a_convertir = ['Proportion_fortement_limitees', 'Proportion_limitees', 'Age_depart', 'Proportion_retraites_61ans', 'Duree_emploi', 'Duree_sans_emploi']
@@ -31,13 +35,10 @@ def nettoyer_depart_retraite(fichier_entree, dossier_sortie):
             df[col] = df[col].str.replace(',', '.').astype(float)
         
         # Convertir la colonne année en int
-        df['Annee'] = df['annee'].astype(int)
+        df['Annee'] = df['Annee'].astype(int)
         
         # Supprimer les entrées avant 2002
         df = df[df['Annee'] >= 2002]
-        
-        # Supprimer les doublons
-        df.drop_duplicates(inplace=True)
         
         # Définir le chemin de sortie
         if not os.path.exists(dossier_sortie):
