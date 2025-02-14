@@ -12,13 +12,18 @@ def nettoyer_masse_salariale(fichier_entree, dossier_sortie):
         df.columns = df.columns.str.strip()
         df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
         
+        # Supprimer les doublons
+        df.drop_duplicates(inplace=True)
+        
         # Convertir les colonnes numériques avec des virgules en float
-        colonnes_a_convertir = ['Masse salariale à T+50 jours (brut)', 'Masse salariale à T+70 jours (brut)',
-                                'Masse salariale à T+50 jours (cvs)', 'Masse salariale à T+70 jours (cvs)',
-                                'Glissement trimestriel - Masse salariale à T+50 jours (cvs)',
-                                'Glissement trimestriel - Masse salariale à T+70 jours (cvs)',
-                                'Glissement annuel - Masse salariale à T+50 jours (cvs)',
-                                'Glissement annuel - Masse salariale à T+70 jours (cvs)']
+        colonnes_a_convertir = [
+            'Masse salariale à T+50 jours (brut)', 'Masse salariale à T+70 jours (brut)',
+            'Masse salariale à T+50 jours (cvs)', 'Masse salariale à T+70 jours (cvs)',
+            'Glissement trimestriel - Masse salariale à T+50 jours (cvs)',
+            'Glissement trimestriel - Masse salariale à T+70 jours (cvs)',
+            'Glissement annuel - Masse salariale à T+50 jours (cvs)',
+            'Glissement annuel - Masse salariale à T+70 jours (cvs)'
+        ]
         for col in colonnes_a_convertir:
             df[col] = df[col].str.replace(',', '.').astype(float)
         
@@ -27,9 +32,6 @@ def nettoyer_masse_salariale(fichier_entree, dossier_sortie):
         
         # Supprimer les entrées avant 2002
         df = df[df['Année'] >= 2002]
-        
-        # Supprimer les doublons
-        df.drop_duplicates(inplace=True)
         
         # Définir le chemin de sortie
         if not os.path.exists(dossier_sortie):
