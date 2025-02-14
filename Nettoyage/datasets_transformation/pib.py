@@ -26,7 +26,7 @@ def nettoyer_pib(fichier_entree,dossier_sortie):
 
         nom_fichier = "pib_nettoyer.csv"
         chemin_sortie = os.path.join(dossier_sortie,nom_fichier)
-        df.to_csv(chemin_sortie, index=False)
+        df.to_csv(chemin_sortie, index=False, sep=';')
 
     except Exception as e:
         print(e)

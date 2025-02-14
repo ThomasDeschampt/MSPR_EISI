@@ -32,7 +32,7 @@ def nettoyer_chomage(fichier_entree,dossier_sortie):
 
         nom_fichier = "chomage_nettoyer.csv"
         chemin_sortie = os.path.join(dossier_sortie,nom_fichier)
-        moyenne_par_annee.to_csv(chemin_sortie, index=False)
+        moyenne_par_annee.to_csv(chemin_sortie, index=False, sep=';')
 
     except Exception as e:
         print(e)

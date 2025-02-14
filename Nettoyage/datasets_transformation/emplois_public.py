@@ -22,7 +22,7 @@ def nettoyer_emplois_public(fichier_entree,dossier_sortie):
 
         nom_fichier = "emplois_public_nettoyer.csv"
         chemin_sortie = os.path.join(dossier_sortie,nom_fichier)
-        moyenne_par_annee.to_csv(chemin_sortie, index=False)
+        moyenne_par_annee.to_csv(chemin_sortie, index=False, sep=';')
 
     except Exception as e:
         print(e)
