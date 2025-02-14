@@ -13,7 +13,6 @@ def nettoyer_chomage(fichier_entree,dossier_sortie):
         # Supprimer les caractères indésirables (comme (SD) ou (A))
         df['taux de chomage'] = df['taux de chomage'].str.replace(r'[^0-9,]', '', regex=True)
 
-        df = df[df['Année'] >= 2002]
 
         # Remplacer les virgules par des points pour la conversion en float
         df['taux de chomage'] = df['taux de chomage'].str.replace(',', '.').astype(float)
@@ -21,9 +20,12 @@ def nettoyer_chomage(fichier_entree,dossier_sortie):
         # Extraire l'année de la colonne 'Période'
         df['Année'] = df['Période'].str.extract(r'(\d{4})').astype(int)
 
+        df = df[df['Année'] >= 2002]
+        
         # Calculer la moyenne du taux de chômage par année
         moyenne_par_annee = df.groupby('Année')['taux de chomage'].mean().reset_index()
 
+        
         # Afficher le résultat
         print(moyenne_par_annee)
 
