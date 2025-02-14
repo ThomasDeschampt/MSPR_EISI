@@ -2,7 +2,6 @@ import os
 from chomage import nettoyer_chomage
 # from commiseriat import nettoyer_commiseriat
 # from conso_menage_data import nettoyer_conso_menage_data
-# from conso_menage_metadata import nettoyer_conso_menage_metadata
 # from demographie import nettoyer_demographie
 # from depart_retraite import nettoyer_depart_retraite
 # from emplois_prive import nettoyer_emplois_prive
@@ -22,7 +21,6 @@ fichiers_a_traiter = {
     "chomage.csv": nettoyer_chomage,
     # "commiseriat.csv": nettoyer_commiseriat,
     # "conso_menage_data.csv": nettoyer_conso_menage_data,
-    # "conso_menage_metadata.csv": nettoyer_conso_menage_metadata,
     # "demographie.csv": nettoyer_demographie,
     # "depart_retraite.csv":  nettoyer_depart_retraite,
     # "emplois_prive.csv": nettoyer_emplois_prive,
