@@ -9,6 +9,7 @@ from masse_salariale import nettoyer_masse_salariale
 from pib import nettoyer_pib
 from conso_menage_data import nettoyer_conso_menage_data
 from election import nettoyer_election
+from candidats import nettoyer_candidats
 
 
 dossier_entree = "Nettoyage/datasets_origine"
@@ -27,7 +28,8 @@ fichiers_a_traiter = {
     "masse_salariale.csv": nettoyer_masse_salariale,
     "pib.csv": nettoyer_pib,
     "conso_menage_data.csv": nettoyer_conso_menage_data,
-    "elections.csv": nettoyer_election
+    "elections.csv": nettoyer_election,
+    "candidats.csv": nettoyer_candidats
 }
 
 for fichier, fonction in fichiers_a_traiter.items():

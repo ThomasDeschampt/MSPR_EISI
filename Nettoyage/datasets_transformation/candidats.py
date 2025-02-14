@@ -1,7 +1,7 @@
 import pandas as pd
 import os 
 
-def nettoyer_election(fichier_entree,dossier_sortie):
+def nettoyer_candidats(fichier_entree,dossier_sortie):
     try:
 
         df = pd.read_csv(fichier_entree, delimiter = ';' , dtype = str)
@@ -16,7 +16,7 @@ def nettoyer_election(fichier_entree,dossier_sortie):
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)
 
-        nom_fichier = "elections_nettoyer.csv"
+        nom_fichier = "candidats_nettoyer.csv"
         chemin_sortie = os.path.join(dossier_sortie,nom_fichier)
         df.to_csv(chemin_sortie, index=False, sep=';')
 
