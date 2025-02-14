@@ -9,27 +9,23 @@ def nettoyer_chomage(fichier_entree,dossier_sortie):
         df = df.dropna()
         df = df.drop_duplicates()
 
-        # Nettoyer la colonne 'taux de chomage'
-        # Supprimer les caractères indésirables (comme (SD) ou (A))
+        # On nettoie la colonne 'taux de chomage'
         df['taux de chomage'] = df['taux de chomage'].str.replace(r'[^0-9,]', '', regex=True)
 
 
-        # Remplacer les virgules par des points pour la conversion en float
+        # Remplacement des virgules par des points et conversion en float
         df['taux de chomage'] = df['taux de chomage'].str.replace(',', '.').astype(float)
 
-        # Extraire l'année de la colonne 'Période'
+        # On récupère l'année sans le trimestre
         df['Année'] = df['Période'].str.extract(r'(\d{4})').astype(int)
 
         df = df[df['Année'] >= 2002]
         
-        # Calculer la moyenne du taux de chômage par année
+        # Moyenne par année
         moyenne_par_annee = df.groupby('Année')['taux de chomage'].mean().reset_index()
-
         
-        # Afficher le résultat
-        print(moyenne_par_annee)
 
-        # Sauvegarder le résultat dans un nouveau fichier CSV
+        # Création du nouveau csv nettoyé
         dossier_sortie = "Nettoyage/datasets_nettoyer"
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)
