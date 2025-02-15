@@ -1,0 +1,6 @@
+.vs/
+ETL/.vs/
+# Ignorer les fichiers de compilation SSIS
+ETL/ETL/bin/
+ETL/ETL/obj/
+ETL/ETL/*.ispac
