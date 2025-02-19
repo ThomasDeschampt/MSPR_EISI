@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="85"
-  DTS:VersionGUID="{04F66E6A-BCCA-4102-87F1-91D839B91D62}">
+  DTS:VersionBuild="97"
+  DTS:VersionGUID="{F3DDF81C-1423-4A65-BE58-A676E588FCCD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -131,7 +131,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ConsoMenages]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{DA1F8357-8699-483B-B5BD-F4A08458606B}"
+      DTS:DTSID="{5B4DA64E-F853-430D-9E50-30BD46ACCE2A}"
       DTS:ObjectName="ConsoMenages">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -151,7 +151,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="REF_SECTOR"
-              DTS:DTSID="{3392AFBB-13DC-4B7A-88E6-9EAEB54285C7}"
+              DTS:DTSID="{6072F084-4F39-4414-A284-4ED0D86F430D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -160,7 +160,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="COUNTERPART_AREA"
-              DTS:DTSID="{62218859-FF4D-4EB5-A56F-18B7E633C2BE}"
+              DTS:DTSID="{D7F81133-A46D-4815-90A2-0B7695085AE2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -169,7 +169,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ACCOUNTING_ENTRY"
-              DTS:DTSID="{4B867D5A-C8F6-47BC-A28C-11A99ECAA696}"
+              DTS:DTSID="{A8A93857-F999-433D-BE26-650C6C4C5467}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -178,7 +178,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="STO"
-              DTS:DTSID="{B6C5419E-B230-4E19-A5CC-01C5585F4D9B}"
+              DTS:DTSID="{96DAE017-AEE2-4CFA-A6F0-740E920E445F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -187,7 +187,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="INSTR_ASSET"
-              DTS:DTSID="{A914F946-E183-45A2-8176-BC681267D8C5}"
+              DTS:DTSID="{64B147D4-7B28-46DD-B124-EE576F4A29E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -196,7 +196,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ACTIVITY"
-              DTS:DTSID="{E411F599-E3E9-43C3-8DCC-DDA2F389F3F4}"
+              DTS:DTSID="{5F746112-9C47-4FA3-926C-6607E1C2F614}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -205,7 +205,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EXPENDITURE"
-              DTS:DTSID="{1F307EE2-ED64-44E1-9DD4-FB58B6E0A9AE}"
+              DTS:DTSID="{AC479820-1BD3-416B-BDD7-D97BF4A529FB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -214,7 +214,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="UNIT_MEASURE"
-              DTS:DTSID="{090F3C48-00DE-4E6C-9379-1AF7EE8CC430}"
+              DTS:DTSID="{D0E9977F-3D74-44F6-B394-8CBE8BDD7392}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -223,7 +223,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PRICES"
-              DTS:DTSID="{E5EEDFB0-6DAA-4CAE-8D2E-3A8426D4EB2C}"
+              DTS:DTSID="{1421D027-EAC1-4E1C-AA88-E05B10532331}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -232,7 +232,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TRANSFORMATION"
-              DTS:DTSID="{3A4D3992-0804-4EFC-8140-C234B5163834}"
+              DTS:DTSID="{EB4C7CF3-BF0D-488D-B17E-931E3583F1C5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -241,7 +241,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PRODUCT"
-              DTS:DTSID="{73878F79-6113-42BC-A364-8990D4F84FE9}"
+              DTS:DTSID="{E82A0F86-A13A-46BA-803D-16C8F3EC71F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -250,7 +250,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FREQ"
-              DTS:DTSID="{07AF55A7-09FF-43E0-809F-A0F45AF155D3}"
+              DTS:DTSID="{B28DD6B9-EA0C-422C-BC20-E77E55A61838}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -259,7 +259,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="OBS_STATUS"
-              DTS:DTSID="{4E90714E-C89F-4C0F-9AED-F010B922A8EE}"
+              DTS:DTSID="{E23C60E7-FFE4-41BF-9A6E-05DFCCEE4888}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -268,16 +268,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CONF_STATUS"
-              DTS:DTSID="{BDCD0C62-269A-4445-96DB-21C378418FDF}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="REF_PERIOD_DETAIL"
-              DTS:DTSID="{678636F0-2741-4FDC-B85A-6337DF712DD6}"
+              DTS:DTSID="{E7EC1B77-DEB8-4930-B5CA-382D20746D40}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -286,7 +277,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="REF_YEAR_PRICE"
-              DTS:DTSID="{7FD29B8A-EC70-4484-9E26-ED5AF1D55EC8}"
+              DTS:DTSID="{49DF9D3D-CC39-475B-8CC2-DF316CA3D966}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -295,16 +286,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DECIMALS"
-              DTS:DTSID="{72A3F913-8249-4C68-8473-1C653B5E3A19}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TABLE_IDENTIFIER"
-              DTS:DTSID="{8D6A3524-E0E8-4B69-A45B-11D0594747D8}"
+              DTS:DTSID="{7C622B03-8772-43E3-BA01-9BA9BB46687F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -313,7 +295,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="UNIT_MULT"
-              DTS:DTSID="{CCE782F6-9621-4D85-A5FB-9C1ED1339EC2}"
+              DTS:DTSID="{842F4060-08FE-4E7E-A278-74A7E077E6EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -322,16 +304,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="OBS_STATUS_FR"
-              DTS:DTSID="{651A539D-0847-4AA5-B2DD-0F293F84FF7D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LAST_UPDATE"
-              DTS:DTSID="{AD203C4E-8755-464B-95B1-28207D7EE34F}"
+              DTS:DTSID="{18C99369-1E09-4C70-B3B4-B9AA2DBF61E9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -340,7 +313,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TIME_PERIOD"
-              DTS:DTSID="{BB6329F8-6E52-49A0-8D2E-58512321A717}"
+              DTS:DTSID="{9491AFB0-AE12-43B5-AE35-8BA060E18160}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -349,7 +322,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="OBS_VALUE"
-              DTS:DTSID="{4BF279FA-E67E-47B6-B005-98A735408782}"
+              DTS:DTSID="{F9DE5A7F-5092-4B2F-B0D3-BABF86E498F5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1289,7 +1262,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">true</property>
+                  name="RetainNulls">false</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
@@ -1616,28 +1589,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[REF_PERIOD_DETAIL]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[REF_PERIOD_DETAIL]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[REF_PERIOD_DETAIL]"
-                      name="REF_PERIOD_DETAIL"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[REF_YEAR_PRICE]"
                       codePage="65001"
                       dataType="str"
@@ -1682,28 +1633,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[TABLE_IDENTIFIER]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[TABLE_IDENTIFIER]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[TABLE_IDENTIFIER]"
-                      name="TABLE_IDENTIFIER"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[UNIT_MULT]"
                       codePage="65001"
                       dataType="str"
@@ -1735,28 +1664,6 @@
                       length="50"
                       lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[OBS_STATUS_FR]"
                       name="OBS_STATUS_FR"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[LAST_UPDATE]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[LAST_UPDATE]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[LAST_UPDATE]"
-                      name="LAST_UPDATE"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1901,12 +1808,6 @@
                       length="50"
                       name="CONF_STATUS" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[REF_PERIOD_DETAIL]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="REF_PERIOD_DETAIL" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[REF_YEAR_PRICE]"
                       codePage="65001"
                       dataType="str"
@@ -1919,12 +1820,6 @@
                       length="50"
                       name="DECIMALS" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[TABLE_IDENTIFIER]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="TABLE_IDENTIFIER" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[UNIT_MULT]"
                       codePage="65001"
                       dataType="str"
@@ -1936,12 +1831,6 @@
                       dataType="str"
                       length="50"
                       name="OBS_STATUS_FR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[LAST_UPDATE]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="LAST_UPDATE" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].ExternalColumns[TIME_PERIOD]"
                       codePage="65001"
@@ -2417,13 +2306,6 @@
                       cachedName="CONF_STATUS"
                       lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[CONF_STATUS]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input].Columns[REF_PERIOD_DETAIL]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="REF_PERIOD_DETAIL"
-                      lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[REF_PERIOD_DETAIL]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input].Columns[REF_YEAR_PRICE]"
                       cachedCodepage="65001"
                       cachedDataType="str"
@@ -2438,13 +2320,6 @@
                       cachedName="DECIMALS"
                       lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[DECIMALS]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input].Columns[TABLE_IDENTIFIER]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="TABLE_IDENTIFIER"
-                      lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[TABLE_IDENTIFIER]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input].Columns[UNIT_MULT]"
                       cachedCodepage="65001"
                       cachedDataType="str"
@@ -2458,13 +2333,6 @@
                       cachedLength="50"
                       cachedName="OBS_STATUS_FR"
                       lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[OBS_STATUS_FR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input].Columns[LAST_UPDATE]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="LAST_UPDATE"
-                      lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[LAST_UPDATE]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input].Columns[TIME_PERIOD]"
                       cachedCodepage="65001"
@@ -2785,27 +2653,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of REF_PERIOD_DETAIL]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of REF_PERIOD_DETAIL]"
-                      name="Copy of REF_PERIOD_DETAIL"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[REF_PERIOD_DETAIL]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of REF_YEAR_PRICE]"
                       dataType="ui8"
                       errorOrTruncationOperation="Conversion"
@@ -2846,29 +2693,8 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of TABLE_IDENTIFIER]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of TABLE_IDENTIFIER]"
-                      name="Copy of TABLE_IDENTIFIER"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[TABLE_IDENTIFIER]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of UNIT_MULT]"
-                      dataType="i8"
+                      dataType="ui8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of UNIT_MULT]"
@@ -2908,29 +2734,8 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of LAST_UPDATE]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of LAST_UPDATE]"
-                      name="Copy of LAST_UPDATE"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output].Columns[LAST_UPDATE]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of TIME_PERIOD]"
-                      dataType="i8"
+                      dataType="ui8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of TIME_PERIOD]"
@@ -6600,13 +6405,6 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[CONF_STATUS]"
                       lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of CONF_STATUS]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].Columns[Copy of REF_PERIOD_DETAIL]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of REF_PERIOD_DETAIL"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[REF_PERIOD_DETAIL]"
-                      lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of REF_PERIOD_DETAIL]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].Columns[Copy of REF_YEAR_PRICE]"
                       cachedDataType="ui8"
                       cachedName="Copy of REF_YEAR_PRICE"
@@ -6619,15 +6417,8 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[DECIMALS]"
                       lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of DECIMALS]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].Columns[Copy of TABLE_IDENTIFIER]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of TABLE_IDENTIFIER"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[TABLE_IDENTIFIER]"
-                      lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of TABLE_IDENTIFIER]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].Columns[Copy of UNIT_MULT]"
-                      cachedDataType="i8"
+                      cachedDataType="ui8"
                       cachedName="Copy of UNIT_MULT"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[UNIT_MULT]"
                       lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of UNIT_MULT]" />
@@ -6639,15 +6430,8 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[OBS_STATUS_FR]"
                       lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of OBS_STATUS_FR]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].Columns[Copy of LAST_UPDATE]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of LAST_UPDATE"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[LAST_UPDATE]"
-                      lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of LAST_UPDATE]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].Columns[Copy of TIME_PERIOD]"
-                      cachedDataType="i8"
+                      cachedDataType="ui8"
                       cachedName="Copy of TIME_PERIOD"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[TIME_PERIOD]"
                       lineageId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output].Columns[Copy of TIME_PERIOD]" />
@@ -6736,23 +6520,15 @@
                       length="50"
                       name="CONF_STATUS" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[REF_PERIOD_DETAIL]"
-                      dataType="wstr"
-                      length="50"
-                      name="REF_PERIOD_DETAIL" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[REF_YEAR_PRICE]"
-                      dataType="i4"
-                      name="REF_YEAR_PRICE" />
+                      dataType="numeric"
+                      name="REF_YEAR_PRICE"
+                      precision="10"
+                      scale="1" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[DECIMALS]"
                       dataType="i4"
                       name="DECIMALS" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[TABLE_IDENTIFIER]"
-                      dataType="wstr"
-                      length="50"
-                      name="TABLE_IDENTIFIER" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[UNIT_MULT]"
                       dataType="i4"
@@ -6762,11 +6538,6 @@
                       dataType="wstr"
                       length="50"
                       name="OBS_STATUS_FR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[LAST_UPDATE]"
-                      dataType="wstr"
-                      length="50"
-                      name="LAST_UPDATE" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input].ExternalColumns[TIME_PERIOD]"
                       dataType="i4"
@@ -7501,7 +7272,7 @@
                       dataType="numeric"
                       name="Nombre de salariés"
                       precision="10"
-                      scale="3" />
+                      scale="2" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -8261,36 +8032,36 @@
               startId="Package\Data Flow Task\Data Conversion Elections.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output9]"
+              endId="Package\Data Flow Task\OLE DB DepartRetraite.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion DepartRetraite.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output8]"
               endId="Package\Data Flow Task\OLE DB MasseSalariale.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion MasseSalariale.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output8]"
+              refId="Package\Data Flow Task.Paths[Data Conversion Output7]"
               endId="Package\Data Flow Task\OLE DB Insecurite.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion Insecurite.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output7]"
+              refId="Package\Data Flow Task.Paths[Data Conversion Output6]"
               endId="Package\Data Flow Task\OLE DB EmploisPublic.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion EmploisPublic.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output6]"
-              endId="Package\Data Flow Task\OLE DB EmploisPrive.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow Task.Paths[Data Conversion Output10]"
+              endId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion EmploisPrive.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output5]"
-              endId="Package\Data Flow Task\OLE DB DepartRetraite.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion DepartRetraite.Outputs[Data Conversion Output]" />
+              startId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output4]"
               endId="Package\Data Flow Task\OLE DB Demographie.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion Demographie.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output10]"
+              refId="Package\Data Flow Task.Paths[Data Conversion Output3]"
               endId="Package\Data Flow Task\OLE DB Pib.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion Pib.Outputs[Data Conversion Output]" />
@@ -8305,47 +8076,47 @@
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion Candidats.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output3]"
-              endId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow Task.Paths[Data Conversion Output5]"
+              endId="Package\Data Flow Task\OLE DB EmploisPrive.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output]" />
+              startId="Package\Data Flow Task\Data Conversion EmploisPrive.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output4]"
-              endId="Package\Data Flow Task\Data Conversion Demographie.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Demographie.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output3]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output10]"
               endId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output10]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task\Data Conversion Demographie.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Demographie.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output2]"
               endId="Package\Data Flow Task\Data Conversion Pib.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Pib.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output2]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output3]"
               endId="Package\Data Flow Task\Data Conversion Chomage.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Chomage.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output6]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output4]"
               endId="Package\Data Flow Task\Data Conversion EmploisPrive.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\EmploisPrive.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output5]"
               endId="Package\Data Flow Task\Data Conversion Candidats.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Candidats.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output7]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output6]"
               endId="Package\Data Flow Task\Data Conversion EmploisPublic.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\EmploisPublic.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output7]"
               endId="Package\Data Flow Task\Data Conversion Elections.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Elections.Outputs[Flat File Source Output]" />
@@ -8356,14 +8127,14 @@
               startId="Package\Data Flow Task\Insecurite.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output9]"
-              endId="Package\Data Flow Task\Data Conversion MasseSalariale.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\MasseSalariale.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output5]"
               endId="Package\Data Flow Task\Data Conversion DepartRetraite.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\DepartRetraite.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Data Conversion MasseSalariale.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\MasseSalariale.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -8382,7 +8153,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{C7BC6D5A-F979-4B43-8242-272F4B223E34}"
-          SQLTask:SqlStatementSource="USE MSPR;&#xA;&#xA;DROP TABLE IF EXISTS Elections;&#xA;CREATE TABLE Elections(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;Tour INT,&#xA;&#x9;Inscrits INT,&#xA;&#x9;Absentions INT,&#xA;&#x9;[%Abs/Ins] DECIMAL(10,2),&#xA;&#x9;Votants INT,&#xA;&#x9;[%Vot/Ins] DECIMAL(10,2),&#xA;&#x9;Blancsetnuls INT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Candidats;&#xA;CREATE TABLE Candidats(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;Tour INT,&#xA;&#x9;Parti NVARCHAR (50),&#xA;&#x9;Bord NVARCHAR (50),&#xA;&#x9;Voix DECIMAL (10,2),&#xA;&#x9;[%_exp] DECIMAL(10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Chomage;&#xA;CREATE TABLE Chomage(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;TauxDeChomage DECIMAL (10,3)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS ConsoMenage;&#xA;CREATE TABLE ConsoMenage(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;REF_SECTOR NVARCHAR (50),&#xA;&#x9;COUNTERPART_AREA NVARCHAR (50),&#xA;&#x9;ACCOUNTING_ENTRY NVARCHAR (50),&#xA;&#x9;STO NVARCHAR (50),&#xA;&#x9;INSTR_ASSET NVARCHAR (50),&#xA;&#x9;ACTIVITY NVARCHAR (50),&#xA;&#x9;EXPENDITURE NVARCHAR (50),&#xA;&#x9;UNIT_MEASURE NVARCHAR (50),&#xA;&#x9;PRICES NVARCHAR (50),&#xA;&#x9;TRANSFORMATION NVARCHAR (50),&#xA;&#x9;PRODUCT NVARCHAR (50),&#xA;&#x9;FREQ NVARCHAR (50),&#xA;&#x9;OBS_STATUS NVARCHAR (50),&#xA;&#x9;CONF_STATUS NVARCHAR (50),&#xA;&#x9;REF_PERIOD_DETAIL NVARCHAR (50),&#xA;&#x9;REF_YEAR_PRICE INT,&#xA;&#x9;DECIMALS INT,&#xA;&#x9;TABLE_IDENTIFIER NVARCHAR (50), &#xA;&#x9;UNIT_MULT INT,&#xA;&#x9;OBS_STATUS_FR NVARCHAR (50),&#xA;&#x9;LAST_UPDATE NVARCHAR (50), &#xA;&#x9;TIME_PERIOD INT,&#xA;&#x9;OBS_VALUE DECIMAL (10,3)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Demographie;&#xA;CREATE TABLE Demographie(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Population au 1er janvier] DECIMAL (10,1),&#xA;&#x9;[Naissances vivantes] DECIMAL (10,1),&#xA;&#x9;Décès DECIMAL (10,1),&#xA;&#x9;[Solde naturel] DECIMAL (10,1),&#xA;&#x9;[Solde migratoire] DECIMAL (10,1),&#xA;&#x9;Ajustement DECIMAL (10,1)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS DepartRetraite;&#xA;CREATE TABLE DepartRetraite(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Annee INT,&#xA;&#x9;[Catégorie socioprofessionnelle] NVARCHAR (100),&#xA;&#x9;Proportion_fortement_limitees DECIMAL (10,1),&#xA;&#x9;Proportion_limitees DECIMAL (10,1),&#xA;&#x9;Age_depart DECIMAL (10,1),&#xA;&#x9;Proportion_retraites_61ans DECIMAL (10,1),&#xA;&#x9;Duree_emploi DECIMAL (10,1),&#xA;&#x9;Duree_sans_emploi DECIMAL (10,1),&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS EmploisPrive;&#xA;CREATE TABLE EmploisPrive(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Nombre de salariés] DECIMAL (10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS EmploisPublic;&#xA;CREATE TABLE EmploisPublic(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Nombre de salariés] DECIMAL (10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Insecurite;&#xA;CREATE TABLE Insecurite(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;annee INT,&#xA;&#x9;nombre FLOAT,&#xA;&#x9;taux_pour_mille FLOAT,&#xA;&#x9;insee_pop FLOAT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS MasseSalariale;&#xA;CREATE TABLE MasseSalariale(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Masse salariale à T+50 jours (brut)] FLOAT,&#xA;&#x9;[Masse salariale à T+70 jours (brut)] FLOAT,&#xA;&#x9;[Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement trimestriel - Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement trimestriel - Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement annuel - Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement annuel - Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Pib;&#xA;CREATE TABLE Pib(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;PIB INT&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE MSPR;&#xA;&#xA;DROP TABLE IF EXISTS Elections;&#xA;CREATE TABLE Elections(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;Tour INT,&#xA;&#x9;Inscrits INT,&#xA;&#x9;Absentions INT,&#xA;&#x9;[%Abs/Ins] DECIMAL(10,2),&#xA;&#x9;Votants INT,&#xA;&#x9;[%Vot/Ins] DECIMAL(10,2),&#xA;&#x9;Blancsetnuls INT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Candidats;&#xA;CREATE TABLE Candidats(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;Tour INT,&#xA;&#x9;Parti NVARCHAR (50),&#xA;&#x9;Bord NVARCHAR (50),&#xA;&#x9;Voix DECIMAL (10,2),&#xA;&#x9;[%_exp] DECIMAL(10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Chomage;&#xA;CREATE TABLE Chomage(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;TauxDeChomage DECIMAL (10,3)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS ConsoMenage;&#xA;CREATE TABLE ConsoMenage(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;REF_SECTOR NVARCHAR(50),&#xA;&#x9;COUNTERPART_AREA NVARCHAR(50),&#xA;&#x9;ACCOUNTING_ENTRY NVARCHAR(50),&#xA;&#x9;STO NVARCHAR(50),&#xA;&#x9;INSTR_ASSET NVARCHAR(50),&#xA;&#x9;ACTIVITY NVARCHAR(50),&#xA;&#x9;EXPENDITURE NVARCHAR(50),&#xA;&#x9;UNIT_MEASURE NVARCHAR(50),&#xA;&#x9;PRICES NVARCHAR(50),&#xA;&#x9;TRANSFORMATION NVARCHAR(50),&#xA;&#x9;PRODUCT NVARCHAR(50),&#xA;&#x9;FREQ NVARCHAR(50),&#xA;&#x9;OBS_STATUS NVARCHAR(50),&#xA;&#x9;CONF_STATUS NVARCHAR(50),&#xA;&#x9;REF_YEAR_PRICE DECIMAL(10,1), &#xA;&#x9;DECIMALS INT,&#xA;&#x9;UNIT_MULT INT,&#xA;&#x9;OBS_STATUS_FR NVARCHAR(50),&#xA;&#x9;TIME_PERIOD INT, &#xA;&#x9;OBS_VALUE DECIMAL(10,3)&#xA;);&#xA;&#xA;&#xA;&#xA;DROP TABLE IF EXISTS Demographie;&#xA;CREATE TABLE Demographie(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Population au 1er janvier] DECIMAL (10,1),&#xA;&#x9;[Naissances vivantes] DECIMAL (10,1),&#xA;&#x9;Décès DECIMAL (10,1),&#xA;&#x9;[Solde naturel] DECIMAL (10,1),&#xA;&#x9;[Solde migratoire] DECIMAL (10,1),&#xA;&#x9;Ajustement DECIMAL (10,1)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS DepartRetraite;&#xA;CREATE TABLE DepartRetraite(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Annee INT,&#xA;&#x9;[Catégorie socioprofessionnelle] NVARCHAR (100),&#xA;&#x9;Proportion_fortement_limitees DECIMAL (10,1),&#xA;&#x9;Proportion_limitees DECIMAL (10,1),&#xA;&#x9;Age_depart DECIMAL (10,1),&#xA;&#x9;Proportion_retraites_61ans DECIMAL (10,1),&#xA;&#x9;Duree_emploi DECIMAL (10,1),&#xA;&#x9;Duree_sans_emploi DECIMAL (10,1),&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS EmploisPrive;&#xA;CREATE TABLE EmploisPrive(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Nombre de salariés] DECIMAL (10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS EmploisPublic;&#xA;CREATE TABLE EmploisPublic(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Nombre de salariés] DECIMAL (10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Insecurite;&#xA;CREATE TABLE Insecurite(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;annee INT,&#xA;&#x9;nombre FLOAT,&#xA;&#x9;taux_pour_mille FLOAT,&#xA;&#x9;insee_pop FLOAT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS MasseSalariale;&#xA;CREATE TABLE MasseSalariale(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Masse salariale à T+50 jours (brut)] FLOAT,&#xA;&#x9;[Masse salariale à T+70 jours (brut)] FLOAT,&#xA;&#x9;[Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement trimestriel - Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement trimestriel - Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement annuel - Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement annuel - Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Pib;&#xA;CREATE TABLE Pib(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;PIB INT&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -8447,63 +8218,139 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="200.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion Elections"
-          TopLeft="217.99999002864,104.833332851198" />
+          Size="184.8,41.6"
+          Id="Package\Data Flow Task\OLE DB EmploisPublic"
+          TopLeft="517.999971998236,680.033331513272" />
         <NodeLayout
-          Size="164,41.6"
-          Id="Package\Data Flow Task\OLE DB Chomage"
-          TopLeft="495.499974866709,262.166665123834" />
+          Size="187.2,41.6"
+          Id="Package\Data Flow Task\OLE DB DepartRetraite"
+          TopLeft="512.999973910551,521.299998173912" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Pib"
+          TopLeft="523.83330501285,955.566664816472" />
         <NodeLayout
           Size="204,41.6"
-          Id="Package\Data Flow Task\Data Conversion Chomage"
-          TopLeft="231.333320994345,265.099998228153" />
+          Id="Package\Data Flow Task\Data Conversion Insecurite"
+          TopLeft="243.833320311375,777.966664816472" />
         <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Data Flow Task\OLE DB Elections"
-          TopLeft="485.499980330469,109.033333447841" />
+          Size="149.6,41.6"
+          Id="Package\Data Flow Task\MasseSalariale"
+          TopLeft="46.3333343805538,873.099998228153" />
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\Data Flow Task\Data Conversion Candidats"
+          TopLeft="230.499992623926,185.633332706557" />
+        <NodeLayout
+          Size="224,41.6"
+          Id="Package\Data Flow Task\Data Conversion EmploisPublic"
+          TopLeft="242.166653735771,683.899055337483" />
         <NodeLayout
           Size="226.4,41.6"
-          Id="Package\Data Flow Task\Data Conversion ConsoMenage"
-          TopLeft="234.666654145553,338.433331368632" />
+          Id="Package\Data Flow Task\Data Conversion DepartRetraite"
+          TopLeft="240.499987160167,518.166664653752" />
         <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\Data Flow Task\ConsoMenage"
-          TopLeft="45.4999978144964,345.09999764959" />
-        <NodeLayout
-          Size="166.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Candidats"
-          TopLeft="491.33331498421,183.233333140479" />
+          Size="180,41.6"
+          Id="Package\Data Flow Task\OLE DB EmploisPrive"
+          TopLeft="512.999972271424,601.233331477112" />
         <NodeLayout
           Size="120.8,41.6"
           Id="Package\Data Flow Task\Elections"
           TopLeft="40.4999980876844,104.299999312957" />
         <NodeLayout
-          Size="125.6,41.6"
-          Id="Package\Data Flow Task\Candidats"
-          TopLeft="45.4999978144965,193.566665358875" />
+          Size="181.6,41.6"
+          Id="Package\Data Flow Task\OLE DB Demographie"
+          TopLeft="502.9999728178,418.966664726072" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\Data Flow Task\Insecurite"
+          TopLeft="47.9999993170301,783.099998372793" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Data Flow Task\OLE DB Chomage"
+          TopLeft="495.499974866709,262.166665123834" />
         <NodeLayout
           Size="123.2,41.6"
           Id="Package\Data Flow Task\Chomage"
           TopLeft="47.1666742248664,269.566666082078" />
         <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\Data Flow Task\Data Conversion Candidats"
-          TopLeft="230.499992623926,185.633332706557" />
+          Size="219.2,41.6"
+          Id="Package\Data Flow Task\Data Conversion EmploisPrive"
+          TopLeft="239.666653872365,605.633331440952" />
+        <NodeLayout
+          Size="93.6,41.6"
+          Id="Package\Data Flow Task\Pib"
+          TopLeft="47.9999993170301,960.833331477112" />
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Data Flow Task\Data Conversion Demographie"
+          TopLeft="235.499987433355,425.075104324739" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Data Flow Task\OLE DB Elections"
+          TopLeft="485.499980330469,109.033333447841" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\Data Flow Task\EmploisPublic"
+          TopLeft="49.6666658926342,689.433331422872" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Candidats"
+          TopLeft="491.33331498421,183.233333140479" />
+        <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Data Flow Task\Demographie"
+          TopLeft="47.9999976779025,428.966664400631" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Data Flow Task\OLE DB Insecurite"
+          TopLeft="517.166640349562,776.766665033433" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\Data Flow Task\DepartRetraite"
+          TopLeft="45.4999994536241,518.033331947194" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Data Flow Task\OLE DB MasseSalariale"
+          TopLeft="521.09997213483,867.566664816472" />
+        <NodeLayout
+          Size="200.8,41.6"
+          Id="Package\Data Flow Task\Data Conversion Elections"
+          TopLeft="217.99999002864,104.833332851198" />
+        <NodeLayout
+          Size="229.6,41.6"
+          Id="Package\Data Flow Task\Data Conversion MasseSalariale"
+          TopLeft="253.833319764999,870.141281673411" />
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\Data Flow Task\EmploisPrive"
+          TopLeft="48.8333309657045,604.633331965274" />
+        <NodeLayout
+          Size="204,41.6"
+          Id="Package\Data Flow Task\Data Conversion Chomage"
+          TopLeft="231.333320994345,265.099998228153" />
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\Data Flow Task\Candidats"
+          TopLeft="45.4999978144965,193.566665358875" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Data Flow Task\Data Conversion Pib"
+          TopLeft="257.166652916207,956.99953299134" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output2]"
-          TopLeft="170.366674224866,288.133332155115">
+          TopLeft="141.59999931703,979.716432234226">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.9666467694782,0"
+              EndConnector="115.566653599177,0"
               Start="0,0"
-              End="53.4666467694782,0">
+              End="108.066653599177,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="53.4666467694782,0" />
+                    End="108.066653599177,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8514,18 +8361,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
-          TopLeft="171.099997814496,210.399999032716">
+          TopLeft="188.799997677903,447.820884362685">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="59.3999948094291,0"
+              EndConnector="46.6999897554522,0"
               Start="0,0"
-              End="51.8999948094291,0">
+              End="39.1999897554522,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="51.8999948094291,0" />
+                    End="39.1999897554522,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8536,18 +8383,172 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="161.299998087684,125.366666082078">
+          TopLeft="195.933334380554,892.420639950782">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="56.6999919409556,0"
+              EndConnector="57.899985384445,0"
               Start="0,0"
-              End="49.1999919409556,0">
+              End="50.399985384445,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="49.1999919409556,0" />
+                    End="50.399985384445,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output9]"
+          TopLeft="466.899987160167,540.533331413832">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.0999867503848,0"
+              Start="0,0"
+              End="38.5999867503848,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.5999867503848,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output8]"
+          TopLeft="483.433319764999,889.653973244942">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.6666523698311,0"
+              Start="0,0"
+              End="30.1666523698311,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.1666523698311,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output7]"
+          TopLeft="447.833320311375,798.166664924953">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.3333200381869,0"
+              Start="0,0"
+              End="61.8333200381869,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="61.8333200381869,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output6]"
+          TopLeft="466.166653735771,702.766193425378">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.8333182624653,0"
+              Start="0,0"
+              End="44.3333182624653,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="44.3333182624653,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output5]"
+          TopLeft="458.866653872365,624.233331459032">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.1333183990589,0"
+              Start="0,0"
+              End="46.6333183990589,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46.6333183990589,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output4]"
+          TopLeft="456.299987433355,442.820884525405">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.6999853844449,0"
+              Start="0,0"
+              End="39.1999853844449,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.1999853844449,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output3]"
+          TopLeft="430.766652916207,977.083098903906">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.066652096643,0"
+              Start="0,0"
+              End="85.566652096643,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="85.566652096643,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8623,119 +8624,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output3]"
-          TopLeft="191.899997814496,362.566664509111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="42.7666563310562,0"
-              Start="0,0"
-              End="35.2666563310562,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="35.2666563310562,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="187.2,41.6"
-          Id="Package\Data Flow Task\OLE DB ConsoMenage"
-          TopLeft="498.833306378789,338.29999768575" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output3]"
-          TopLeft="461.066654145553,359.166664527191">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37.7666522332364,0"
-              Start="0,0"
-              End="30.2666522332364,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="30.2666522332364,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Data Flow Task\Demographie"
-          TopLeft="47.9999976779025,428.966664400631" />
-        <NodeLayout
-          Size="220.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion Demographie"
-          TopLeft="235.499987433355,425.075104324739" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output4]"
-          TopLeft="188.799997677903,447.820884362685">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.6999897554522,0"
-              Start="0,0"
-              End="39.1999897554522,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="39.1999897554522,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\Data Flow Task\OLE DB Demographie"
-          TopLeft="502.9999728178,418.966664726072" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output4]"
-          TopLeft="456.299987433355,442.820884525405">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.6999853844449,0"
-              Start="0,0"
-              End="39.1999853844449,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="39.1999853844449,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\Data Flow Task\DepartRetraite"
-          TopLeft="45.4999994536241,518.033331947194" />
-        <NodeLayout
-          Size="226.4,41.6"
-          Id="Package\Data Flow Task\Data Conversion DepartRetraite"
-          TopLeft="240.499987160167,518.166664653752" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output5]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output9]"
           TopLeft="191.899999453624,538.899998300473">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8756,152 +8645,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="187.2,41.6"
-          Id="Package\Data Flow Task\OLE DB DepartRetraite"
-          TopLeft="512.999973910551,521.299998173912" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output5]"
-          TopLeft="466.899987160167,540.533331413832">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.0999867503848,0"
-              Start="0,0"
-              End="38.5999867503848,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="38.5999867503848,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\Data Flow Task\EmploisPrive"
-          TopLeft="48.8333309657045,604.633331965274" />
-        <NodeLayout
-          Size="219.2,41.6"
-          Id="Package\Data Flow Task\Data Conversion EmploisPrive"
-          TopLeft="239.666653872365,605.633331440952" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output6]"
-          TopLeft="188.033330965704,625.933331703113">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51.6333229066602,0"
-              Start="0,0"
-              End="44.1333229066602,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="44.1333229066602,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Data Flow Task\OLE DB EmploisPrive"
-          TopLeft="512.999972271424,601.233331477112" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output6]"
-          TopLeft="458.866653872365,624.233331459032">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="54.1333183990589,0"
-              Start="0,0"
-              End="46.6333183990589,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="46.6333183990589,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\Data Flow Task\EmploisPublic"
-          TopLeft="49.6666658926342,689.433331422872" />
-        <NodeLayout
-          Size="224,41.6"
-          Id="Package\Data Flow Task\Data Conversion EmploisPublic"
-          TopLeft="242.166653735771,683.899055337483" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output7]"
-          TopLeft="193.666665892634,707.466193380178">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="48.4999878431365,0"
-              Start="0,0"
-              End="40.9999878431365,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="40.9999878431365,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="184.8,41.6"
-          Id="Package\Data Flow Task\OLE DB EmploisPublic"
-          TopLeft="517.999971998236,680.033331513272" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output7]"
-          TopLeft="466.166653735771,702.766193425378">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51.8333182624653,0"
-              Start="0,0"
-              End="44.3333182624653,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="44.3333182624653,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="123.2,41.6"
-          Id="Package\Data Flow Task\Insecurite"
-          TopLeft="47.9999993170301,783.099998372793" />
-        <NodeLayout
-          Size="204,41.6"
-          Id="Package\Data Flow Task\Data Conversion Insecurite"
-          TopLeft="243.833320311375,777.966664816472" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output8]"
           TopLeft="171.19999931703,801.333331594633">
@@ -8924,24 +8667,108 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164,41.6"
-          Id="Package\Data Flow Task\OLE DB Insecurite"
-          TopLeft="517.166640349562,776.766665033433" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output8]"
-          TopLeft="447.833320311375,798.166664924953">
+          Id="Package\Data Flow Task.Paths[Flat File Source Output7]"
+          TopLeft="161.299998087684,125.366666082078">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="69.3333200381869,0"
+              EndConnector="56.6999919409556,0"
               Start="0,0"
-              End="61.8333200381869,0">
+              End="49.1999919409556,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="61.8333200381869,0" />
+                    End="49.1999919409556,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output6]"
+          TopLeft="193.666665892634,707.466193380178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.4999878431365,0"
+              Start="0,0"
+              End="40.9999878431365,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.9999878431365,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output5]"
+          TopLeft="171.099997814496,210.399999032716">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.3999948094291,0"
+              Start="0,0"
+              End="51.8999948094291,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.8999948094291,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output4]"
+          TopLeft="188.033330965704,625.933331703113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.6333229066602,0"
+              Start="0,0"
+              End="44.1333229066602,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="44.1333229066602,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output3]"
+          TopLeft="170.366674224866,288.133332155115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.9666467694782,0"
+              Start="0,0"
+              End="53.4666467694782,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.4666467694782,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8951,83 +8778,27 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Data Flow Task\MasseSalariale"
-          TopLeft="46.3333343805538,873.099998228153" />
+          Size="226.4,41.6"
+          Id="Package\Data Flow Task\Data Conversion ConsoMenage"
+          TopLeft="237.166654008959,343.452061567875" />
         <NodeLayout
-          Size="229.6,41.6"
-          Id="Package\Data Flow Task\Data Conversion MasseSalariale"
-          TopLeft="253.833319764999,870.141281673411" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output9]"
-          TopLeft="195.933334380554,892.420639950782">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="57.899985384445,0"
-              Start="0,0"
-              End="50.399985384445,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="50.399985384445,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\Data Flow Task\OLE DB MasseSalariale"
-          TopLeft="521.09997213483,867.566664816472" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output9]"
-          TopLeft="483.433319764999,889.653973244942">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37.6666523698311,0"
-              Start="0,0"
-              End="30.1666523698311,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="30.1666523698311,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="93.6,41.6"
-          Id="Package\Data Flow Task\Pib"
-          TopLeft="47.9999993170301,960.833331477112" />
-        <NodeLayout
-          Size="173.6,41.6"
-          Id="Package\Data Flow Task\Data Conversion Pib"
-          TopLeft="257.166652916207,956.99953299134" />
+          Size="146.4,41.6"
+          Id="Package\Data Flow Task\ConsoMenage"
+          TopLeft="47.1666693074835,343.318728861317" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output10]"
-          TopLeft="141.59999931703,979.716432234226">
+          TopLeft="193.566669307483,364.185395214596">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="115.566653599177,0"
+              EndConnector="43.5999847014752,0"
               Start="0,0"
-              End="108.066653599177,0">
+              End="36.0999847014752,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="108.066653599177,0" />
+                    End="36.0999847014752,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9037,23 +8808,23 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Pib"
-          TopLeft="523.83330501285,955.566664816472" />
+          Size="187.2,41.6"
+          Id="Package\Data Flow Task\OLE DB ConsoMenage"
+          TopLeft="507.166649091576,344.0520628154" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output10]"
-          TopLeft="430.766652916207,977.083098903906">
+          TopLeft="463.566654008959,364.552062191637">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="93.066652096643,0"
+              EndConnector="43.5999950826169,0"
               Start="0,0"
-              End="85.566652096643,0">
+              End="36.0999950826169,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="85.566652096643,0" />
+                    End="36.0999950826169,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9065,6 +8836,71 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB EmploisPublic">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB DepartRetraite">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Pib">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB EmploisPrive">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Demographie">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Chomage">
     <Properties>
@@ -9105,71 +8941,6 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB ConsoMenage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Demographie">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB DepartRetraite">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB EmploisPrive">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB EmploisPublic">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Insecurite">
     <Properties>
       <Property>
@@ -9196,7 +8967,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Pib">
+    design-time-name="Package\Data Flow Task\OLE DB ConsoMenage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
