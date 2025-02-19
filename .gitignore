@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 .vs/
 ETL/.vs/
 # Ignorer les fichiers de compilation SSIS
 ETL/ETL/bin/
 ETL/ETL/obj/
 ETL/ETL/*.ispac
+=======
+# Ignorer les fichiers __pycache__ 
+__pycache__/
+
+>>>>>>> origin/main
