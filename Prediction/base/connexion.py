@@ -1,6 +1,7 @@
 import pyodbc
-from config import DB_CONFIG
+from base.config import DB_CONFIG
 
+# Connexion à la base de données
 def get_connection():
     """ Établit la connexion avec SQL Server. """
     conn_str = (
@@ -10,6 +11,7 @@ def get_connection():
         f"Trusted_Connection={'yes' if DB_CONFIG['trusted_connection'] else 'no'};"
     )
 
+    # On essaie de se connecter et on renvoie la connexion
     try:
         conn = pyodbc.connect(conn_str)
         print("Connexion réussie !")
