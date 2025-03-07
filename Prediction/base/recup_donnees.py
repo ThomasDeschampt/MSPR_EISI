@@ -25,6 +25,9 @@ def load_full_data():
         conn.close()
         print("Données fusionnées :", df.shape)
 
+        # On retire les colonnes inutiles
+        df.drop(['Id_fait_election', 'Id_demographie', 'Id_conso_menage', 'Id_emploi', 'Id_insecurite', 'Id_economie', 'Id_depart_retraite', 'Id_candidat'], axis=1, inplace=True)
+
         # On sauvegarde les données dans un fichier CSV
         df.to_csv('./Prediction/data/donnees_fusionnees.csv', index=False)
         print("Les données ont été sauvegardées dans 'donnees_fusionnees.csv'.")
