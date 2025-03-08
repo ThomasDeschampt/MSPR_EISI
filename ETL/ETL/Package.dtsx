@@ -11,11 +11,40 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="100"
-  DTS:VersionGUID="{FC87DFF1-76F6-4A46-8325-571CACC23935}">
+  DTS:VersionBuild="102"
+  DTS:VersionGUID="{3E5B80A6-DCCE-4BE1-9F06-08BCE6C69A17}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Annees]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8C94672C-78C3-4C7F-A629-1294B08E807E}"
+      DTS:ObjectName="Annees">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\abiga\OneDrive - Ifag Paris\Documents\EPSI_Cours\MSPR Bloc 3\MSPR_EISI\ETL\annee.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Annee"
+              DTS:DTSID="{24EA7FB1-EE8A-4A40-84B0-03EEAF92D4E0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Candidats]"
       DTS:CreationName="FLATFILE"
@@ -895,6 +924,99 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Data Flow Task\Annees"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1036"
+              name="Annees"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Annees.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Annees]"
+                  connectionManagerRefId="Package.ConnectionManagers[Annees]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Annees.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Annees.Outputs[Flat File Source Output].Columns[Annee]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Annees.Outputs[Flat File Source Output].ExternalColumns[Annee]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Annees.Outputs[Flat File Source Output].Columns[Annee]"
+                      name="Annee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Annees.Outputs[Flat File Source Output].ExternalColumns[Annee]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Annee" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Annees.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Annees.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Annees.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Annees.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Annees.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Annees.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Annees.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Data Flow Task\Candidats"
               componentClassID="Microsoft.FlatFileSource"
@@ -1867,6 +1989,83 @@
                       refId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Data Conversion Annees"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion Annees"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion Annees.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion Annees.Inputs[Data Conversion Input].Columns[Annee]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Annee"
+                      lineageId="Package\Data Flow Task\Annees.Outputs[Flat File Source Output].Columns[Annee]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion Annees.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Output].Columns[Copy of Annee]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Output].Columns[Copy of Annee]"
+                      name="Copy of Annee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Annees.Outputs[Flat File Source Output].Columns[Annee]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion Annees.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5928,6 +6127,123 @@
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\OLE DB Annees"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Annees"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Annees]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Annees.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PC_EPSI.MSPR]"
+                  connectionManagerRefId="Package.ConnectionManagers[PC_EPSI.MSPR]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Annees.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Annees.Inputs[OLE DB Destination Input].Columns[Copy of Annee]"
+                      cachedDataType="ui4"
+                      cachedName="Copy of Annee"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Annees.Inputs[OLE DB Destination Input].ExternalColumns[Année]"
+                      lineageId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Output].Columns[Copy of Annee]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Annees.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Annees.Inputs[OLE DB Destination Input].ExternalColumns[Année]"
+                      dataType="i4"
+                      name="Année" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Annees.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Annees.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Annees.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Annees.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Annees.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Annees.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\OLE DB Candidats"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -8031,110 +8347,120 @@
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion Elections.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output9]"
-              endId="Package\Data Flow Task\OLE DB Candidats.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion Candidats.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output8]"
-              endId="Package\Data Flow Task\OLE DB Chomage.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion Chomage.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output7]"
-              endId="Package\Data Flow Task\OLE DB Pib.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion Pib.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output6]"
-              endId="Package\Data Flow Task\OLE DB Demographie.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion Demographie.Outputs[Data Conversion Output]" />
-            <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output10]"
-              endId="Package\Data Flow Task\OLE DB EmploisPrive.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion EmploisPrive.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output4]"
-              endId="Package\Data Flow Task\OLE DB EmploisPublic.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion EmploisPublic.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output3]"
-              endId="Package\Data Flow Task\OLE DB Insecurite.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion Insecurite.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output2]"
-              endId="Package\Data Flow Task\OLE DB MasseSalariale.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion MasseSalariale.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output1]"
-              endId="Package\Data Flow Task\OLE DB DepartRetraite.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion DepartRetraite.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output5]"
               endId="Package\Data Flow Task\OLE DB ConsoMenage.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion ConsoMenage.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output9]"
-              endId="Package\Data Flow Task\Data Conversion DepartRetraite.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\DepartRetraite.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output9]"
+              endId="Package\Data Flow Task\OLE DB DepartRetraite.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion DepartRetraite.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output8]"
+              endId="Package\Data Flow Task\OLE DB MasseSalariale.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion MasseSalariale.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
-              endId="Package\Data Flow Task\Data Conversion Demographie.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Demographie.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output7]"
+              endId="Package\Data Flow Task\OLE DB Insecurite.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion Insecurite.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output2]"
-              endId="Package\Data Flow Task\Data Conversion Pib.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Pib.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output6]"
+              endId="Package\Data Flow Task\OLE DB EmploisPublic.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion EmploisPublic.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output3]"
-              endId="Package\Data Flow Task\Data Conversion Chomage.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Chomage.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output11]"
+              endId="Package\Data Flow Task\OLE DB Annees.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion Annees.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output4]"
-              endId="Package\Data Flow Task\Data Conversion EmploisPrive.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\EmploisPrive.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output4]"
+              endId="Package\Data Flow Task\OLE DB Demographie.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion Demographie.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output5]"
-              endId="Package\Data Flow Task\Data Conversion Candidats.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Candidats.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output3]"
+              endId="Package\Data Flow Task\OLE DB Pib.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion Pib.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output6]"
-              endId="Package\Data Flow Task\Data Conversion EmploisPublic.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\EmploisPublic.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output2]"
+              endId="Package\Data Flow Task\OLE DB Chomage.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion Chomage.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output7]"
-              endId="Package\Data Flow Task\Data Conversion Elections.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Elections.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output1]"
+              endId="Package\Data Flow Task\OLE DB Candidats.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion Candidats.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output8]"
-              endId="Package\Data Flow Task\Data Conversion Insecurite.Inputs[Data Conversion Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Insecurite.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output5]"
+              endId="Package\Data Flow Task\OLE DB EmploisPrive.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion EmploisPrive.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output10]"
               endId="Package\Data Flow Task\Data Conversion MasseSalariale.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\MasseSalariale.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output9]"
+              endId="Package\Data Flow Task\Data Conversion Insecurite.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Insecurite.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output8]"
+              endId="Package\Data Flow Task\Data Conversion Elections.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Elections.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output7]"
+              endId="Package\Data Flow Task\Data Conversion EmploisPublic.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\EmploisPublic.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output6]"
+              endId="Package\Data Flow Task\Data Conversion Candidats.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Candidats.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output4]"
+              endId="Package\Data Flow Task\Data Conversion Chomage.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Chomage.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output3]"
+              endId="Package\Data Flow Task\Data Conversion Pib.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Pib.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output2]"
+              endId="Package\Data Flow Task\Data Conversion Demographie.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Demographie.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task\Data Conversion ConsoMenage.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\ConsoMenage.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output11]"
+              endId="Package\Data Flow Task\Data Conversion Annees.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Annees.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output5]"
+              endId="Package\Data Flow Task\Data Conversion EmploisPrive.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\EmploisPrive.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Data Conversion DepartRetraite.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\DepartRetraite.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -8153,7 +8479,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{C7BC6D5A-F979-4B43-8242-272F4B223E34}"
-          SQLTask:SqlStatementSource="USE MSPR;&#xA;&#xA;DROP TABLE IF EXISTS Elections;&#xA;CREATE TABLE Elections(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;Tour INT,&#xA;&#x9;Inscrits INT,&#xA;&#x9;Absentions INT,&#xA;&#x9;[%Abs/Ins] DECIMAL(10,2),&#xA;&#x9;Votants INT,&#xA;&#x9;[%Vot/Ins] DECIMAL(10,2),&#xA;&#x9;Blancsetnuls INT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Candidats;&#xA;CREATE TABLE Candidats(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;Tour INT,&#xA;&#x9;Parti NVARCHAR (50),&#xA;&#x9;Bord NVARCHAR (50),&#xA;&#x9;Voix DECIMAL (10,2),&#xA;&#x9;[%_exp] DECIMAL(10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Chomage;&#xA;CREATE TABLE Chomage(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;TauxDeChomage DECIMAL (10,3)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS ConsoMenage;&#xA;CREATE TABLE ConsoMenage(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;REF_SECTOR NVARCHAR(50),&#xA;&#x9;COUNTERPART_AREA NVARCHAR(50),&#xA;&#x9;ACCOUNTING_ENTRY NVARCHAR(50),&#xA;&#x9;STO NVARCHAR(50),&#xA;&#x9;INSTR_ASSET NVARCHAR(50),&#xA;&#x9;ACTIVITY NVARCHAR(50),&#xA;&#x9;EXPENDITURE NVARCHAR(50),&#xA;&#x9;UNIT_MEASURE NVARCHAR(50),&#xA;&#x9;PRICES NVARCHAR(50),&#xA;&#x9;TRANSFORMATION NVARCHAR(50),&#xA;&#x9;PRODUCT NVARCHAR(50),&#xA;&#x9;FREQ NVARCHAR(50),&#xA;&#x9;OBS_STATUS NVARCHAR(50),&#xA;&#x9;CONF_STATUS NVARCHAR(50),&#xA;&#x9;REF_YEAR_PRICE DECIMAL(10,1), &#xA;&#x9;DECIMALS INT,&#xA;&#x9;UNIT_MULT INT,&#xA;&#x9;OBS_STATUS_FR NVARCHAR(50),&#xA;&#x9;TIME_PERIOD INT, &#xA;&#x9;OBS_VALUE DECIMAL(10,3)&#xA;);&#xA;&#xA;&#xA;&#xA;DROP TABLE IF EXISTS Demographie;&#xA;CREATE TABLE Demographie(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Population au 1er janvier] DECIMAL (10,1),&#xA;&#x9;[Naissances vivantes] DECIMAL (10,1),&#xA;&#x9;Décès DECIMAL (10,1),&#xA;&#x9;[Solde naturel] DECIMAL (10,1),&#xA;&#x9;[Solde migratoire] DECIMAL (10,1),&#xA;&#x9;Ajustement DECIMAL (10,1)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS DepartRetraite;&#xA;CREATE TABLE DepartRetraite(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Annee INT,&#xA;&#x9;[Catégorie socioprofessionnelle] NVARCHAR (100),&#xA;&#x9;Proportion_fortement_limitees DECIMAL (10,1),&#xA;&#x9;Proportion_limitees DECIMAL (10,1),&#xA;&#x9;Age_depart DECIMAL (10,1),&#xA;&#x9;Proportion_retraites_61ans DECIMAL (10,1),&#xA;&#x9;Duree_emploi DECIMAL (10,1),&#xA;&#x9;Duree_sans_emploi DECIMAL (10,1),&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS EmploisPrive;&#xA;CREATE TABLE EmploisPrive(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Nombre de salariés] DECIMAL (10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS EmploisPublic;&#xA;CREATE TABLE EmploisPublic(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Nombre de salariés] DECIMAL (10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Insecurite;&#xA;CREATE TABLE Insecurite(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;annee INT,&#xA;&#x9;nombre FLOAT,&#xA;&#x9;taux_pour_mille FLOAT,&#xA;&#x9;insee_pop FLOAT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS MasseSalariale;&#xA;CREATE TABLE MasseSalariale(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Masse salariale à T+50 jours (brut)] FLOAT,&#xA;&#x9;[Masse salariale à T+70 jours (brut)] FLOAT,&#xA;&#x9;[Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement trimestriel - Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement trimestriel - Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement annuel - Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement annuel - Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Pib;&#xA;CREATE TABLE Pib(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;PIB INT&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE MSPR;&#xA;&#xA;DROP TABLE IF EXISTS Annees;&#xA;CREATE TABLE Annees(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Elections;&#xA;CREATE TABLE Elections(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;Tour INT,&#xA;&#x9;Inscrits INT,&#xA;&#x9;Absentions INT,&#xA;&#x9;[%Abs/Ins] DECIMAL(10,2),&#xA;&#x9;Votants INT,&#xA;&#x9;[%Vot/Ins] DECIMAL(10,2),&#xA;&#x9;Blancsetnuls INT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Candidats;&#xA;CREATE TABLE Candidats(&#xA;    Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;Tour INT,&#xA;&#x9;Parti NVARCHAR (50),&#xA;&#x9;Bord NVARCHAR (50),&#xA;&#x9;Voix DECIMAL (10,2),&#xA;&#x9;[%_exp] DECIMAL(10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Chomage;&#xA;CREATE TABLE Chomage(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;TauxDeChomage DECIMAL (10,3)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS ConsoMenage;&#xA;CREATE TABLE ConsoMenage(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;REF_SECTOR NVARCHAR(50),&#xA;&#x9;COUNTERPART_AREA NVARCHAR(50),&#xA;&#x9;ACCOUNTING_ENTRY NVARCHAR(50),&#xA;&#x9;STO NVARCHAR(50),&#xA;&#x9;INSTR_ASSET NVARCHAR(50),&#xA;&#x9;ACTIVITY NVARCHAR(50),&#xA;&#x9;EXPENDITURE NVARCHAR(50),&#xA;&#x9;UNIT_MEASURE NVARCHAR(50),&#xA;&#x9;PRICES NVARCHAR(50),&#xA;&#x9;TRANSFORMATION NVARCHAR(50),&#xA;&#x9;PRODUCT NVARCHAR(50),&#xA;&#x9;FREQ NVARCHAR(50),&#xA;&#x9;OBS_STATUS NVARCHAR(50),&#xA;&#x9;CONF_STATUS NVARCHAR(50),&#xA;&#x9;REF_YEAR_PRICE DECIMAL(10,1), &#xA;&#x9;DECIMALS INT,&#xA;&#x9;UNIT_MULT INT,&#xA;&#x9;OBS_STATUS_FR NVARCHAR(50),&#xA;&#x9;TIME_PERIOD INT, &#xA;&#x9;OBS_VALUE DECIMAL(10,3)&#xA;);&#xA;&#xA;&#xA;&#xA;DROP TABLE IF EXISTS Demographie;&#xA;CREATE TABLE Demographie(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Population au 1er janvier] DECIMAL (10,1),&#xA;&#x9;[Naissances vivantes] DECIMAL (10,1),&#xA;&#x9;Décès DECIMAL (10,1),&#xA;&#x9;[Solde naturel] DECIMAL (10,1),&#xA;&#x9;[Solde migratoire] DECIMAL (10,1),&#xA;&#x9;Ajustement DECIMAL (10,1)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS DepartRetraite;&#xA;CREATE TABLE DepartRetraite(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Annee INT,&#xA;&#x9;[Catégorie socioprofessionnelle] NVARCHAR (100),&#xA;&#x9;Proportion_fortement_limitees DECIMAL (10,1),&#xA;&#x9;Proportion_limitees DECIMAL (10,1),&#xA;&#x9;Age_depart DECIMAL (10,1),&#xA;&#x9;Proportion_retraites_61ans DECIMAL (10,1),&#xA;&#x9;Duree_emploi DECIMAL (10,1),&#xA;&#x9;Duree_sans_emploi DECIMAL (10,1),&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS EmploisPrive;&#xA;CREATE TABLE EmploisPrive(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Nombre de salariés] DECIMAL (10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS EmploisPublic;&#xA;CREATE TABLE EmploisPublic(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Nombre de salariés] DECIMAL (10,2)&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Insecurite;&#xA;CREATE TABLE Insecurite(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;annee INT,&#xA;&#x9;nombre FLOAT,&#xA;&#x9;taux_pour_mille FLOAT,&#xA;&#x9;insee_pop FLOAT&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS MasseSalariale;&#xA;CREATE TABLE MasseSalariale(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;[Masse salariale à T+50 jours (brut)] FLOAT,&#xA;&#x9;[Masse salariale à T+70 jours (brut)] FLOAT,&#xA;&#x9;[Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement trimestriel - Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement trimestriel - Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement annuel - Masse salariale à T+50 jours (cvs)] FLOAT,&#xA;&#x9;[Glissement annuel - Masse salariale à T+70 jours (cvs)] FLOAT,&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS Pib;&#xA;CREATE TABLE Pib(&#xA;&#x9;Id INT PRIMARY KEY IDENTITY(1,1),&#xA;&#x9;Année INT,&#xA;&#x9;PIB INT&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -8351,94 +8677,6 @@
           TopLeft="49.6666658926342,689.433331422872" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output7]"
-          TopLeft="430.766652916207,977.083098903906">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93.066652096643,0"
-              Start="0,0"
-              End="85.566652096643,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="85.566652096643,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output6]"
-          TopLeft="456.299987433355,442.820884525405">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.6999853844449,0"
-              Start="0,0"
-              End="39.1999853844449,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="39.1999853844449,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output5]"
-          TopLeft="463.566654008959,364.552062191637">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="43.5999950826169,0"
-              Start="0,0"
-              End="36.0999950826169,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="36.0999950826169,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output4]"
-          TopLeft="466.166653735771,702.766193425378">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51.8333182624653,0"
-              Start="0,0"
-              End="44.3333182624653,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="44.3333182624653,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output3]"
           TopLeft="447.833320311375,798.166664924953">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8460,19 +8698,107 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output2]"
-          TopLeft="483.433319764999,889.653973244942">
+          Id="Package\Data Flow Task.Paths[Data Conversion Output6]"
+          TopLeft="466.166653735771,702.766193425378">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="37.6666523698311,0"
+              EndConnector="51.8333182624653,0"
               Start="0,0"
-              End="30.1666523698311,0">
+              End="44.3333182624653,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="30.1666523698311,0" />
+                    End="44.3333182624653,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output5]"
+          TopLeft="458.866653872365,624.233331459032">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.1333183990589,0"
+              Start="0,0"
+              End="46.6333183990589,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46.6333183990589,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output4]"
+          TopLeft="456.299987433355,442.820884525405">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.6999853844449,0"
+              Start="0,0"
+              End="39.1999853844449,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.1999853844449,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output3]"
+          TopLeft="430.766652916207,977.083098903906">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.066652096643,0"
+              Start="0,0"
+              End="85.566652096643,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="85.566652096643,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output2]"
+          TopLeft="435.333320994345,284.433331675993">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.1666538723646,0"
+              Start="0,0"
+              End="52.6666538723646,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="52.6666538723646,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8483,18 +8809,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output1]"
-          TopLeft="466.899987160167,540.533331413832">
+          TopLeft="436.099992623926,205.233332923518">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="46.0999867503848,0"
+              EndConnector="55.2333223602843,0"
               Start="0,0"
-              End="38.5999867503848,0">
+              End="47.7333223602843,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="38.5999867503848,0" />
+                    End="47.7333223602843,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8549,28 +8875,6 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output9]"
-          TopLeft="191.899999453624,538.899998300473">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="48.5999877065426,0"
-              Start="0,0"
-              End="41.0999877065426,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="41.0999877065426,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output8]"
           TopLeft="171.19999931703,801.333331594633">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8592,7 +8896,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output7]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output8]"
           TopLeft="161.299998087684,125.366666082078">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8614,7 +8918,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output6]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output7]"
           TopLeft="193.666665892634,707.466193380178">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8636,7 +8940,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output5]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output6]"
           TopLeft="171.099997814496,210.399999032716">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8658,7 +8962,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output4]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output5]"
           TopLeft="188.033330965704,625.933331703113">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8680,7 +8984,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output3]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output4]"
           TopLeft="170.366674224866,288.133332155115">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8702,7 +9006,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output2]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output3]"
           TopLeft="141.59999931703,979.716432234226">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8724,7 +9028,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output2]"
           TopLeft="188.799997677903,447.820884362685">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8746,7 +9050,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
           TopLeft="193.566669307483,364.185395214596">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8768,19 +9072,41 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output10]"
-          TopLeft="458.866653872365,624.233331459032">
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="191.899999453624,538.899998300473">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="54.1333183990589,0"
+              EndConnector="48.5999877065426,0"
               Start="0,0"
-              End="46.6333183990589,0">
+              End="41.0999877065426,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="46.6333183990589,0" />
+                    End="41.0999877065426,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output10]"
+          TopLeft="463.566654008959,364.552062191637">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43.5999950826169,0"
+              Start="0,0"
+              End="36.0999950826169,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.0999950826169,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8791,18 +9117,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output9]"
-          TopLeft="436.099992623926,205.233332923518">
+          TopLeft="466.899987160167,540.533331413832">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="55.2333223602843,0"
+              EndConnector="46.0999867503848,0"
               Start="0,0"
-              End="47.7333223602843,0">
+              End="38.5999867503848,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="47.7333223602843,0" />
+                    End="38.5999867503848,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8813,18 +9139,74 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output8]"
-          TopLeft="435.333320994345,284.433331675993">
+          TopLeft="483.433319764999,889.653973244942">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.1666538723646,0"
+              EndConnector="37.6666523698311,0"
               Start="0,0"
-              End="52.6666538723646,0">
+              End="30.1666523698311,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="52.6666538723646,0" />
+                    End="30.1666523698311,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="113.6,41.6"
+          Id="Package\Data Flow Task\Annees"
+          TopLeft="44.6666645266944,32.3666664798392" />
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\Data Flow Task\Data Conversion Annees"
+          TopLeft="222.166654828522,36.4621174337967" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output11]"
+          TopLeft="158.266664526694,55.214391956818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.8999903018281,0"
+              Start="0,0"
+              End="56.3999903018281,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.3999903018281,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Annees"
+          TopLeft="487.166641988689,34.3954509901176" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output11]"
+          TopLeft="415.766654828523,56.2287842119571">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.3999871601667,0"
+              Start="0,0"
+              End="63.8999871601667,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="63.8999871601667,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8968,6 +9350,19 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB MasseSalariale">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Annees">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
