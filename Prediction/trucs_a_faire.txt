@@ -1,0 +1,55 @@
+
+1. Préparation des données 
+    - on verifie les types de colonnes : 
+        - on identifie les colonnes numériques et les colonnes catégorielles
+        - on encode les colonnes catégorielles
+
+    - normalisation des données
+
+    - Verification du bruit dans les données
+        - suppression des colonnes qui n'ont pas de corrélation avec le vote
+
+
+2. Mise en place de l'apprentissage
+
+    - Modèle des prédictions pour les dimensions : 
+        - Avant de prédire les résultats électoraux, il faut d’abord prévoir l’évolution des indicateurs
+        - L'enjeu est donc de pouvoir prédire l'évolution des indicateurs sur les années à venir
+        - On va utiliser un modèle de prévision temporelle (Prophet, ARIMA, LSTM…)
+        - On aura en sortie un csv, avec les nouvelles valeurs prédites pour les indicateurs
+
+
+    - Modèle de prédiction des résultats électoraux
+        - Prédire les résultats des élections à partir des données historiques
+        - modèle de machine learning (Random Forest, XGBoost, SVM, Régression logistique, Réseaux de neurones…)
+        - on va entrainer notre modèle sur les données passées
+        - puis on pourra ensuite utiliser les données prédites pour prédire les résultats des élections à venir
+
+        - Premiers tours
+            - pourcentage de votes exprimés pour les grands bords politiques
+            - stats globales sur l'élections (nombre de votants, absention, votes blancs, votes nuls)
+
+        - Seconds tours
+            - selection des deux candidats en tete au premier tour
+            - pourcentage de votes exprimés pour les 2 candidats
+            - stats globales sur les élections (nombre de votants, absention, votes blancs, votes nuls)
+
+    - Une fois les modèles en place, on va pouvoir alimenter les modèles de prédiction des résultats électoraux avec les données prédites des indicateurs
+        - on pourra alors prédire les valeurs des indicateurs pour les années à venir
+
+3. Optimisation et validation
+
+    - optimisation des hyperparamètres
+
+    - Analyse des performances du modèle (précision, ...)
+
+    - comparaison avec d'autres modèles
+
+
+4. Visualisation et interprétation
+
+    - Représentation visuelle des résultats et des performances
+
+
+
+- (Bonus pour le fun) : predire les trigrammes des futurs partis politiques en fonction des précédents trigrammes
