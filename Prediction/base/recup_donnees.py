@@ -27,7 +27,10 @@ def load_full_data():
 
         # On retire les colonnes inutiles
         df = df.loc[:, ~df.columns.duplicated(keep="first")]
+        # Les id qui ne sont pas utiles
         df.drop(['Id_fait_election', 'Id_demographie', 'Id_conso_menage', 'Id_emploi', 'Id_insecurite', 'Id_economie', 'Id_depart_retraite', 'Id_candidat'], axis=1, inplace=True)
+        # Les valeurs qui ne sont pas en pourcentage
+        df.drop(['Inscrits', 'Absentions', 'Votants', 'Nombre_de_voix', 'BlancsNuls'], axis=1, inplace=True)
 
         # On sauvegarde les données dans un fichier CSV
         df.to_csv('./Prediction/data/donnees_fusionnees.csv', index=False)
