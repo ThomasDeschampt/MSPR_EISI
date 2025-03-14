@@ -1,10 +1,8 @@
 
 1. Préparation des données 
-    - on verifie les types de colonnes : 
-        - on identifie les colonnes numériques et les colonnes catégorielles
-        - on encode les colonnes catégorielles
 
-    - normalisation des données
+
+    - traitement des valeurs manquantes
 
     - Verification du bruit dans les données
         - suppression des colonnes qui n'ont pas de corrélation avec le vote
