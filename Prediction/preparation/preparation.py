@@ -16,9 +16,8 @@ df = pd.get_dummies(df, columns=categorical_columns)
 scaler = StandardScaler()
 df[numerical_columns] = scaler.fit_transform(df[numerical_columns])
 
-# On supprime les années sans election 
-#A FAIRE QUAND JDD COMLET (il faut juste le recup actullement c'est l'ancien)
-
+# On supprime les années sans election
+df = df.dropna(subset=['Tour'])
 
 
 # On traite les valeurs manquantes
