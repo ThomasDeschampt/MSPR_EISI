@@ -1,4 +1,5 @@
 import os 
+from valeurs_mensuelles import nettoyer_valeurs_mensuelles
 from chomage import nettoyer_chomage
 from demographie import nettoyer_demographie
 from depart_retraite import nettoyer_depart_retraite
@@ -29,7 +30,8 @@ fichiers_a_traiter = {
     "pib.csv": nettoyer_pib,
     "conso_menage_data.csv": nettoyer_conso_menage_data,
     "elections.csv": nettoyer_election,
-    "candidats.csv": nettoyer_candidats
+    "candidats.csv": nettoyer_candidats,
+    "valeurs_mensuelles.csv" : nettoyer_valeurs_mensuelles
 }
 
 for fichier, fonction in fichiers_a_traiter.items():
