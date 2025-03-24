@@ -8,7 +8,6 @@ from emplois_public import nettoyer_emplois_public
 from insecurite import nettoyer_insecurite
 from masse_salariale import nettoyer_masse_salariale
 from pib import nettoyer_pib
-from conso_menage_data import nettoyer_conso_menage_data
 from election import nettoyer_election
 from candidats import nettoyer_candidats
 
@@ -28,7 +27,6 @@ fichiers_a_traiter = {
     "insecurite.csv": nettoyer_insecurite,
     "masse_salariale.csv": nettoyer_masse_salariale,
     "pib.csv": nettoyer_pib,
-    "conso_menage_data.csv": nettoyer_conso_menage_data,
     "elections.csv": nettoyer_election,
     "candidats.csv": nettoyer_candidats,
     "valeurs_mensuelles.csv" : nettoyer_valeurs_annuelles
