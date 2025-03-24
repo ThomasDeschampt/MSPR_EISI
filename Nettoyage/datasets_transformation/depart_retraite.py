@@ -1,54 +1,59 @@
 import pandas as pd
 import os
+import numpy as np
+from sklearn.linear_model import LinearRegression
 
-def nettoyer_depart_retraite(fichier_entree, dossier_sortie):
+def nettoyer_retraite(fichier_entree, dossier_sortie):
     try:
-        print(f"Début du traitement du fichier : {fichier_entree}")
-        
-        # Charger le fichier CSV avec le bon séparateur
+        # Chargement du fichier CSV
         df = pd.read_csv(fichier_entree, delimiter=';', dtype=str)
-        
-        # Supprimer les espaces inutiles dans les colonnes et les valeurs
-        df.columns = df.columns.str.strip()
-        df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
-        
-        # Enlever les valeurs entre parenthèses
-        df = df.replace(to_replace=r'\(.*?\)', value='', regex=True)
-        
-        # Renommer les colonnes pour éviter les caractères spéciaux
-        df.rename(columns={
-            'Âge conjoncturel de départ à la retraite': 'Age_depart',
-            'Proportion de personnes fortement limitées au cours de la première année de retraite (%)': 'Proportion_fortement_limitees',
-            'Proportion de personnes limitées, mais pas fortement au cours de la première année de retraite (%)': 'Proportion_limitees',
-            'Proportion de retraités à 61 ans': 'Proportion_retraites_61ans',
-            'Durée moyenne en emploi (hors cumul)': 'Duree_emploi',
-            'Durée moyenne sans emploi ni retraite': 'Duree_sans_emploi',
-            'annee': 'Annee'
-        }, inplace=True)
-        
-        # Supprimer les doublons avant toute conversion
-        df.drop_duplicates(inplace=True)
-        
-        # Convertir les valeurs numériques en float
-        colonnes_a_convertir = ['Proportion_fortement_limitees', 'Proportion_limitees', 'Age_depart', 'Proportion_retraites_61ans', 'Duree_emploi', 'Duree_sans_emploi']
-        for col in colonnes_a_convertir:
-            df[col] = df[col].str.replace(',', '.').astype(float)
-        
-        # Convertir la colonne année en int
-        df['Annee'] = df['Annee'].astype(int)
-        
-        # Supprimer les entrées avant 2002
-        df = df[df['Annee'] >= 2002]
-        
-        # Définir le chemin de sortie
+        print(df.info())
+
+        # Suppression des lignes avec des valeurs manquantes et des doublons
+        df = df.dropna()
+        df = df.drop_duplicates()
+
+        # Renommage de la colonne 'Retraite' pour une meilleure clarté
+        df = df.rename(columns={'Retraite': 'Taux_Retraite'})
+
+        # On garde seulement les années après 2004
+        df['Année'] = df['Année'].astype(int)
+        df = df[df['Année'] >= 2004]
+
+        # Régression linéaire pour estimer les valeurs manquantes jusqu'en 2024
+        annee_min = 2002
+        annee_max = 2024
+        annees_existantes = df['Année'].values.reshape(-1, 1)
+        valeurs_existantes = df['Taux_Retraite'].values.reshape(-1, 1)
+
+        # Entraînement du modèle de régression linéaire
+        modele = LinearRegression()
+        modele.fit(annees_existantes, valeurs_existantes)
+
+        # Prédire les valeurs pour les années manquantes (jusqu'en 2024)
+        annees_manquantes = np.arange(annee_min, annee_max + 1).reshape(-1, 1)
+        predictions = modele.predict(annees_manquantes)
+
+        # Création d'un DataFrame pour les prédictions
+        df_predictions = pd.DataFrame({
+            'Année': annees_manquantes.flatten(),
+            'Taux_Retraite': predictions.flatten()
+        })
+
+        # Fusionner les données existantes et les prédictions
+        df = pd.concat([df, df_predictions]).drop_duplicates(subset=['Année']).sort_values(by='Année')
+
+        #On garde juste deux chiffres après la virgule
+        df['Taux_Retraite'] = df['Taux_Retraite'].astype(float).round(2)
+
+        # Création du dossier de sortie s'il n'existe pas
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)
-        
-        nom_fichier = "depart_retraite_nettoye.csv"
+
+        # Nom du fichier de sortie
+        nom_fichier = "retraite_nettoyer.csv"
         chemin_sortie = os.path.join(dossier_sortie, nom_fichier)
-        
-        # Sauvegarder le fichier nettoyé
         df.to_csv(chemin_sortie, index=False, sep=';')
-        print(f"Fichier nettoyé et sauvegardé : {chemin_sortie}")
+
     except Exception as e:
-        print(f"Erreur lors du traitement de {fichier_entree} : {e}")
+        print(e)

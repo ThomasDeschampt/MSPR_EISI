@@ -2,7 +2,7 @@ import os
 from valeurs_mensuelles import nettoyer_valeurs_annuelles
 from chomage import nettoyer_chomage
 from demographie import nettoyer_demographie
-from depart_retraite import nettoyer_depart_retraite
+from depart_retraite import nettoyer_retraite
 from emplois_prive import nettoyer_emplois_prive
 from emplois_public import nettoyer_emplois_public
 from insecurite import nettoyer_insecurite
@@ -22,7 +22,7 @@ if not os.path.exists(dossier_sortie):
 fichiers_a_traiter = {
     "chomage.csv": nettoyer_chomage,
     "demographie.csv": nettoyer_demographie,
-    "depart_retraite.csv":  nettoyer_depart_retraite,
+    "retraite.csv":  nettoyer_retraite,
     "emplois_prive.csv": nettoyer_emplois_prive,
     "emplois_public.csv": nettoyer_emplois_public,
     "insecurite.csv": nettoyer_insecurite,
