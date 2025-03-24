@@ -8,7 +8,7 @@ def nettoyer_insecurite(fichier_entree,dossier_sortie):
         print(df.info())
         df = df.dropna()
         df = df.drop_duplicates()
-
+        
         # On supprime la colonne non pertinentes
         df = df.drop(columns=['Code_region'])
         df = df.drop(columns=['insee_pop_millesime'])
@@ -20,6 +20,12 @@ def nettoyer_insecurite(fichier_entree,dossier_sortie):
         # Moyenne par année
         df['taux_pour_mille'] = df['taux_pour_mille'].str.replace(',', '.').astype(float)
         moyenne_par_annee = df.groupby('annee')[['nombre', 'taux_pour_mille', 'insee_pop']].mean().reset_index()
+
+        # Garder les années après 2002
+        moyenne_par_annee = moyenne_par_annee[moyenne_par_annee['annee'] > 2002]
+
+        # Arrondis deux chiffres après la virgule 
+        moyenne_par_annee = moyenne_par_annee.round(2)
 
         # Création du nouveau csv nettoyé
         dossier_sortie = "Nettoyage/datasets_nettoyer"
