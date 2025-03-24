@@ -23,7 +23,9 @@ def nettoyer_chomage(fichier_entree,dossier_sortie):
         
         # Moyenne par année
         moyenne_par_annee = df.groupby('Année')['taux de chomage'].mean().reset_index()
-        
+
+        # On arrondi les valeurs à 2 chiffres après la virgule
+        moyenne_par_annee['taux de chomage'] = moyenne_par_annee['taux de chomage'].round(2)
 
         # Création du nouveau csv nettoyé
         dossier_sortie = "Nettoyage/datasets_nettoyer"

@@ -29,9 +29,6 @@ def nettoyer_emplois_public(fichier_entree, dossier_sortie):
         # Prédire les valeurs pour les années manquantes
         annees_manquantes = np.arange(annee_min, annee_max + 1).reshape(-1, 1)
         predictions = modele.predict(annees_manquantes)
-        
-        # Arrondir les valeurs prédites à deux décimales
-        predictions = np.round(predictions, 2)
 
         # Création d'un DataFrame pour les prédictions
         df_predictions = pd.DataFrame({
@@ -41,6 +38,9 @@ def nettoyer_emplois_public(fichier_entree, dossier_sortie):
         
         # Fusionner les données existantes et les prédictions
         df_final = pd.concat([moyenne_par_annee, df_predictions]).drop_duplicates(subset=['Année']).sort_values(by='Année')
+
+        #Arrondir les valeurs à 2 chiffres après la virgule
+        df_final['Nombre de salariés'] = df_final['Nombre de salariés'].round(2)
 
         # Création du dossier de sortie si inexistant
         if not os.path.exists(dossier_sortie):
