@@ -32,7 +32,7 @@ def nettoyer_valeurs_annuelles(fichier_entree, fichier_sortie="valeurs_annuelles
         os.makedirs(dossier_sortie)
 
     # Créer le chemin complet du fichier de sortie
-    nom_fichier = os.path.basename(fichier_sortie)
+    nom_fichier = "consomenage.csv"
     chemin_sortie = os.path.join(dossier_sortie, nom_fichier)
 
     # Sauvegarder au format CSV
