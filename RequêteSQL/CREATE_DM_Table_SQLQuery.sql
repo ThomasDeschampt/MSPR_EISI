@@ -1,6 +1,6 @@
 USE MSPR_DM;
 
--- Supprimer les tables avant recréation
+-- Supprimer les tables avant recrï¿½ation
 DROP TABLE IF EXISTS Faits_Elections;
 DROP TABLE IF EXISTS Candidat;
 DROP TABLE IF EXISTS Economie;
@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS Emplois;
 DROP TABLE IF EXISTS DepartRetraite;
 DROP TABLE IF EXISTS ConsoMenage;
 
--- Création des tables
+-- Crï¿½ation des tables
 CREATE TABLE Economie(
    Id_economie INT PRIMARY KEY IDENTITY(1,1),
    Taux_chomage DECIMAL(10,3),
@@ -55,37 +55,13 @@ CREATE TABLE Emplois(
 CREATE TABLE DepartRetraite(
    Id_depart_retraite INT PRIMARY KEY,
    Annee INT,
-   Categorie_socioprofessionnelle NVARCHAR(100),
-   Proportion_fortement_limitees DECIMAL(10,1),
-   Proportion_limitees DECIMAL(10,1),
-   Age_depart DECIMAL(10,1),
-   Proportion_retraites_61ans DECIMAL(10,1),
-   Duree_emploi DECIMAL(10,1),
-   Duree_sans_emploi DECIMAL(10,1)
+   Age_depart DECIMAL(10,2)
 );
 
 CREATE TABLE ConsoMenage(
    Id_conso_menage INT PRIMARY KEY,
-   Ref_sector NVARCHAR(50),
-   Accounting_entry NVARCHAR(50),
-   Sto NVARCHAR(50),
-   Instr_asset NVARCHAR(50),
-   Activity NVARCHAR(50),
-   Expenditure NVARCHAR(50),
-   Unit_measure NVARCHAR(50),
-   Prices NVARCHAR(50),
-   Transformation NVARCHAR(50),
-   Product NVARCHAR(50),
-   Freq NVARCHAR(50),
-   Obs_status NVARCHAR(50),
-   Conf_status NVARCHAR(50),
-   Ref_year_price DECIMAL(10,1),
-   Decimals INT,
-   Unit_mult INT,
-   Obs_status_fr NVARCHAR(50),
    Annee INT,
-   Obs_value DECIMAL(10,3),
-   Counterpart_area NVARCHAR(50)
+   Prix_consommation DECIMAL(10,2)
 );
 
 CREATE TABLE Candidat(
@@ -96,7 +72,7 @@ CREATE TABLE Candidat(
    Bord NVARCHAR(50)
 );
 
--- Création de Faits_Elections avec FK explicites
+-- Crï¿½ation de Faits_Elections avec FK explicites
 CREATE TABLE Faits_Elections(
    Id_fait_election INT PRIMARY KEY IDENTITY(1,1),
    Annee INT,
