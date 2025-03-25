@@ -13,7 +13,7 @@ def load_full_data():
     LEFT JOIN Emplois d3 ON f.Id_emploi = d3.Id_emploi
     LEFT JOIN Insecurite d4 ON f.Id_insecurite = d4.Id_insecurite
     LEFT JOIN Economie d5 ON f.Id_economie = d5.Id_economie
-    LEFT JOIN DepartRetraite d6 ON f.Id_depart_retraite = d6.Id_depart_retraite
+    LEFT JOIN Retraite d6 ON f.Id_depart_retraite = d6.Id_depart_retraite
     LEFT JOIN Demographie d7 ON f.Id_demographie = d7.Id_demographie;
     """
 
