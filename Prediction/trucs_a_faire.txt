@@ -2,10 +2,10 @@
 1. Préparation des données 
 
 
-    - traitement des valeurs manquantes
-
     - Verification du bruit dans les données
         - suppression des colonnes qui n'ont pas de corrélation avec le vote
+
+    - Enregistrer un nouveau csv avec les données nettoyées
 
 
 2. Mise en place de l'apprentissage

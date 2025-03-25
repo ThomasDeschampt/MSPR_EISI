@@ -13,7 +13,7 @@ def load_full_data():
     LEFT JOIN Emplois d3 ON f.Id_emploi = d3.Id_emploi
     LEFT JOIN Insecurite d4 ON f.Id_insecurite = d4.Id_insecurite
     LEFT JOIN Economie d5 ON f.Id_economie = d5.Id_economie
-    LEFT JOIN Retraite d6 ON f.Id_depart_retraite = d6.Id_depart_retraite
+    LEFT JOIN Retraite d6 ON f.Id_retraite = d6.Id_retraite
     LEFT JOIN Demographie d7 ON f.Id_demographie = d7.Id_demographie;
     """
 
@@ -28,7 +28,7 @@ def load_full_data():
         # On retire les colonnes inutiles
         df = df.loc[:, ~df.columns.duplicated(keep="first")]
         # Les id qui ne sont pas utiles
-        df.drop(['Id_fait_election', 'Id_demographie', 'Id_conso_menage', 'Id_emploi', 'Id_insecurite', 'Id_economie', 'Id_depart_retraite', 'Id_candidat'], axis=1, inplace=True)
+        df.drop(['Id_fait_election', 'Id_demographie', 'Id_conso_menage', 'Id_emploi', 'Id_insecurite', 'Id_economie', 'Id_retraite', 'Id_candidat'], axis=1, inplace=True)
         # Les valeurs qui ne sont pas en pourcentage
         df.drop(['Inscrits', 'Absentions', 'Votants', 'Nombre_de_voix', 'BlancsNuls'], axis=1, inplace=True)
 
