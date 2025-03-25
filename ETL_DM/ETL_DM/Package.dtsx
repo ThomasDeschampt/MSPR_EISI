@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="135"
-  DTS:VersionGUID="{F134E074-6E00-453B-9073-0116C2494927}">
+  DTS:VersionBuild="147"
+  DTS:VersionGUID="{A9A367D9-CEEA-4D24-8530-8AF8A65A2E1C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -200,15 +200,15 @@
                       cachedName="Id_economie"
                       lineageId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_economie]" />
                     <inputColumn
-                      refId="Package\Data Flow Task Candidat\Merge Join.Inputs[Merge Join Right Input].Columns[Id_depart_retraite]"
-                      cachedDataType="i4"
-                      cachedName="Id_depart_retraite"
-                      lineageId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_depart_retraite]" />
-                    <inputColumn
                       refId="Package\Data Flow Task Candidat\Merge Join.Inputs[Merge Join Right Input].Columns[Id_demographie]"
                       cachedDataType="i4"
                       cachedName="Id_demographie"
                       lineageId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_demographie]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Candidat\Merge Join.Inputs[Merge Join Right Input].Columns[Id_retraite]"
+                      cachedDataType="i4"
+                      cachedName="Id_retraite"
+                      lineageId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_retraite]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -464,19 +464,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task Candidat\Merge Join.Inputs[Merge Join Right Input].Columns[Id_depart_retraite]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output].Columns[Id_demographie]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output].Columns[Id_demographie]"
@@ -487,6 +474,19 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Data Flow Task Candidat\Merge Join.Inputs[Merge Join Right Input].Columns[Id_demographie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output].Columns[Id_retraite]"
+                      name="Id_retraite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task Candidat\Merge Join.Inputs[Merge Join Right Input].Columns[Id_retraite]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -897,12 +897,6 @@
                       externalMetadataColumnId="Package\Data Flow Task Candidat\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_economie]"
                       lineageId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output].Columns[Id_economie]" />
                     <inputColumn
-                      refId="Package\Data Flow Task Candidat\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_depart_retraite]"
-                      cachedDataType="i4"
-                      cachedName="Id_depart_retraite"
-                      externalMetadataColumnId="Package\Data Flow Task Candidat\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output].Columns[Id_depart_retraite]" />
-                    <inputColumn
                       refId="Package\Data Flow Task Candidat\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_demographie]"
                       cachedDataType="i4"
                       cachedName="Id_demographie"
@@ -984,13 +978,13 @@
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Candidat\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task Candidat\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Candidat\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1233,15 +1227,6 @@
                       name="Id_economie"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_candidat]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -1249,6 +1234,15 @@
                       externalMetadataColumnId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_candidat]"
                       name="Id_candidat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      name="Id_retraite"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1326,13 +1320,13 @@
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1429,10 +1423,10 @@
                       lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Error Output].Columns[Id_economie]"
                       name="Id_economie" />
                     <outputColumn
-                      refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite" />
+                      lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
+                      name="Id_retraite" />
                     <outputColumn
                       refId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Error Output].Columns[Id_candidat]"
                       dataType="i4"
@@ -1998,10 +1992,10 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task Candidat\Sort 1.Inputs[Sort Input].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task Candidat\Sort 1.Inputs[Sort Input].Columns[Id_candidat]"
                       cachedDataType="i4"
-                      cachedName="Id_depart_retraite"
-                      lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]">
+                      cachedName="Id_candidat"
+                      lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_candidat]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2014,10 +2008,10 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task Candidat\Sort 1.Inputs[Sort Input].Columns[Id_candidat]"
+                      refId="Package\Data Flow Task Candidat\Sort 1.Inputs[Sort Input].Columns[Id_retraite]"
                       cachedDataType="i4"
-                      cachedName="Id_candidat"
-                      lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_candidat]">
+                      cachedName="Id_retraite"
+                      lineageId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_retraite]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2258,19 +2252,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_candidat]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_candidat]"
@@ -2281,6 +2262,19 @@
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_candidat]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Candidat\Sort 1.Outputs[Sort Output].Columns[Id_retraite]"
+                      name="Id_retraite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output].Columns[Id_retraite]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2297,14 +2291,14 @@
               startId="Package\Data Flow Task Candidat\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Data Flow Task Candidat.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task Candidat\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Data Flow Task Candidat.Paths[OLE DB Source Output1]"
               endId="Package\Data Flow Task Candidat\Sort.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task Candidat\OLE DB Candidats.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task Candidat.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task Candidat\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task Candidat\OLE DB Faits_Elections.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task Candidat.Paths[Sort Output]"
               endId="Package\Data Flow Task Candidat\Merge Join.Inputs[Merge Join Left Input]"
@@ -3234,13 +3228,13 @@
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task Direct\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4437,12 +4431,6 @@
                       externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
                       lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Annee]" />
                     <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].Columns[Id]"
-                      cachedDataType="i4"
-                      cachedName="Id"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Id]" />
-                    <inputColumn
                       refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].Columns[Taux_Retraite]"
                       cachedDataType="numeric"
                       cachedName="Taux_Retraite"
@@ -4450,13 +4438,15 @@
                       cachedScale="2"
                       externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Age_depart]"
                       lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Taux_Retraite]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_retraite]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
                       dataType="i4"
@@ -4467,6 +4457,10 @@
                       name="Age_depart"
                       precision="10"
                       scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5613,13 +5607,13 @@ where [refTable].[Annee] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DepartRetraite]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Retraite]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DepartRetraite]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Retraite]) [refTable]
 where [refTable].[Annee] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -5651,7 +5645,7 @@ where [refTable].[Annee] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Id_depart_retraite" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Annee" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Categorie_socioprofessionnelle" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Proportion_fortement_limitees" dataType="DT_NUMERIC" length="0" precision="10" scale="1" codePage="0"/&gt;&lt;referenceColumn name="Proportion_limitees" dataType="DT_NUMERIC" length="0" precision="10" scale="1" codePage="0"/&gt;&lt;referenceColumn name="Age_depart" dataType="DT_NUMERIC" length="0" precision="10" scale="1" codePage="0"/&gt;&lt;referenceColumn name="Proportion_retraites_61ans" dataType="DT_NUMERIC" length="0" precision="10" scale="1" codePage="0"/&gt;&lt;referenceColumn name="Duree_emploi" dataType="DT_NUMERIC" length="0" precision="10" scale="1" codePage="0"/&gt;&lt;referenceColumn name="Duree_sans_emploi" dataType="DT_NUMERIC" length="0" precision="10" scale="1" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Id_retraite" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Annee" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Age_depart" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -5696,11 +5690,11 @@ where [refTable].[Annee] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task FK Key\Lookup 1 1 1 1 1.Inputs[Lookup Input].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task FK Key\Lookup 1 1 1 1 1.Inputs[Lookup Input].Columns[Id_retraite]"
                       cachedDataType="i4"
-                      cachedName="Id_depart_retraite"
+                      cachedName="Id_retraite"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -5711,7 +5705,7 @@ where [refTable].[Annee] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Id_depart_retraite</property>
+                          name="CopyFromReferenceColumn">Id_retraite</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -5811,7 +5805,7 @@ where [refTable].[Annee] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Id_conso_menage" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Ref_sector" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Accounting_entry" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Sto" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Instr_asset" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Activity" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Expenditure" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Unit_measure" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Prices" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Transformation" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Product" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Freq" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Obs_status" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Conf_status" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Ref_year_price" dataType="DT_NUMERIC" length="0" precision="10" scale="1" codePage="0"/&gt;&lt;referenceColumn name="Decimals" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Unit_mult" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Obs_status_fr" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Annee" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Obs_value" dataType="DT_NUMERIC" length="0" precision="10" scale="3" codePage="0"/&gt;&lt;referenceColumn name="Counterpart_area" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Id_conso_menage" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Annee" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Prix_consommation" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -6394,7 +6388,7 @@ WHERE Id_fait_election = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE Faits_Elections
-SET Id_depart_retraite = ?
+SET Id_retraite = ?
 WHERE Id_fait_election = ?</property>
                 <property
                   dataType="System.Int32"
@@ -6424,11 +6418,11 @@ WHERE Id_fait_election = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_fait_election]" />
                     <inputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1.Inputs[OLE DB Command Input].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1.Inputs[OLE DB Command Input].Columns[Id_retraite]"
                       cachedDataType="i4"
-                      cachedName="Id_depart_retraite"
+                      cachedName="Id_retraite"
                       externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]" />
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6795,15 +6789,6 @@ WHERE Id_fait_election = ?</property>
                       name="Id_economie"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre_de_voix]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
@@ -6833,6 +6818,15 @@ WHERE Id_fait_election = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_candidat]"
                       name="Id_candidat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      name="Id_retraite"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -6898,10 +6892,6 @@ WHERE Id_fait_election = ?</property>
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre_de_voix]"
                       dataType="numeric"
                       name="Nombre_de_voix"
@@ -6917,6 +6907,10 @@ WHERE Id_fait_election = ?</property>
                       refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -7013,10 +7007,10 @@ WHERE Id_fait_election = ?</property>
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id_economie]"
                       name="Id_economie" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite" />
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
+                      name="Id_retraite" />
                     <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id_candidat]"
                       dataType="i4"
@@ -7231,15 +7225,6 @@ WHERE Id_fait_election = ?</property>
                       name="Id_economie"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].Columns[Nombre_de_voix]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
@@ -7269,6 +7254,15 @@ WHERE Id_fait_election = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].Columns[Id_candidat]"
                       name="Id_candidat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      name="Id_retraite"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -7334,10 +7328,6 @@ WHERE Id_fait_election = ?</property>
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].ExternalColumns[Nombre_de_voix]"
                       dataType="numeric"
                       name="Nombre_de_voix"
@@ -7353,6 +7343,10 @@ WHERE Id_fait_election = ?</property>
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -7449,10 +7443,10 @@ WHERE Id_fait_election = ?</property>
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Error Output].Columns[Id_economie]"
                       name="Id_economie" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite" />
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
+                      name="Id_retraite" />
                     <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1.Outputs[OLE DB Source Error Output].Columns[Id_candidat]"
                       dataType="i4"
@@ -7667,15 +7661,6 @@ WHERE Id_fait_election = ?</property>
                       name="Id_economie"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].Columns[Nombre_de_voix]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
@@ -7705,6 +7690,15 @@ WHERE Id_fait_election = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].Columns[Id_candidat]"
                       name="Id_candidat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      name="Id_retraite"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -7770,10 +7764,6 @@ WHERE Id_fait_election = ?</property>
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Nombre_de_voix]"
                       dataType="numeric"
                       name="Nombre_de_voix"
@@ -7789,6 +7779,10 @@ WHERE Id_fait_election = ?</property>
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -7885,10 +7879,10 @@ WHERE Id_fait_election = ?</property>
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_economie]"
                       name="Id_economie" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite" />
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
+                      name="Id_retraite" />
                     <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_candidat]"
                       dataType="i4"
@@ -8103,15 +8097,6 @@ WHERE Id_fait_election = ?</property>
                       name="Id_economie"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].Columns[Nombre_de_voix]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
@@ -8141,6 +8126,15 @@ WHERE Id_fait_election = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_candidat]"
                       name="Id_candidat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      name="Id_retraite"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -8206,10 +8200,6 @@ WHERE Id_fait_election = ?</property>
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Nombre_de_voix]"
                       dataType="numeric"
                       name="Nombre_de_voix"
@@ -8225,6 +8215,10 @@ WHERE Id_fait_election = ?</property>
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -8321,10 +8315,10 @@ WHERE Id_fait_election = ?</property>
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_economie]"
                       name="Id_economie" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite" />
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
+                      name="Id_retraite" />
                     <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_candidat]"
                       dataType="i4"
@@ -8539,15 +8533,6 @@ WHERE Id_fait_election = ?</property>
                       name="Id_economie"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Nombre_de_voix]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
@@ -8577,6 +8562,15 @@ WHERE Id_fait_election = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_candidat]"
                       name="Id_candidat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      name="Id_retraite"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -8642,10 +8636,6 @@ WHERE Id_fait_election = ?</property>
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Nombre_de_voix]"
                       dataType="numeric"
                       name="Nombre_de_voix"
@@ -8661,6 +8651,10 @@ WHERE Id_fait_election = ?</property>
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -8757,10 +8751,10 @@ WHERE Id_fait_election = ?</property>
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_economie]"
                       name="Id_economie" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite" />
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
+                      name="Id_retraite" />
                     <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_candidat]"
                       dataType="i4"
@@ -8975,15 +8969,6 @@ WHERE Id_fait_election = ?</property>
                       name="Id_economie"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Nombre_de_voix]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
@@ -9013,6 +8998,15 @@ WHERE Id_fait_election = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_candidat]"
                       name="Id_candidat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].Columns[Id_retraite]"
+                      name="Id_retraite"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -9078,10 +9072,6 @@ WHERE Id_fait_election = ?</property>
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Nombre_de_voix]"
                       dataType="numeric"
                       name="Nombre_de_voix"
@@ -9097,6 +9087,10 @@ WHERE Id_fait_election = ?</property>
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Output].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -9193,10 +9187,10 @@ WHERE Id_fait_election = ?</property>
                       lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_economie]"
                       name="Id_economie" />
                     <outputColumn
-                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
+                      refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite" />
+                      lineageId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_retraite]"
+                      name="Id_retraite" />
                     <outputColumn
                       refId="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1 1.Outputs[OLE DB Source Error Output].Columns[Id_candidat]"
                       dataType="i4"
@@ -9243,14 +9237,14 @@ WHERE Id_fait_election = ?</property>
               startId="Package\Data Flow Task FK Key\Lookup 1 1 1 1.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task FK Key.Paths[Lookup Match Output4]"
-              endId="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task FK Key\Lookup 1 1 1 1 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task FK Key.Paths[Lookup Match Output5]"
               endId="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1 1.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task FK Key\Lookup 1 1 1 1 1 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task FK Key.Paths[Lookup Match Output5]"
+              endId="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task FK Key\Lookup 1 1 1 1 1.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task FK Key.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task FK Key\Lookup.Inputs[Lookup Input]"
@@ -9551,7 +9545,7 @@ where [refTable].[Annee] = ? and [refTable].[Tour] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Id_fait_election" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Annee" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Tour" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Inscrits" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Absentions" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Pourcentage_Abstention" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Votants" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Pourcentage_Votants" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="BlancsNuls" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Nombre_de_voix" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Ratio_voix_exprime" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Id_demographie" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_conso_menage" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_emploi" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_insecurite" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_economie" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_depart_retraite" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_candidat" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Id_fait_election" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Annee" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Tour" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Inscrits" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Absentions" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Pourcentage_Abstention" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Votants" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Pourcentage_Votants" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="BlancsNuls" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Nombre_de_voix" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Ratio_voix_exprime" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Id_demographie" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_conso_menage" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_emploi" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_insecurite" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_economie" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_retraite" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Id_candidat" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -9856,20 +9850,6 @@ where [refTable].[Annee] = ? and [refTable].[Tour] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2.Outputs[Lookup Match Output].Columns[Id_depart_retraite]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2.Outputs[Lookup Match Output].Columns[Id_depart_retraite]"
-                      name="Id_depart_retraite"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Id_depart_retraite</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2.Outputs[Lookup Match Output].Columns[Id_candidat]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
@@ -9881,6 +9861,20 @@ where [refTable].[Annee] = ? and [refTable].[Tour] = ?</property>
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
                           name="CopyFromReferenceColumn">Id_candidat</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2.Outputs[Lookup Match Output].Columns[Id_retraite]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2.Outputs[Lookup Match Output].Columns[Id_retraite]"
+                      name="Id_retraite"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Id_retraite</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -10393,13 +10387,13 @@ WHERE Annee = ?
                       dataType="i4"
                       name="Id_economie" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_candidat]"
                       dataType="i4"
                       name="Id_candidat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_retraite]"
+                      dataType="i4"
+                      name="Id_retraite" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -12177,7 +12171,7 @@ WHERE Annee = ?
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F6DBD40A-96F5-4E7E-9AA6-BC59FC3F54DB}"
-          SQLTask:SqlStatementSource="USE MSPR_DM;&#xA;&#xA;-- Supprimer les tables avant recr�ation&#xA;DROP TABLE IF EXISTS Faits_Elections;&#xA;DROP TABLE IF EXISTS Candidat;&#xA;DROP TABLE IF EXISTS Economie;&#xA;DROP TABLE IF EXISTS Demographie;&#xA;DROP TABLE IF EXISTS Insecurite;&#xA;DROP TABLE IF EXISTS Emplois;&#xA;DROP TABLE IF EXISTS Retraite;&#xA;DROP TABLE IF EXISTS ConsoMenage;&#xA;&#xA;-- Cr�ation des tables&#xA;CREATE TABLE Economie(&#xA;   Id_economie INT PRIMARY KEY IDENTITY(1,1),&#xA;   Taux_chomage DECIMAL(10,3),&#xA;   Pib INT,&#xA;   Annee INT&#xA;);&#xA;&#xA;CREATE TABLE Demographie(&#xA;   Id_demographie INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Population DECIMAL(10,1),&#xA;   Naissances DECIMAL(10,1),&#xA;   Deces DECIMAL(10,1),&#xA;   SoldeNaturel DECIMAL(10,1),&#xA;   SoldeMigratoire DECIMAL(10,1),&#xA;   Ajustement DECIMAL(10,1)&#xA;);&#xA;&#xA;CREATE TABLE Insecurite(&#xA;   Id_insecurite INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Nombre FLOAT,&#xA;   Taux_pour_mille FLOAT,&#xA;   insee_pop FLOAT&#xA;);&#xA;&#xA;CREATE TABLE Emplois(&#xA;   Id_emploi INT PRIMARY KEY IDENTITY(1,1),&#xA;   Annee INT,&#xA;   Nombre_salaries_public FLOAT,&#xA;   Nombre_salaries_prive FLOAT,&#xA;   Masse_salariale_T50_jours_brut FLOAT,&#xA;   Glissement_trimestriel_masse_salariale_T50_jours_cvs FLOAT,&#xA;   Glissement_trimestriel_masse_salariale_T70_jours_cvs FLOAT,&#xA;   Glissement_annuel_masse_salariale_T50_jours_cvs FLOAT,&#xA;   Glissement_annuel_masse_salariale_T70_jours_cvs FLOAT,&#xA;   Masse_salariale_T70_jours_brut FLOAT,&#xA;   Masse_salariale_T50_jours_cvs FLOAT,&#xA;   Masse_salariale_T70_jours_cvs FLOAT&#xA;);&#xA;&#xA;CREATE TABLE Retraite(&#xA;   Id_depart_retraite INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Age_depart DECIMAL(10,2)&#xA;);&#xA;&#xA;CREATE TABLE ConsoMenage(&#xA;   Id_conso_menage INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Prix_consommation DECIMAL(10,2)&#xA;);&#xA;&#xA;CREATE TABLE Candidat(&#xA;   Id_candidat INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Tour INT,&#xA;   Parti NVARCHAR(50),&#xA;   Bord NVARCHAR(50)&#xA;);&#xA;&#xA;-- Cr�ation de Faits_Elections avec FK explicites&#xA;CREATE TABLE Faits_Elections(&#xA;   Id_fait_election INT PRIMARY KEY IDENTITY(1,1),&#xA;   Annee INT,&#xA;   Tour INT,&#xA;   Inscrits INT,&#xA;   Absentions INT,&#xA;   Pourcentage_Abstention DECIMAL(10,2),&#xA;   Votants INT,&#xA;   Pourcentage_Votants DECIMAL(10,2),&#xA;   BlancsNuls INT,&#xA;   Nombre_de_voix DECIMAL(10,2),&#xA;   Ratio_voix_exprime DECIMAL(10,2),&#xA;   Id_demographie INT,&#xA;   Id_conso_menage INT,&#xA;   Id_emploi INT,&#xA;   Id_insecurite INT,&#xA;   Id_economie INT,&#xA;   Id_depart_retraite INT,&#xA;   Id_candidat INT,&#xA;   CONSTRAINT FK_FaitsElections_Candidat FOREIGN KEY(Id_candidat) REFERENCES Candidat(Id_candidat),&#xA;   CONSTRAINT FK_FaitsElections_Demographie FOREIGN KEY(Id_demographie) REFERENCES Demographie(Id_demographie),&#xA;   CONSTRAINT FK_FaitsElections_ConsoMenage FOREIGN KEY(Id_conso_menage) REFERENCES ConsoMenage(Id_conso_menage),&#xA;   CONSTRAINT FK_FaitsElections_Emplois FOREIGN KEY(Id_emploi) REFERENCES Emplois(Id_emploi),&#xA;   CONSTRAINT FK_FaitsElections_Insecurite FOREIGN KEY(Id_insecurite) REFERENCES Insecurite(Id_insecurite),&#xA;   CONSTRAINT FK_FaitsElections_Economie FOREIGN KEY(Id_economie) REFERENCES Economie(Id_economie),&#xA;   CONSTRAINT FK_FaitsElections_DepartRetraite FOREIGN KEY(Id_depart_retraite) REFERENCES DepartRetraite(Id_depart_retraite)&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE MSPR_DM;&#xA;&#xA;-- Supprimer les tables avant recr�ation&#xA;DROP TABLE IF EXISTS Faits_Elections;&#xA;DROP TABLE IF EXISTS Candidat;&#xA;DROP TABLE IF EXISTS Economie;&#xA;DROP TABLE IF EXISTS Demographie;&#xA;DROP TABLE IF EXISTS Insecurite;&#xA;DROP TABLE IF EXISTS Emplois;&#xA;DROP TABLE IF EXISTS Retraite;&#xA;DROP TABLE IF EXISTS ConsoMenage;&#xA;&#xA;&#xA;-- Cr�ation des tables&#xA;CREATE TABLE Economie(&#xA;   Id_economie INT PRIMARY KEY IDENTITY(1,1),&#xA;   Taux_chomage DECIMAL(10,3),&#xA;   Pib INT,&#xA;   Annee INT&#xA;);&#xA;&#xA;CREATE TABLE Demographie(&#xA;   Id_demographie INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Population DECIMAL(10,1),&#xA;   Naissances DECIMAL(10,1),&#xA;   Deces DECIMAL(10,1),&#xA;   SoldeNaturel DECIMAL(10,1),&#xA;   SoldeMigratoire DECIMAL(10,1),&#xA;   Ajustement DECIMAL(10,1)&#xA;);&#xA;&#xA;CREATE TABLE Insecurite(&#xA;   Id_insecurite INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Nombre FLOAT,&#xA;   Taux_pour_mille FLOAT,&#xA;   insee_pop FLOAT&#xA;);&#xA;&#xA;CREATE TABLE Emplois(&#xA;   Id_emploi INT PRIMARY KEY IDENTITY(1,1),&#xA;   Annee INT,&#xA;   Nombre_salaries_public FLOAT,&#xA;   Nombre_salaries_prive FLOAT,&#xA;   Masse_salariale_T50_jours_brut FLOAT,&#xA;   Glissement_trimestriel_masse_salariale_T50_jours_cvs FLOAT,&#xA;   Glissement_trimestriel_masse_salariale_T70_jours_cvs FLOAT,&#xA;   Glissement_annuel_masse_salariale_T50_jours_cvs FLOAT,&#xA;   Glissement_annuel_masse_salariale_T70_jours_cvs FLOAT,&#xA;   Masse_salariale_T70_jours_brut FLOAT,&#xA;   Masse_salariale_T50_jours_cvs FLOAT,&#xA;   Masse_salariale_T70_jours_cvs FLOAT&#xA;);&#xA;&#xA;CREATE TABLE Retraite(&#xA;   Id_retraite INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Age_depart DECIMAL(10,2)&#xA;);&#xA;&#xA;CREATE TABLE ConsoMenage(&#xA;   Id_conso_menage INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Prix_consommation DECIMAL(10,2)&#xA;);&#xA;&#xA;CREATE TABLE Candidat(&#xA;   Id_candidat INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Tour INT,&#xA;   Parti NVARCHAR(50),&#xA;   Bord NVARCHAR(50)&#xA;);&#xA;&#xA;-- Cr�ation de Faits_Elections avec FK explicites&#xA;CREATE TABLE Faits_Elections(&#xA;   Id_fait_election INT PRIMARY KEY IDENTITY(1,1),&#xA;   Annee INT,&#xA;   Tour INT,&#xA;   Inscrits INT,&#xA;   Absentions INT,&#xA;   Pourcentage_Abstention DECIMAL(10,2),&#xA;   Votants INT,&#xA;   Pourcentage_Votants DECIMAL(10,2),&#xA;   BlancsNuls INT,&#xA;   Nombre_de_voix DECIMAL(10,2),&#xA;   Ratio_voix_exprime DECIMAL(10,2),&#xA;   Id_demographie INT,&#xA;   Id_conso_menage INT,&#xA;   Id_emploi INT,&#xA;   Id_insecurite INT,&#xA;   Id_economie INT,&#xA;   Id_retraite INT,&#xA;   Id_candidat INT,&#xA;   CONSTRAINT FK_FaitsElections_Candidat FOREIGN KEY(Id_candidat) REFERENCES Candidat(Id_candidat),&#xA;   CONSTRAINT FK_FaitsElections_Demographie FOREIGN KEY(Id_demographie) REFERENCES Demographie(Id_demographie),&#xA;   CONSTRAINT FK_FaitsElections_ConsoMenage FOREIGN KEY(Id_conso_menage) REFERENCES ConsoMenage(Id_conso_menage),&#xA;   CONSTRAINT FK_FaitsElections_Emplois FOREIGN KEY(Id_emploi) REFERENCES Emplois(Id_emploi),&#xA;   CONSTRAINT FK_FaitsElections_Insecurite FOREIGN KEY(Id_insecurite) REFERENCES Insecurite(Id_insecurite),&#xA;   CONSTRAINT FK_FaitsElections_Economie FOREIGN KEY(Id_economie) REFERENCES Economie(Id_economie),&#xA;   CONSTRAINT FK_FaitsElections_Retraite FOREIGN KEY(Id_retraite) REFERENCES Retraite(Id_retraite)&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -12251,10 +12245,6 @@ WHERE Annee = ?
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="195.2,41.6"
-          Id="Package\Data Flow Task Candidat"
-          TopLeft="65.4999967217442,279.233332344955" />
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\Data Flow Task Direct"
@@ -12417,20 +12407,24 @@ WHERE Annee = ?
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\Data Flow Task Candidat"
+          TopLeft="65.4999967217442,279.233332344955" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Contrainte 5]"
-          TopLeft="381.333314437834,297.333332010474">
+          Id="Package.PrecedenceConstraints[Contrainte 6]"
+          TopLeft="162.383329668062,320.833332344955">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-120.633317716089,0"
+              EndConnector="0,52.999998427034"
               Start="0,0"
-              End="-113.133317716089,0">
+              End="0,45.499998427034">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-113.133317716089,0" />
+                    End="0,45.499998427034" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12440,19 +12434,19 @@ WHERE Annee = ?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Contrainte 6]"
-          TopLeft="162.383329668062,320.833332344955">
+          Id="Package.PrecedenceConstraints[Contrainte 5]"
+          TopLeft="381.333314437834,297.333332010474">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.9999984270342"
+              EndConnector="-120.63331771609,0"
               Start="0,0"
-              End="0,45.4999984270342">
+              End="-113.13331771609,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.4999984270342" />
+                    End="-113.13331771609,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12465,195 +12459,6 @@ WHERE Annee = ?
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task Candidat">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Data Flow Task Candidat\Merge Join"
-          TopLeft="492.499994978309,263.29999858439" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Data Flow Task Candidat\Sort 1"
-          TopLeft="298.999996438622,306.099997481704" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Data Flow Task Candidat\Sort"
-          TopLeft="304.499997332692,230.299998629093" />
-        <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\Data Flow Task Candidat\OLE DB Faits_Elections"
-          TopLeft="55.4999997019768,303.499996006489" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task Candidat\OLE DB Destination"
-          TopLeft="694.499992415309,258.29999910593" />
-        <NodeLayout
-          Size="166.4,41.6"
-          Id="Package\Data Flow Task Candidat\OLE DB Candidats"
-          TopLeft="50.4999993294477,227.499996691942" />
-        <EdgeLayout
-          Id="Package\Data Flow Task Candidat.Paths[Sort Output1]"
-          TopLeft="396.599996438622,326.899997481704">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="95.8999985396862,-37.1999988973142"
-              Start="0,0"
-              End="88.3999985396862,-37.1999988973142">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="51.408888045152,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51.408888045152,0"
-                    Point2="55.408888045152,0"
-                    Point3="55.408888045152,-4" />
-                  <mssgle:LineSegment
-                    End="55.408888045152,-33.1999988973142" />
-                  <mssgle:CubicBezierSegment
-                    Point1="55.408888045152,-33.1999988973142"
-                    Point2="55.408888045152,-37.1999988973142"
-                    Point3="59.408888045152,-37.1999988973142" />
-                  <mssgle:LineSegment
-                    End="88.3999985396862,-37.1999988973142" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task Candidat.Paths[Sort Output]"
-          TopLeft="402.099997332692,251.099998629093">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="90.3999976456166,32.9999999552965"
-              Start="0,0"
-              End="82.8999976456166,32.9999999552965">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="41.1999988228083,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.1999988228083,0"
-                    Point2="45.1999988228083,0"
-                    Point3="45.1999988228083,4" />
-                  <mssgle:LineSegment
-                    End="45.1999988228083,28.9999999552965" />
-                  <mssgle:CubicBezierSegment
-                    Point1="45.1999988228083,28.9999999552965"
-                    Point2="45.1999988228083,32.9999999552965"
-                    Point3="49.1999988228083,32.9999999552965" />
-                  <mssgle:LineSegment
-                    End="82.8999976456166,32.9999999552965" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task Candidat.Paths[OLE DB Source Output1]"
-          TopLeft="216.899999329448,249.699997660518">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="87.5999980032445,0"
-              Start="0,0"
-              End="80.0999980032445,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="80.0999980032445,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task Candidat.Paths[OLE DB Source Output]"
-          TopLeft="245.099999701977,325.599996744096">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.8999967366457,0"
-              Start="0,0"
-              End="46.3999967366457,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="46.3999967366457,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task Candidat.Paths[Merge Join Output]"
-          TopLeft="622.099994978309,281.59999884516">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="72.3999974370003,0"
-              Start="0,0"
-              End="64.8999974370003,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="64.8999974370003,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Candidat\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Data Flow Task Direct">
     <LayoutInfo>
       <GraphLayout
@@ -12663,6 +12468,22 @@ WHERE Annee = ?
           Id="Package\Data Flow Task Direct\OLE DB Inescurite DM"
           TopLeft="331.333318808841,271.766665232314" />
         <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Emploi DM"
+          TopLeft="327.166650730703,129.966666009757" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB ConsoMenage"
+          TopLeft="71.3333297363588,492.033331947194" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Retraite"
+          TopLeft="72.9999995902182,415.833335075047" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Insecurite"
+          TopLeft="73.8333295997648,268.099998173912" />
+        <NodeLayout
           Size="184.8,41.6"
           Id="Package\Data Flow Task Direct\OLE DB MasseSalarial"
           TopLeft="77.1666627509728,133.766665774716" />
@@ -12671,29 +12492,69 @@ WHERE Annee = ?
           Id="Package\Data Flow Task Direct\OLE DB Demographie DM"
           TopLeft="330.499982242784,343.770887609865" />
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Destination"
-          TopLeft="331.499995589256,196.530118410666" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Emploi DM"
-          TopLeft="327.166650730703,129.966666009757" />
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Retraite"
-          TopLeft="72.9999995902182,415.833335075047" />
-        <NodeLayout
           Size="181.6,41.6"
           Id="Package\Data Flow Task Direct\OLE DB Demographie"
           TopLeft="72.1666630241607,343.566664527191" />
         <NodeLayout
-          Size="164,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Insecurite"
-          TopLeft="73.8333295997648,268.099998173912" />
+          Size="174.4,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Retraite DM"
+          TopLeft="332.99998210619,416.166665630076" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Destination"
+          TopLeft="331.499995589256,196.530118410666" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Destination 1"
+          TopLeft="335.499983608723,489.499998662074" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Data Flow Task Direct\OLE DB Annee"
           TopLeft="77.4999989271164,200.530117904027" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output5]"
+          TopLeft="258.533329736359,511.566665304634">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.9666538723647,0"
+              Start="0,0"
+              End="69.4666538723647,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="69.4666538723647,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output4]"
+          TopLeft="228.999999590218,436.800000352561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.999982515971,0"
+              Start="0,0"
+              End="96.4999825159715,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="96.4999825159715,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output3]"
           TopLeft="227.099998927116,219.330118157347">
@@ -12782,119 +12643,11 @@ WHERE Annee = ?
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="187.2,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB ConsoMenage"
-          TopLeft="71.3333297363588,492.033331947194" />
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Retraite DM"
-          TopLeft="332.99998210619,416.166665630076" />
-        <EdgeLayout
-          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output4]"
-          TopLeft="228.999999590218,436.800000352561">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="103.999982515971,0"
-              Start="0,0"
-              End="96.4999825159715,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="96.4999825159715,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Destination 1"
-          TopLeft="335.499983608723,489.499998662074" />
-        <EdgeLayout
-          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output5]"
-          TopLeft="258.533329736359,511.566665304634">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76.9666538723647,0"
-              Start="0,0"
-              End="69.4666538723647,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="69.4666538723647,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB MasseSalarial">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Demographie DM">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Retraite">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Inescurite DM">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Insecurite">
+    design-time-name="Package\Data Flow Task Direct\OLE DB Retraite DM">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12920,6 +12673,45 @@ WHERE Annee = ?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Inescurite DM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Retraite">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task Direct\OLE DB Emploi DM">
     <Properties>
       <Property>
@@ -12933,7 +12725,33 @@ WHERE Annee = ?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Destination">
+    design-time-name="Package\Data Flow Task Direct\OLE DB MasseSalarial">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB ConsoMenage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Insecurite">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12947,6 +12765,32 @@ WHERE Annee = ?
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task Direct\OLE DB Annee">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Demographie DM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13071,10 +12915,6 @@ WHERE Annee = ?
           Size="112.8,41.6"
           Id="Package\Data Flow Task FK Key\Lookup"
           TopLeft="336.166662186384,258.999996818602" />
-        <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1"
-          TopLeft="527.166659787297,657.166668727994" />
         <EdgeLayout
           Id="Package\Data Flow Task FK Key.Paths[OLE DB Source Output5]"
           TopLeft="274.699998658896,784.650004235655">
@@ -13094,9 +12934,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13118,9 +12956,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13142,9 +12978,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13166,9 +13000,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13190,9 +13022,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13214,38 +13044,12 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task FK Key.Paths[Lookup Match Output5]"
-          TopLeft="449.966662171484,783.316670415551">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="77.1999976158142,0"
-              Start="0,0"
-              End="69.6999976158142,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="69.6999976158142,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-13.3413879108429,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task FK Key.Paths[Lookup Match Output4]"
-          TopLeft="449.966662171484,679.050002775341">
+          TopLeft="449.966662171484,783.316670415551">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13363,6 +13167,34 @@ WHERE Annee = ?
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Data Flow Task FK Key\OLE DB Command 1 1 1 1 1"
+          TopLeft="527.166659787297,657.166668727994" />
+        <EdgeLayout
+          Id="Package\Data Flow Task FK Key.Paths[Lookup Match Output5]"
+          TopLeft="449.966662171483,679.050002775341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77.199997615814,0"
+              Start="0,0"
+              End="69.699997615814,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="69.699997615814,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-13.341387910843,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -13372,7 +13204,7 @@ WHERE Annee = ?
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -13382,7 +13214,7 @@ WHERE Annee = ?
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13395,17 +13227,17 @@ WHERE Annee = ?
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DepartRetraite]</Value>
+          type="q3:string">[dbo].[Retraite]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13468,6 +13300,19 @@ WHERE Annee = ?
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task FK Key\OLE DB Source 1 1 1 1 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -13593,9 +13438,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13629,9 +13472,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13653,9 +13494,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13677,9 +13516,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13701,9 +13538,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13725,9 +13560,7 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13787,7 +13620,7 @@ WHERE Annee = ?
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -13797,7 +13630,7 @@ WHERE Annee = ?
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14042,8 +13875,174 @@ WHERE Annee = ?
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\Data Flow Task Candidat">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Data Flow Task Candidat\Merge Join"
+          TopLeft="492.499994978309,263.29999858439" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task Candidat\Sort 1"
+          TopLeft="298.999996438622,306.099997481704" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Data Flow Task Candidat\Sort"
+          TopLeft="304.499997332692,230.299998629093" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Data Flow Task Candidat\OLE DB Faits_Elections"
+          TopLeft="55.4999997019768,303.499996006489" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task Candidat\OLE DB Destination"
+          TopLeft="694.499992415309,258.29999910593" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Data Flow Task Candidat\OLE DB Candidats"
+          TopLeft="50.4999993294477,227.499996691942" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Candidat.Paths[Merge Join Output]"
+          TopLeft="622.099994978309,281.59999884516">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.3999974370003,0"
+              Start="0,0"
+              End="64.8999974370003,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.8999974370003,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task Candidat.Paths[Sort Output]"
+          TopLeft="402.099997332692,251.099998629093">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90.3999976456166,32.9999999552965"
+              Start="0,0"
+              End="82.8999976456166,32.9999999552965">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="41.1999988228083,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.1999988228083,0"
+                    Point2="45.1999988228083,0"
+                    Point3="45.1999988228083,4" />
+                  <mssgle:LineSegment
+                    End="45.1999988228083,28.9999999552965" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.1999988228083,28.9999999552965"
+                    Point2="45.1999988228083,32.9999999552965"
+                    Point3="49.1999988228083,32.9999999552965" />
+                  <mssgle:LineSegment
+                    End="82.8999976456166,32.9999999552965" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task Candidat.Paths[OLE DB Source Output]"
+          TopLeft="216.899999329448,249.699997660518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.5999980032445,0"
+              Start="0,0"
+              End="80.0999980032445,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="80.0999980032445,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task Candidat.Paths[OLE DB Source Output1]"
+          TopLeft="245.099999701977,325.599996744097">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="53.8999967366452,0"
+              Start="0,0"
+              End="46.3999967366452,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46.3999967366452,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task Candidat.Paths[Sort Output1]"
+          TopLeft="405.399996438622,326.899997481704">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.099998539687,-37.1999988973141"
+              Start="0,0"
+              End="79.599998539687,-37.1999988973141">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46.324443600708,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.324443600708,0"
+                    Point2="50.324443600708,0"
+                    Point3="50.324443600708,-4" />
+                  <mssgle:LineSegment
+                    End="50.324443600708,-33.1999988973141" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.324443600708,-33.1999988973141"
+                    Point2="50.324443600708,-37.1999988973141"
+                    Point3="54.324443600708,-37.1999988973141" />
+                  <mssgle:LineSegment
+                    End="79.599998539687,-37.1999988973141" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB ConsoMenage">
+    design-time-name="Package\Data Flow Task Candidat\OLE DB Faits_Elections">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14056,20 +14055,7 @@ WHERE Annee = ?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Retraite DM">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Destination 1">
+    design-time-name="Package\Data Flow Task Candidat\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

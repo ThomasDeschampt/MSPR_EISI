@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS Emplois;
 DROP TABLE IF EXISTS Retraite;
 DROP TABLE IF EXISTS ConsoMenage;
 
+
 -- Cr�ation des tables
 CREATE TABLE Economie(
    Id_economie INT PRIMARY KEY IDENTITY(1,1),
@@ -53,7 +54,7 @@ CREATE TABLE Emplois(
 );
 
 CREATE TABLE Retraite(
-   Id_depart_retraite INT PRIMARY KEY,
+   Id_retraite INT PRIMARY KEY,
    Annee INT,
    Age_depart DECIMAL(10,2)
 );
@@ -90,7 +91,7 @@ CREATE TABLE Faits_Elections(
    Id_emploi INT,
    Id_insecurite INT,
    Id_economie INT,
-   Id_depart_retraite INT,
+   Id_retraite INT,
    Id_candidat INT,
    CONSTRAINT FK_FaitsElections_Candidat FOREIGN KEY(Id_candidat) REFERENCES Candidat(Id_candidat),
    CONSTRAINT FK_FaitsElections_Demographie FOREIGN KEY(Id_demographie) REFERENCES Demographie(Id_demographie),
@@ -98,5 +99,5 @@ CREATE TABLE Faits_Elections(
    CONSTRAINT FK_FaitsElections_Emplois FOREIGN KEY(Id_emploi) REFERENCES Emplois(Id_emploi),
    CONSTRAINT FK_FaitsElections_Insecurite FOREIGN KEY(Id_insecurite) REFERENCES Insecurite(Id_insecurite),
    CONSTRAINT FK_FaitsElections_Economie FOREIGN KEY(Id_economie) REFERENCES Economie(Id_economie),
-   CONSTRAINT FK_FaitsElections_DepartRetraite FOREIGN KEY(Id_depart_retraite) REFERENCES DepartRetraite(Id_depart_retraite)
+   CONSTRAINT FK_FaitsElections_Retraite FOREIGN KEY(Id_retraite) REFERENCES Retraite(Id_retraite)
 );
