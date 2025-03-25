@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="132"
-  DTS:VersionGUID="{3188A175-AF9D-4F78-A2FD-7C6BA55F5C52}">
+  DTS:VersionBuild="135"
+  DTS:VersionGUID="{F134E074-6E00-453B-9073-0116C2494927}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2528,203 +2528,24 @@
                       name="Id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[REF_SECTOR]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[annee]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[REF_SECTOR]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[REF_SECTOR]"
-                      name="REF_SECTOR"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[annee]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[annee]"
+                      name="annee"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[COUNTERPART_AREA]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[COUNTERPART_AREA]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[COUNTERPART_AREA]"
-                      name="COUNTERPART_AREA"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[ACCOUNTING_ENTRY]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[ACCOUNTING_ENTRY]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[ACCOUNTING_ENTRY]"
-                      name="ACCOUNTING_ENTRY"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[STO]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[STO]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[STO]"
-                      name="STO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[INSTR_ASSET]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[INSTR_ASSET]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[INSTR_ASSET]"
-                      name="INSTR_ASSET"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[ACTIVITY]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[ACTIVITY]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[ACTIVITY]"
-                      name="ACTIVITY"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[EXPENDITURE]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[EXPENDITURE]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[EXPENDITURE]"
-                      name="EXPENDITURE"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[UNIT_MEASURE]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[UNIT_MEASURE]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[UNIT_MEASURE]"
-                      name="UNIT_MEASURE"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[PRICES]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[PRICES]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[PRICES]"
-                      name="PRICES"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[TRANSFORMATION]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[TRANSFORMATION]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[TRANSFORMATION]"
-                      name="TRANSFORMATION"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[PRODUCT]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[PRODUCT]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[PRODUCT]"
-                      name="PRODUCT"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[FREQ]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[FREQ]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[FREQ]"
-                      name="FREQ"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_STATUS]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[OBS_STATUS]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_STATUS]"
-                      name="OBS_STATUS"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[CONF_STATUS]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[CONF_STATUS]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[CONF_STATUS]"
-                      name="CONF_STATUS"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[REF_YEAR_PRICE]"
+                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[valeur]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[REF_YEAR_PRICE]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[REF_YEAR_PRICE]"
-                      name="REF_YEAR_PRICE"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[valeur]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[valeur]"
+                      name="valeur"
                       precision="10"
-                      scale="1"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[DECIMALS]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[DECIMALS]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[DECIMALS]"
-                      name="DECIMALS"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[UNIT_MULT]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[UNIT_MULT]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[UNIT_MULT]"
-                      name="UNIT_MULT"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_STATUS_FR]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[OBS_STATUS_FR]"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_STATUS_FR]"
-                      name="OBS_STATUS_FR"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[TIME_PERIOD]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[TIME_PERIOD]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[TIME_PERIOD]"
-                      name="TIME_PERIOD"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_VALUE]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[OBS_VALUE]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_VALUE]"
-                      name="OBS_VALUE"
-                      precision="10"
-                      scale="3"
+                      scale="2"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -2734,104 +2555,15 @@
                       dataType="i4"
                       name="Id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[REF_SECTOR]"
-                      dataType="wstr"
-                      length="50"
-                      name="REF_SECTOR" />
+                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[annee]"
+                      dataType="i4"
+                      name="annee" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[COUNTERPART_AREA]"
-                      dataType="wstr"
-                      length="50"
-                      name="COUNTERPART_AREA" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[ACCOUNTING_ENTRY]"
-                      dataType="wstr"
-                      length="50"
-                      name="ACCOUNTING_ENTRY" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[STO]"
-                      dataType="wstr"
-                      length="50"
-                      name="STO" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[INSTR_ASSET]"
-                      dataType="wstr"
-                      length="50"
-                      name="INSTR_ASSET" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[ACTIVITY]"
-                      dataType="wstr"
-                      length="50"
-                      name="ACTIVITY" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[EXPENDITURE]"
-                      dataType="wstr"
-                      length="50"
-                      name="EXPENDITURE" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[UNIT_MEASURE]"
-                      dataType="wstr"
-                      length="50"
-                      name="UNIT_MEASURE" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[PRICES]"
-                      dataType="wstr"
-                      length="50"
-                      name="PRICES" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[TRANSFORMATION]"
-                      dataType="wstr"
-                      length="50"
-                      name="TRANSFORMATION" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[PRODUCT]"
-                      dataType="wstr"
-                      length="50"
-                      name="PRODUCT" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[FREQ]"
-                      dataType="wstr"
-                      length="50"
-                      name="FREQ" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[OBS_STATUS]"
-                      dataType="wstr"
-                      length="50"
-                      name="OBS_STATUS" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[CONF_STATUS]"
-                      dataType="wstr"
-                      length="50"
-                      name="CONF_STATUS" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[REF_YEAR_PRICE]"
+                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[valeur]"
                       dataType="numeric"
-                      name="REF_YEAR_PRICE"
+                      name="valeur"
                       precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[DECIMALS]"
-                      dataType="i4"
-                      name="DECIMALS" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[UNIT_MULT]"
-                      dataType="i4"
-                      name="UNIT_MULT" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[OBS_STATUS_FR]"
-                      dataType="wstr"
-                      length="50"
-                      name="OBS_STATUS_FR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[TIME_PERIOD]"
-                      dataType="i4"
-                      name="TIME_PERIOD" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].ExternalColumns[OBS_VALUE]"
-                      dataType="numeric"
-                      name="OBS_VALUE"
-                      precision="10"
-                      scale="3" />
+                      scale="2" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2845,124 +2577,17 @@
                       lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[Id]"
                       name="Id" />
                     <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[REF_SECTOR]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[REF_SECTOR]"
-                      name="REF_SECTOR" />
+                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[annee]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[annee]"
+                      name="annee" />
                     <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[COUNTERPART_AREA]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[COUNTERPART_AREA]"
-                      name="COUNTERPART_AREA" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[ACCOUNTING_ENTRY]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[ACCOUNTING_ENTRY]"
-                      name="ACCOUNTING_ENTRY" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[STO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[STO]"
-                      name="STO" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[INSTR_ASSET]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[INSTR_ASSET]"
-                      name="INSTR_ASSET" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[ACTIVITY]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[ACTIVITY]"
-                      name="ACTIVITY" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[EXPENDITURE]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[EXPENDITURE]"
-                      name="EXPENDITURE" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[UNIT_MEASURE]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[UNIT_MEASURE]"
-                      name="UNIT_MEASURE" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[PRICES]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[PRICES]"
-                      name="PRICES" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[TRANSFORMATION]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[TRANSFORMATION]"
-                      name="TRANSFORMATION" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[PRODUCT]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[PRODUCT]"
-                      name="PRODUCT" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[FREQ]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[FREQ]"
-                      name="FREQ" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[OBS_STATUS]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[OBS_STATUS]"
-                      name="OBS_STATUS" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[CONF_STATUS]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[CONF_STATUS]"
-                      name="CONF_STATUS" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[REF_YEAR_PRICE]"
+                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[valeur]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[REF_YEAR_PRICE]"
-                      name="REF_YEAR_PRICE"
+                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[valeur]"
+                      name="valeur"
                       precision="10"
-                      scale="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[DECIMALS]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[DECIMALS]"
-                      name="DECIMALS" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[UNIT_MULT]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[UNIT_MULT]"
-                      name="UNIT_MULT" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[OBS_STATUS_FR]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[OBS_STATUS_FR]"
-                      name="OBS_STATUS_FR" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[TIME_PERIOD]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[TIME_PERIOD]"
-                      name="TIME_PERIOD" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[OBS_VALUE]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[OBS_VALUE]"
-                      name="OBS_VALUE"
-                      precision="10"
-                      scale="3" />
+                      scale="2" />
                     <outputColumn
                       refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2973,357 +2598,6 @@
                       refId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB ConsoMenage DM"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[ConsoMenage]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MSPR_DM]"
-                  connectionManagerRefId="Package.ConnectionManagers[MSPR_DM]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[REF_SECTOR]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="REF_SECTOR"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Ref_sector]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[REF_SECTOR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[COUNTERPART_AREA]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="COUNTERPART_AREA"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Counterpart_area]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[COUNTERPART_AREA]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[ACCOUNTING_ENTRY]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="ACCOUNTING_ENTRY"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Accounting_entry]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[ACCOUNTING_ENTRY]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[STO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="STO"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Sto]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[STO]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[INSTR_ASSET]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="INSTR_ASSET"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Instr_asset]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[INSTR_ASSET]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[ACTIVITY]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="ACTIVITY"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Activity]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[ACTIVITY]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[EXPENDITURE]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="EXPENDITURE"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Expenditure]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[EXPENDITURE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[UNIT_MEASURE]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="UNIT_MEASURE"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Unit_measure]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[UNIT_MEASURE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[PRICES]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="PRICES"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Prices]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[PRICES]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[TRANSFORMATION]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="TRANSFORMATION"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Transformation]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[TRANSFORMATION]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[PRODUCT]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="PRODUCT"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[PRODUCT]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[FREQ]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="FREQ"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Freq]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[FREQ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[OBS_STATUS]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="OBS_STATUS"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Obs_status]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_STATUS]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[CONF_STATUS]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="CONF_STATUS"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Conf_status]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[CONF_STATUS]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[REF_YEAR_PRICE]"
-                      cachedDataType="numeric"
-                      cachedName="REF_YEAR_PRICE"
-                      cachedPrecision="10"
-                      cachedScale="1"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Ref_year_price]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[REF_YEAR_PRICE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[DECIMALS]"
-                      cachedDataType="i4"
-                      cachedName="DECIMALS"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Decimals]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[DECIMALS]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[UNIT_MULT]"
-                      cachedDataType="i4"
-                      cachedName="UNIT_MULT"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Unit_mult]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[UNIT_MULT]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[OBS_STATUS_FR]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="OBS_STATUS_FR"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Obs_status_fr]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_STATUS_FR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[OBS_VALUE]"
-                      cachedDataType="numeric"
-                      cachedName="OBS_VALUE"
-                      cachedPrecision="10"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Obs_value]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[OBS_VALUE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[Id]"
-                      cachedDataType="i4"
-                      cachedName="Id"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_conso_menage]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[Id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].Columns[TIME_PERIOD]"
-                      cachedDataType="i4"
-                      cachedName="TIME_PERIOD"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[TIME_PERIOD]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_conso_menage]"
-                      dataType="i4"
-                      name="Id_conso_menage" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Ref_sector]"
-                      dataType="wstr"
-                      length="50"
-                      name="Ref_sector" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Accounting_entry]"
-                      dataType="wstr"
-                      length="50"
-                      name="Accounting_entry" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Sto]"
-                      dataType="wstr"
-                      length="50"
-                      name="Sto" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Instr_asset]"
-                      dataType="wstr"
-                      length="50"
-                      name="Instr_asset" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Activity]"
-                      dataType="wstr"
-                      length="50"
-                      name="Activity" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Expenditure]"
-                      dataType="wstr"
-                      length="50"
-                      name="Expenditure" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Unit_measure]"
-                      dataType="wstr"
-                      length="50"
-                      name="Unit_measure" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Prices]"
-                      dataType="wstr"
-                      length="50"
-                      name="Prices" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Transformation]"
-                      dataType="wstr"
-                      length="50"
-                      name="Transformation" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
-                      dataType="wstr"
-                      length="50"
-                      name="Product" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Freq]"
-                      dataType="wstr"
-                      length="50"
-                      name="Freq" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Obs_status]"
-                      dataType="wstr"
-                      length="50"
-                      name="Obs_status" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Conf_status]"
-                      dataType="wstr"
-                      length="50"
-                      name="Conf_status" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Ref_year_price]"
-                      dataType="numeric"
-                      name="Ref_year_price"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Decimals]"
-                      dataType="i4"
-                      name="Decimals" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Unit_mult]"
-                      dataType="i4"
-                      name="Unit_mult" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Obs_status_fr]"
-                      dataType="wstr"
-                      length="50"
-                      name="Obs_status_fr" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
-                      dataType="i4"
-                      name="Annee" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Obs_value]"
-                      dataType="numeric"
-                      name="Obs_value"
-                      precision="10"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input].ExternalColumns[Counterpart_area]"
-                      dataType="wstr"
-                      length="50"
-                      name="Counterpart_area" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3807,514 +3081,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task Direct\OLE DB DepartRetraite"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB DepartRetraite"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DepartRetraite]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[PC_EPSI.MSPR]"
-                  connectionManagerRefId="Package.ConnectionManagers[PC_EPSI.MSPR]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Id]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Id]"
-                      name="Id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Annee]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Annee]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Annee]"
-                      name="Annee"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Catégorie socioprofessionnelle]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Catégorie socioprofessionnelle]"
-                      length="100"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Catégorie socioprofessionnelle]"
-                      name="Catégorie socioprofessionnelle"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_fortement_limitees]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Proportion_fortement_limitees]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_fortement_limitees]"
-                      name="Proportion_fortement_limitees"
-                      precision="10"
-                      scale="1"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_limitees]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Proportion_limitees]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_limitees]"
-                      name="Proportion_limitees"
-                      precision="10"
-                      scale="1"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Age_depart]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Age_depart]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Age_depart]"
-                      name="Age_depart"
-                      precision="10"
-                      scale="1"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_retraites_61ans]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Proportion_retraites_61ans]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_retraites_61ans]"
-                      name="Proportion_retraites_61ans"
-                      precision="10"
-                      scale="1"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Duree_emploi]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Duree_emploi]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Duree_emploi]"
-                      name="Duree_emploi"
-                      precision="10"
-                      scale="1"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Duree_sans_emploi]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Duree_sans_emploi]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Duree_sans_emploi]"
-                      name="Duree_sans_emploi"
-                      precision="10"
-                      scale="1"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Id]"
-                      dataType="i4"
-                      name="Id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Annee]"
-                      dataType="i4"
-                      name="Annee" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Catégorie socioprofessionnelle]"
-                      dataType="wstr"
-                      length="100"
-                      name="Catégorie socioprofessionnelle" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Proportion_fortement_limitees]"
-                      dataType="numeric"
-                      name="Proportion_fortement_limitees"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Proportion_limitees]"
-                      dataType="numeric"
-                      name="Proportion_limitees"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Age_depart]"
-                      dataType="numeric"
-                      name="Age_depart"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Proportion_retraites_61ans]"
-                      dataType="numeric"
-                      name="Proportion_retraites_61ans"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Duree_emploi]"
-                      dataType="numeric"
-                      name="Duree_emploi"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].ExternalColumns[Duree_sans_emploi]"
-                      dataType="numeric"
-                      name="Duree_sans_emploi"
-                      precision="10"
-                      scale="1" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Id]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Id]"
-                      name="Id" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Annee]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Annee]"
-                      name="Annee" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Catégorie socioprofessionnelle]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Catégorie socioprofessionnelle]"
-                      name="Catégorie socioprofessionnelle" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Proportion_fortement_limitees]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Proportion_fortement_limitees]"
-                      name="Proportion_fortement_limitees"
-                      precision="10"
-                      scale="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Proportion_limitees]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Proportion_limitees]"
-                      name="Proportion_limitees"
-                      precision="10"
-                      scale="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Age_depart]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Age_depart]"
-                      name="Age_depart"
-                      precision="10"
-                      scale="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Proportion_retraites_61ans]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Proportion_retraites_61ans]"
-                      name="Proportion_retraites_61ans"
-                      precision="10"
-                      scale="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Duree_emploi]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Duree_emploi]"
-                      name="Duree_emploi"
-                      precision="10"
-                      scale="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Duree_sans_emploi]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[Duree_sans_emploi]"
-                      name="Duree_sans_emploi"
-                      precision="10"
-                      scale="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB DepartRetraite DM"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DepartRetraite]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MSPR_DM]"
-                  connectionManagerRefId="Package.ConnectionManagers[MSPR_DM]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Annee]"
-                      cachedDataType="i4"
-                      cachedName="Annee"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Annee]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Proportion_fortement_limitees]"
-                      cachedDataType="numeric"
-                      cachedName="Proportion_fortement_limitees"
-                      cachedPrecision="10"
-                      cachedScale="1"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Proportion_fortement_limitees]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_fortement_limitees]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Proportion_limitees]"
-                      cachedDataType="numeric"
-                      cachedName="Proportion_limitees"
-                      cachedPrecision="10"
-                      cachedScale="1"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Proportion_limitees]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_limitees]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Age_depart]"
-                      cachedDataType="numeric"
-                      cachedName="Age_depart"
-                      cachedPrecision="10"
-                      cachedScale="1"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Age_depart]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Age_depart]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Proportion_retraites_61ans]"
-                      cachedDataType="numeric"
-                      cachedName="Proportion_retraites_61ans"
-                      cachedPrecision="10"
-                      cachedScale="1"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Proportion_retraites_61ans]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Proportion_retraites_61ans]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Duree_emploi]"
-                      cachedDataType="numeric"
-                      cachedName="Duree_emploi"
-                      cachedPrecision="10"
-                      cachedScale="1"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Duree_emploi]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Duree_emploi]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Duree_sans_emploi]"
-                      cachedDataType="numeric"
-                      cachedName="Duree_sans_emploi"
-                      cachedPrecision="10"
-                      cachedScale="1"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Duree_sans_emploi]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Duree_sans_emploi]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Id]"
-                      cachedDataType="i4"
-                      cachedName="Id"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].Columns[Catégorie socioprofessionnelle]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Catégorie socioprofessionnelle"
-                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Categorie_socioprofessionnelle]"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output].Columns[Catégorie socioprofessionnelle]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
-                      dataType="i4"
-                      name="Id_depart_retraite" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
-                      dataType="i4"
-                      name="Annee" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Categorie_socioprofessionnelle]"
-                      dataType="wstr"
-                      length="100"
-                      name="Categorie_socioprofessionnelle" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Proportion_fortement_limitees]"
-                      dataType="numeric"
-                      name="Proportion_fortement_limitees"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Proportion_limitees]"
-                      dataType="numeric"
-                      name="Proportion_limitees"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Age_depart]"
-                      dataType="numeric"
-                      name="Age_depart"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Proportion_retraites_61ans]"
-                      dataType="numeric"
-                      name="Proportion_retraites_61ans"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Duree_emploi]"
-                      dataType="numeric"
-                      name="Duree_emploi"
-                      precision="10"
-                      scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Duree_sans_emploi]"
-                      dataType="numeric"
-                      name="Duree_sans_emploi"
-                      precision="10"
-                      scale="1" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task Direct\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -4496,6 +3262,143 @@
                       refId="Package\Data Flow Task Direct\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task Direct\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task Direct\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ConsoMenage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Direct\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MSPR_DM]"
+                  connectionManagerRefId="Package.ConnectionManagers[MSPR_DM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[annee]"
+                      cachedDataType="i4"
+                      cachedName="annee"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[annee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Id_conso_menage]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[valeur]"
+                      cachedDataType="numeric"
+                      cachedName="valeur"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Prix_consommation]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output].Columns[valeur]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Id_conso_menage]"
+                      dataType="i4"
+                      name="Id_conso_menage" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
+                      dataType="i4"
+                      name="Annee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Prix_consommation]"
+                      dataType="numeric"
+                      name="Prix_consommation"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Direct\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5307,6 +4210,291 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task Direct\OLE DB Retraite"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Retraite"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Retraite]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Direct\OLE DB Retraite.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PC_EPSI.MSPR]"
+                  connectionManagerRefId="Package.ConnectionManagers[PC_EPSI.MSPR]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Annee]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].ExternalColumns[Annee]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Annee]"
+                      name="Annee"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Taux_Retraite]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].ExternalColumns[Taux_Retraite]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Taux_Retraite]"
+                      name="Taux_Retraite"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].ExternalColumns[Annee]"
+                      dataType="i4"
+                      name="Annee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].ExternalColumns[Taux_Retraite]"
+                      dataType="numeric"
+                      name="Taux_Retraite"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[Annee]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[Annee]"
+                      name="Annee" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[Taux_Retraite]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[Taux_Retraite]"
+                      name="Taux_Retraite"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task Direct\OLE DB Retraite DM"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Retraite DM"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Retraite]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MSPR_DM]"
+                  connectionManagerRefId="Package.ConnectionManagers[MSPR_DM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].Columns[Annee]"
+                      cachedDataType="i4"
+                      cachedName="Annee"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Annee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].Columns[Taux_Retraite]"
+                      cachedDataType="numeric"
+                      cachedName="Taux_Retraite"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Age_depart]"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output].Columns[Taux_Retraite]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Id_depart_retraite]"
+                      dataType="i4"
+                      name="Id_depart_retraite" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Annee]"
+                      dataType="i4"
+                      name="Annee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input].ExternalColumns[Age_depart]"
+                      dataType="numeric"
+                      name="Age_depart"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite DM.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Direct\OLE DB Retraite DM.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Direct\OLE DB Retraite DM.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -5316,29 +4504,29 @@
               startId="Package\Data Flow Task Direct\OLE DB Insecurite.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output1]"
-              endId="Package\Data Flow Task Direct\OLE DB DepartRetraite DM.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Data Flow Task Direct\OLE DB DepartRetraite.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output2]"
-              endId="Package\Data Flow Task Direct\OLE DB ConsoMenage DM.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output3]"
               endId="Package\Data Flow Task Direct\OLE DB Demographie DM.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task Direct\OLE DB Demographie.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output4]"
+              refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output2]"
               endId="Package\Data Flow Task Direct\OLE DB Emploi DM.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task Direct\OLE DB MasseSalarial.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output5]"
+              refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output3]"
               endId="Package\Data Flow Task Direct\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task Direct\OLE DB Annee.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output4]"
+              endId="Package\Data Flow Task Direct\OLE DB Retraite DM.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task Direct\OLE DB Retraite.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task Direct.Paths[OLE DB Source Output5]"
+              endId="Package\Data Flow Task Direct\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task Direct\OLE DB ConsoMenage.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -12989,7 +12177,7 @@ WHERE Annee = ?
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F6DBD40A-96F5-4E7E-9AA6-BC59FC3F54DB}"
-          SQLTask:SqlStatementSource="USE MSPR_DM;&#xA;&#xA;-- Supprimer les tables avant recréation&#xA;DROP TABLE IF EXISTS Faits_Elections;&#xA;DROP TABLE IF EXISTS Candidat;&#xA;DROP TABLE IF EXISTS Economie;&#xA;DROP TABLE IF EXISTS Demographie;&#xA;DROP TABLE IF EXISTS Insecurite;&#xA;DROP TABLE IF EXISTS Emplois;&#xA;DROP TABLE IF EXISTS DepartRetraite;&#xA;DROP TABLE IF EXISTS ConsoMenage;&#xA;&#xA;-- Création des tables&#xA;CREATE TABLE Economie(&#xA;   Id_economie INT PRIMARY KEY IDENTITY(1,1),&#xA;   Taux_chomage DECIMAL(10,3),&#xA;   Pib INT,&#xA;   Annee INT&#xA;);&#xA;&#xA;CREATE TABLE Demographie(&#xA;   Id_demographie INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Population DECIMAL(10,1),&#xA;   Naissances DECIMAL(10,1),&#xA;   Deces DECIMAL(10,1),&#xA;   SoldeNaturel DECIMAL(10,1),&#xA;   SoldeMigratoire DECIMAL(10,1),&#xA;   Ajustement DECIMAL(10,1)&#xA;);&#xA;&#xA;CREATE TABLE Insecurite(&#xA;   Id_insecurite INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Nombre FLOAT,&#xA;   Taux_pour_mille FLOAT,&#xA;   insee_pop FLOAT&#xA;);&#xA;&#xA;CREATE TABLE Emplois(&#xA;   Id_emploi INT PRIMARY KEY IDENTITY(1,1),&#xA;   Annee INT,&#xA;   Nombre_salaries_public FLOAT,&#xA;   Nombre_salaries_prive FLOAT,&#xA;   Masse_salariale_T50_jours_brut FLOAT,&#xA;   Glissement_trimestriel_masse_salariale_T50_jours_cvs FLOAT,&#xA;   Glissement_trimestriel_masse_salariale_T70_jours_cvs FLOAT,&#xA;   Glissement_annuel_masse_salariale_T50_jours_cvs FLOAT,&#xA;   Glissement_annuel_masse_salariale_T70_jours_cvs FLOAT,&#xA;   Masse_salariale_T70_jours_brut FLOAT,&#xA;   Masse_salariale_T50_jours_cvs FLOAT,&#xA;   Masse_salariale_T70_jours_cvs FLOAT&#xA;);&#xA;&#xA;CREATE TABLE DepartRetraite(&#xA;   Id_depart_retraite INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Categorie_socioprofessionnelle NVARCHAR(100),&#xA;   Proportion_fortement_limitees DECIMAL(10,1),&#xA;   Proportion_limitees DECIMAL(10,1),&#xA;   Age_depart DECIMAL(10,1),&#xA;   Proportion_retraites_61ans DECIMAL(10,1),&#xA;   Duree_emploi DECIMAL(10,1),&#xA;   Duree_sans_emploi DECIMAL(10,1)&#xA;);&#xA;&#xA;CREATE TABLE ConsoMenage(&#xA;   Id_conso_menage INT PRIMARY KEY,&#xA;   Ref_sector NVARCHAR(50),&#xA;   Accounting_entry NVARCHAR(50),&#xA;   Sto NVARCHAR(50),&#xA;   Instr_asset NVARCHAR(50),&#xA;   Activity NVARCHAR(50),&#xA;   Expenditure NVARCHAR(50),&#xA;   Unit_measure NVARCHAR(50),&#xA;   Prices NVARCHAR(50),&#xA;   Transformation NVARCHAR(50),&#xA;   Product NVARCHAR(50),&#xA;   Freq NVARCHAR(50),&#xA;   Obs_status NVARCHAR(50),&#xA;   Conf_status NVARCHAR(50),&#xA;   Ref_year_price DECIMAL(10,1),&#xA;   Decimals INT,&#xA;   Unit_mult INT,&#xA;   Obs_status_fr NVARCHAR(50),&#xA;   Annee INT,&#xA;   Obs_value DECIMAL(10,3),&#xA;   Counterpart_area NVARCHAR(50)&#xA;);&#xA;&#xA;CREATE TABLE Candidat(&#xA;   Id_candidat INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Tour INT,&#xA;   Parti NVARCHAR(50),&#xA;   Bord NVARCHAR(50)&#xA;);&#xA;&#xA;-- Création de Faits_Elections avec FK explicites&#xA;CREATE TABLE Faits_Elections(&#xA;   Id_fait_election INT PRIMARY KEY IDENTITY(1,1),&#xA;   Annee INT,&#xA;   Tour INT,&#xA;   Inscrits INT,&#xA;   Absentions INT,&#xA;   Pourcentage_Abstention DECIMAL(10,2),&#xA;   Votants INT,&#xA;   Pourcentage_Votants DECIMAL(10,2),&#xA;   BlancsNuls INT,&#xA;   Nombre_de_voix DECIMAL(10,2),&#xA;   Ratio_voix_exprime DECIMAL(10,2),&#xA;   Id_demographie INT,&#xA;   Id_conso_menage INT,&#xA;   Id_emploi INT,&#xA;   Id_insecurite INT,&#xA;   Id_economie INT,&#xA;   Id_depart_retraite INT,&#xA;   Id_candidat INT,&#xA;   CONSTRAINT FK_FaitsElections_Candidat FOREIGN KEY(Id_candidat) REFERENCES Candidat(Id_candidat),&#xA;   CONSTRAINT FK_FaitsElections_Demographie FOREIGN KEY(Id_demographie) REFERENCES Demographie(Id_demographie),&#xA;   CONSTRAINT FK_FaitsElections_ConsoMenage FOREIGN KEY(Id_conso_menage) REFERENCES ConsoMenage(Id_conso_menage),&#xA;   CONSTRAINT FK_FaitsElections_Emplois FOREIGN KEY(Id_emploi) REFERENCES Emplois(Id_emploi),&#xA;   CONSTRAINT FK_FaitsElections_Insecurite FOREIGN KEY(Id_insecurite) REFERENCES Insecurite(Id_insecurite),&#xA;   CONSTRAINT FK_FaitsElections_Economie FOREIGN KEY(Id_economie) REFERENCES Economie(Id_economie),&#xA;   CONSTRAINT FK_FaitsElections_DepartRetraite FOREIGN KEY(Id_depart_retraite) REFERENCES DepartRetraite(Id_depart_retraite)&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE MSPR_DM;&#xA;&#xA;-- Supprimer les tables avant recr�ation&#xA;DROP TABLE IF EXISTS Faits_Elections;&#xA;DROP TABLE IF EXISTS Candidat;&#xA;DROP TABLE IF EXISTS Economie;&#xA;DROP TABLE IF EXISTS Demographie;&#xA;DROP TABLE IF EXISTS Insecurite;&#xA;DROP TABLE IF EXISTS Emplois;&#xA;DROP TABLE IF EXISTS Retraite;&#xA;DROP TABLE IF EXISTS ConsoMenage;&#xA;&#xA;-- Cr�ation des tables&#xA;CREATE TABLE Economie(&#xA;   Id_economie INT PRIMARY KEY IDENTITY(1,1),&#xA;   Taux_chomage DECIMAL(10,3),&#xA;   Pib INT,&#xA;   Annee INT&#xA;);&#xA;&#xA;CREATE TABLE Demographie(&#xA;   Id_demographie INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Population DECIMAL(10,1),&#xA;   Naissances DECIMAL(10,1),&#xA;   Deces DECIMAL(10,1),&#xA;   SoldeNaturel DECIMAL(10,1),&#xA;   SoldeMigratoire DECIMAL(10,1),&#xA;   Ajustement DECIMAL(10,1)&#xA;);&#xA;&#xA;CREATE TABLE Insecurite(&#xA;   Id_insecurite INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Nombre FLOAT,&#xA;   Taux_pour_mille FLOAT,&#xA;   insee_pop FLOAT&#xA;);&#xA;&#xA;CREATE TABLE Emplois(&#xA;   Id_emploi INT PRIMARY KEY IDENTITY(1,1),&#xA;   Annee INT,&#xA;   Nombre_salaries_public FLOAT,&#xA;   Nombre_salaries_prive FLOAT,&#xA;   Masse_salariale_T50_jours_brut FLOAT,&#xA;   Glissement_trimestriel_masse_salariale_T50_jours_cvs FLOAT,&#xA;   Glissement_trimestriel_masse_salariale_T70_jours_cvs FLOAT,&#xA;   Glissement_annuel_masse_salariale_T50_jours_cvs FLOAT,&#xA;   Glissement_annuel_masse_salariale_T70_jours_cvs FLOAT,&#xA;   Masse_salariale_T70_jours_brut FLOAT,&#xA;   Masse_salariale_T50_jours_cvs FLOAT,&#xA;   Masse_salariale_T70_jours_cvs FLOAT&#xA;);&#xA;&#xA;CREATE TABLE Retraite(&#xA;   Id_depart_retraite INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Age_depart DECIMAL(10,2)&#xA;);&#xA;&#xA;CREATE TABLE ConsoMenage(&#xA;   Id_conso_menage INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Prix_consommation DECIMAL(10,2)&#xA;);&#xA;&#xA;CREATE TABLE Candidat(&#xA;   Id_candidat INT PRIMARY KEY,&#xA;   Annee INT,&#xA;   Tour INT,&#xA;   Parti NVARCHAR(50),&#xA;   Bord NVARCHAR(50)&#xA;);&#xA;&#xA;-- Cr�ation de Faits_Elections avec FK explicites&#xA;CREATE TABLE Faits_Elections(&#xA;   Id_fait_election INT PRIMARY KEY IDENTITY(1,1),&#xA;   Annee INT,&#xA;   Tour INT,&#xA;   Inscrits INT,&#xA;   Absentions INT,&#xA;   Pourcentage_Abstention DECIMAL(10,2),&#xA;   Votants INT,&#xA;   Pourcentage_Votants DECIMAL(10,2),&#xA;   BlancsNuls INT,&#xA;   Nombre_de_voix DECIMAL(10,2),&#xA;   Ratio_voix_exprime DECIMAL(10,2),&#xA;   Id_demographie INT,&#xA;   Id_conso_menage INT,&#xA;   Id_emploi INT,&#xA;   Id_insecurite INT,&#xA;   Id_economie INT,&#xA;   Id_depart_retraite INT,&#xA;   Id_candidat INT,&#xA;   CONSTRAINT FK_FaitsElections_Candidat FOREIGN KEY(Id_candidat) REFERENCES Candidat(Id_candidat),&#xA;   CONSTRAINT FK_FaitsElections_Demographie FOREIGN KEY(Id_demographie) REFERENCES Demographie(Id_demographie),&#xA;   CONSTRAINT FK_FaitsElections_ConsoMenage FOREIGN KEY(Id_conso_menage) REFERENCES ConsoMenage(Id_conso_menage),&#xA;   CONSTRAINT FK_FaitsElections_Emplois FOREIGN KEY(Id_emploi) REFERENCES Emplois(Id_emploi),&#xA;   CONSTRAINT FK_FaitsElections_Insecurite FOREIGN KEY(Id_insecurite) REFERENCES Insecurite(Id_insecurite),&#xA;   CONSTRAINT FK_FaitsElections_Economie FOREIGN KEY(Id_economie) REFERENCES Economie(Id_economie),&#xA;   CONSTRAINT FK_FaitsElections_DepartRetraite FOREIGN KEY(Id_depart_retraite) REFERENCES DepartRetraite(Id_depart_retraite)&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -13088,6 +12276,10 @@ WHERE Annee = ?
           Id="Package\Data Flow Task JOIN"
           TopLeft="678.833296544024,270.699998155832" />
         <NodeLayout
+          Size="164,41.6"
+          Id="Package\Suppression ligne"
+          TopLeft="79.6666626143789,373.833330771989" />
+        <NodeLayout
           Size="243.2,41.6"
           Id="Package\Table MSPR_DM"
           TopLeft="57.1666638437246,155.433332290716" />
@@ -13170,6 +12362,28 @@ WHERE Annee = ?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 3]"
+          TopLeft="770.266631470953,189.766665883197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80.9333322726349"
+              Start="0,0"
+              End="0,73.4333322726349">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.4333322726349" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Contrainte 4]"
           TopLeft="178.766663843725,155.433332290716">
           <EdgeLayout.Curve>
@@ -13217,32 +12431,6 @@ WHERE Annee = ?
                   Capacity="5">
                   <mssgle:LineSegment
                     End="-113.133317716089,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164,41.6"
-          Id="Package\Suppression ligne"
-          TopLeft="79.6666626143789,373.833330771989" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Contrainte 3]"
-          TopLeft="770.266631470953,189.766665883197">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,80.9333322726349"
-              Start="0,0"
-              End="0,73.4333322726349">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,73.4333322726349" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13471,47 +12659,65 @@ WHERE Annee = ?
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Insecurite"
-          TopLeft="73.8333295997648,268.099998173912" />
-        <NodeLayout
-          Size="200.8,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Demographie DM"
-          TopLeft="330.499982242784,343.770887609865" />
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Demographie"
-          TopLeft="72.1666630241607,343.566664527191" />
-        <NodeLayout
-          Size="187.2,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB DepartRetraite"
-          TopLeft="72.9999995902182,415.833335075047" />
+          Size="183.2,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Inescurite DM"
+          TopLeft="331.333318808841,271.766665232314" />
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\Data Flow Task Direct\OLE DB MasseSalarial"
           TopLeft="77.1666627509728,133.766665774716" />
         <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB DepartRetraite DM"
-          TopLeft="337.1666485452,415.366667799684" />
+          Size="200.8,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Demographie DM"
+          TopLeft="330.499982242784,343.770887609865" />
         <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB ConsoMenage DM"
-          TopLeft="340.499981696408,487.233334478404" />
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Inescurite DM"
-          TopLeft="331.333318808841,271.766665232314" />
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Destination"
+          TopLeft="331.499995589256,196.530118410666" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Data Flow Task Direct\OLE DB Emploi DM"
           TopLeft="327.166650730703,129.966666009757" />
         <NodeLayout
-          Size="187.2,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB ConsoMenage"
-          TopLeft="72.1666646632885,489.500001410245" />
+          Size="156,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Retraite"
+          TopLeft="72.9999995902182,415.833335075047" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Demographie"
+          TopLeft="72.1666630241607,343.566664527191" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Insecurite"
+          TopLeft="73.8333295997648,268.099998173912" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Annee"
+          TopLeft="77.4999989271164,200.530117904027" />
         <EdgeLayout
-          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output4]"
+          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output3]"
+          TopLeft="227.099998927116,219.330118157347">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104.39999666214,0"
+              Start="0,0"
+              End="96.89999666214,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="96.89999666214,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output2]"
           TopLeft="261.966662750973,152.666665892237">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13533,7 +12739,7 @@ WHERE Annee = ?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output3]"
+          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output1]"
           TopLeft="253.766663024161,364.468776068528">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13546,50 +12752,6 @@ WHERE Annee = ?
                   Capacity="5">
                   <mssgle:LineSegment
                     End="69.2333192186229,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output2]"
-          TopLeft="259.366664663288,509.166667944324">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="81.1333170331194,0"
-              Start="0,0"
-              End="73.6333170331194,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="73.6333170331194,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output1]"
-          TopLeft="260.199999590218,436.400001437365">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76.9666489549816,0"
-              Start="0,0"
-              End="69.4666489549816,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="69.4666489549816,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13621,27 +12783,53 @@ WHERE Annee = ?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Annee"
-          TopLeft="77.4999989271164,200.530117904027" />
+          Size="187.2,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB ConsoMenage"
+          TopLeft="71.3333297363588,492.033331947194" />
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task Direct\OLE DB Destination"
-          TopLeft="331.499995589256,196.530118410666" />
+          Size="174.4,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Retraite DM"
+          TopLeft="332.99998210619,416.166665630076" />
         <EdgeLayout
-          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output5]"
-          TopLeft="227.099998927116,219.330118157347">
+          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output4]"
+          TopLeft="228.999999590218,436.800000352561">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="104.39999666214,0"
+              EndConnector="103.999982515971,0"
               Start="0,0"
-              End="96.89999666214,0">
+              End="96.4999825159715,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="96.89999666214,0" />
+                    End="96.4999825159715,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Data Flow Task Direct\OLE DB Destination 1"
+          TopLeft="335.499983608723,489.499998662074" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Direct.Paths[OLE DB Source Output5]"
+          TopLeft="258.533329736359,511.566665304634">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.9666538723647,0"
+              Start="0,0"
+              End="69.4666538723647,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="69.4666538723647,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13654,72 +12842,7 @@ WHERE Annee = ?
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB DepartRetraite DM">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task Direct\OLE DB MasseSalarial">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Insecurite">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB ConsoMenage DM">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Inescurite DM">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Emploi DM">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13745,7 +12868,33 @@ WHERE Annee = ?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB DepartRetraite">
+    design-time-name="Package\Data Flow Task Direct\OLE DB Retraite">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Inescurite DM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Insecurite">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13771,7 +12920,33 @@ WHERE Annee = ?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB ConsoMenage">
+    design-time-name="Package\Data Flow Task Direct\OLE DB Emploi DM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Direct\OLE DB Annee">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13787,7 +12962,7 @@ WHERE Annee = ?
     design-time-name="Package\Data Flow Task Direct Candidat">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\Data Flow Task Direct Candidat\OLE DB Candidats DM"
@@ -13815,7 +12990,9 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14346,25 +13523,33 @@ WHERE Annee = ?
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Data Flow Task INSERT &amp; UPDATE\Sort Eprive"
-          TopLeft="307.666653239065,205.10000077486" />
+          Size="120.8,41.6"
+          Id="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2"
+          TopLeft="312.499995872378,124.499998852611" />
         <NodeLayout
-          Size="175.2,41.6"
-          Id="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB EmploiPrive"
-          TopLeft="75.9999992301067,209.033333535657" />
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Destination"
+          TopLeft="521.499993652105,126.499999716878" />
         <NodeLayout
           Size="167.2,41.6"
           Id="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Command"
           TopLeft="671.499991863966,339.499996811151" />
         <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Data Flow Task INSERT &amp; UPDATE\Sort Epublic"
-          TopLeft="310.999988029401,288.833333734538" />
+          Size="129.6,41.6"
+          Id="Package\Data Flow Task INSERT &amp; UPDATE\Sort Eprive"
+          TopLeft="307.666653239065,205.10000077486" />
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\Data Flow Task INSERT &amp; UPDATE\Merge Join 1"
           TopLeft="486.833310116498,244.833333843018" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Elections"
+          TopLeft="72.4999990016222,127.499998360872" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB EmploiPrive"
+          TopLeft="75.9999992301067,209.033333535657" />
         <NodeLayout
           Size="176.8,41.6"
           Id="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB EmploiPubic"
@@ -14373,6 +13558,10 @@ WHERE Annee = ?
           Size="120.8,41.6"
           Id="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 1"
           TopLeft="695.499990165234,245.499996870756" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Data Flow Task INSERT &amp; UPDATE\Sort Epublic"
+          TopLeft="310.999988029401,288.833333734538" />
         <EdgeLayout
           Id="Package\Data Flow Task INSERT &amp; UPDATE.Paths[Sort Output1]"
           TopLeft="437.266653239065,225.90000077486">
@@ -14404,7 +13593,9 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14438,7 +13629,33 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task INSERT &amp; UPDATE.Paths[OLE DB Source Output2]"
+          TopLeft="234.099999001622,146.799998606741">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.3999968707562,0"
+              Start="0,0"
+              End="70.8999968707562,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="70.8999968707562,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14460,7 +13677,9 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14482,7 +13701,9 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14504,7 +13725,33 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task INSERT &amp; UPDATE.Paths[Lookup No Match Output]"
+          TopLeft="433.299995872378,146.299999284744">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88.199997779727,0"
+              Start="0,0"
+              End="80.699997779727,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="80.699997779727,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.4563878288865,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14531,67 +13778,58 @@ WHERE Annee = ?
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Elections"
-          TopLeft="72.4999990016222,127.499998360872" />
-        <NodeLayout
-          Size="120.8,41.6"
-          Id="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2"
-          TopLeft="312.499995872378,124.499998852611" />
-        <EdgeLayout
-          Id="Package\Data Flow Task INSERT &amp; UPDATE.Paths[OLE DB Source Output2]"
-          TopLeft="234.099999001622,146.799998606741">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="78.3999968707562,0"
-              Start="0,0"
-              End="70.8999968707562,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="70.8999968707562,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Destination"
-          TopLeft="521.499993652105,126.499999716878" />
-        <EdgeLayout
-          Id="Package\Data Flow Task INSERT &amp; UPDATE.Paths[Lookup No Match Output]"
-          TopLeft="433.299995872378,146.299999284744">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="88.199997779727,0"
-              Start="0,0"
-              End="80.699997779727,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="80.699997779727,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-15.4563878288865,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Faits_Elections]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Elections">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB EmploiPrive">
     <Properties>
@@ -14632,7 +13870,7 @@ WHERE Annee = ?
     design-time-name="Package\Data Flow Task JOIN">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="106.4,41.6"
           Id="Package\Data Flow Task JOIN\Sort 6"
@@ -14688,7 +13926,9 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14710,7 +13950,9 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14732,7 +13974,9 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14754,7 +13998,9 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14788,14 +14034,16 @@ WHERE Annee = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Annee">
+    design-time-name="Package\Data Flow Task Direct\OLE DB ConsoMenage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14808,7 +14056,7 @@ WHERE Annee = ?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Direct\OLE DB Destination">
+    design-time-name="Package\Data Flow Task Direct\OLE DB Retraite DM">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14821,43 +14069,7 @@ WHERE Annee = ?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Elections">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task INSERT &amp; UPDATE\Lookup 2">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Faits_Elections]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task INSERT &amp; UPDATE\OLE DB Destination">
+    design-time-name="Package\Data Flow Task Direct\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

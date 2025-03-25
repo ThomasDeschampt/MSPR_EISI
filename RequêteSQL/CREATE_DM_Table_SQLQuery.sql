@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS Economie;
 DROP TABLE IF EXISTS Demographie;
 DROP TABLE IF EXISTS Insecurite;
 DROP TABLE IF EXISTS Emplois;
-DROP TABLE IF EXISTS DepartRetraite;
+DROP TABLE IF EXISTS Retraite;
 DROP TABLE IF EXISTS ConsoMenage;
 
 -- Cr�ation des tables
@@ -52,7 +52,7 @@ CREATE TABLE Emplois(
    Masse_salariale_T70_jours_cvs FLOAT
 );
 
-CREATE TABLE DepartRetraite(
+CREATE TABLE Retraite(
    Id_depart_retraite INT PRIMARY KEY,
    Annee INT,
    Age_depart DECIMAL(10,2)
