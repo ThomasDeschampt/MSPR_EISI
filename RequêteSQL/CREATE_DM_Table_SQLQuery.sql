@@ -1,6 +1,5 @@
 USE MSPR_DM;
 
--- Supprimer les tables avant recr�ation
 DROP TABLE IF EXISTS Faits_Elections;
 DROP TABLE IF EXISTS Candidat;
 DROP TABLE IF EXISTS Economie;
@@ -11,7 +10,6 @@ DROP TABLE IF EXISTS Retraite;
 DROP TABLE IF EXISTS ConsoMenage;
 
 
--- Cr�ation des tables
 CREATE TABLE Economie(
    Id_economie INT PRIMARY KEY IDENTITY(1,1),
    Taux_chomage DECIMAL(10,3),
@@ -73,7 +71,7 @@ CREATE TABLE Candidat(
    Bord NVARCHAR(50)
 );
 
--- Cr�ation de Faits_Elections avec FK explicites
+
 CREATE TABLE Faits_Elections(
    Id_fait_election INT PRIMARY KEY IDENTITY(1,1),
    Annee INT,
