@@ -47,7 +47,3 @@
 4. Visualisation et interprétation
 
     - Représentation visuelle des résultats et des performances
-
-
-
-- (Bonus pour le fun) : predire les trigrammes des futurs partis politiques en fonction des précédents trigrammes
