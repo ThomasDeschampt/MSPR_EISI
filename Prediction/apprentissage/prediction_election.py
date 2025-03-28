@@ -82,3 +82,62 @@ print(df_pred[['Annee', 'Ratio_voix_exprime', 'Ratio_voix_exprime_adjusted']].he
 
 # Optionnel : Enregistrer le dataframe ajusté dans un nouveau fichier CSV
 df_pred.to_csv('./Prediction/data/predictions_2025_2027_with_predictions_adjusted.csv', index=False)
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Charger les données
+df = pd.read_csv('./Prediction/data/predictions_2025_2027_with_predictions_adjusted.csv')  # Remplacez par le chemin de votre fichier
+
+# Créer un dictionnaire pour mapper les colonnes booléennes aux noms de partis
+partis = {
+    'Bord_Centre': 'Centre',
+    'Bord_Droite': 'Droite',
+    'Bord_Extrêmedroite': 'Extrême Droite',
+    'Bord_Extrêmegauche': 'Extrême Gauche',
+    'Bord_Gauche': 'Gauche'
+}
+
+# Préparer les données
+data = []
+for annee in df['Annee'].unique():
+    for parti in partis:
+        # Filtrer les données pour l'année et le parti
+        mask = (df['Annee'] == annee) & (df[parti] == True)
+        if mask.any():
+            row = df[mask].iloc[0]
+            data.append({
+                'Annee': annee,
+                'Parti': partis[parti],
+                'Voix_exprimees': row['Ratio_voix_exprime_adjusted']
+            })
+
+# Créer un DataFrame à partir des données préparées
+df_plot = pd.DataFrame(data)
+
+# Pivoter les données pour avoir les partis en colonnes
+pivot_df = df_plot.pivot(index='Annee', columns='Parti', values='Voix_exprimees')
+
+# Créer le graphique
+plt.figure(figsize=(12, 7))
+ax = pivot_df.plot(kind='bar', stacked=False, width=0.8)
+
+# Personnalisation du graphique
+plt.title('Voix exprimées par parti politique et par année', fontsize=14)
+plt.xlabel('Année', fontsize=12)
+plt.ylabel('Pourcentage de voix exprimées (ajusté)', fontsize=12)
+plt.xticks(rotation=0)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Ajouter les valeurs sur les barres
+for p in ax.patches:
+    ax.annotate(f"{p.get_height():.1f}%", 
+                (p.get_x() + p.get_width() / 2., p.get_height()), 
+                ha='center', va='center', 
+                xytext=(0, 5), 
+                textcoords='offset points')
+
+plt.legend(title='Parti politique', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()

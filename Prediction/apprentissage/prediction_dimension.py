@@ -10,7 +10,7 @@ df = pd.read_csv('./Prediction/data/donnees_fusionnees.csv')
 variables_a_ne_pas_predire = ['Tour', 'Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime']
 
 # Préparation du dataframe pour les prédictions futures
-future_years = pd.DataFrame({'Annee': [2025, 2026, 2027]})
+future_years = pd.DataFrame({'Annee': [2025, 2026, 2027, 2028]})
 results = future_years.copy()
 
 # On va boucler sur les colonnes du dataframe pour prédire chaque variable
@@ -45,7 +45,7 @@ for colonne in df.columns:
                            
             # Création du dataframe futur
             future = pd.DataFrame({
-                'ds': pd.to_datetime(['2025-12-31', '2026-12-31', '2027-12-31'])
+                'ds': pd.to_datetime(['2025-12-31', '2026-12-31', '2027-12-31', '2028-12-31'])
             })
             
             # Prédiction
@@ -53,11 +53,11 @@ for colonne in df.columns:
             
             # Filtrer spécifiquement pour les années 2025-2027
             forecast['year'] = forecast['ds'].dt.year
-            predictions = forecast[forecast['year'].isin([2025, 2026, 2027])].copy()
+            predictions = forecast[forecast['year'].isin([2025, 2026, 2027, 2028])].copy()
             print(predictions)
             
-            # Vérifier que nous avons bien 3 prédictions
-            if len(predictions) != 3:
+            # Vérifier que nous avons bien 4 prédictions
+            if len(predictions) != 4:
                 print(f"Problème avec les années de prédiction - obtenu {predictions['year'].tolist()}")
                 results[colonne] = np.nan
                 continue

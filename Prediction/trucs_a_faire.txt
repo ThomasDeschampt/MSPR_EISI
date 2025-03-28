@@ -1,22 +1,10 @@
-2. Mise en place de l'apprentissage
 
-    - Modèle de prédiction des résultats électoraux
-        - Prédire les résultats des élections à partir des données historiques
-        - modèle de machine learning (Random Forest, XGBoost, SVM, Régression logistique, Réseaux de neurones…)
-        - on va entrainer notre modèle sur les données passées
-        - puis on pourra ensuite utiliser les données prédites pour prédire les résultats des élections à venir
-
-        - Premiers tours
-            - pourcentage de votes exprimés pour les grands bords politiques
-            - stats globales sur l'élections (nombre de votants, absention, votes blancs, votes nuls)
 
         - Seconds tours
             - selection des deux candidats en tete au premier tour
             - pourcentage de votes exprimés pour les 2 candidats
             - stats globales sur les élections (nombre de votants, absention, votes blancs, votes nuls)
 
-    - Une fois les modèles en place, on va pouvoir alimenter les modèles de prédiction des résultats électoraux avec les données prédites des indicateurs
-        - on pourra alors prédire les valeurs des indicateurs pour les années à venir
 
 3. Optimisation et validation
 
