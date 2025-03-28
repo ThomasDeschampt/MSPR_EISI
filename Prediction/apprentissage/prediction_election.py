@@ -65,3 +65,20 @@ print(df_pred.head())
 
 # Charger les données avec prédictions
 df_pred = pd.read_csv('./Prediction/data/predictions_2025_2027_with_predictions.csv')
+
+# Vérifier les premières lignes du dataframe pour s'assurer qu'il est bien chargé
+print(df_pred.head())
+
+# Calculer la somme des valeurs de 'Ratio_voix_exprime' par année
+sum_by_annee = df_pred.groupby('Annee')['Ratio_voix_exprime'].sum()
+
+# Ajuster les valeurs de 'Ratio_voix_exprime' pour chaque année en utilisant un produit en croix
+df_pred['Ratio_voix_exprime_adjusted'] = df_pred.apply(
+    lambda row: row['Ratio_voix_exprime'] * (100 / sum_by_annee[row['Annee']]) 
+    if sum_by_annee[row['Annee']] != 0 else 0, axis=1)
+
+# Vérifier le résultat
+print(df_pred[['Annee', 'Ratio_voix_exprime', 'Ratio_voix_exprime_adjusted']].head())
+
+# Optionnel : Enregistrer le dataframe ajusté dans un nouveau fichier CSV
+df_pred.to_csv('./Prediction/data/predictions_2025_2027_with_predictions_adjusted.csv', index=False)
