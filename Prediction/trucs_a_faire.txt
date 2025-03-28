@@ -1,3 +1,4 @@
+
 2. Mise en place de l'apprentissage
 
     - Modèle de prédiction des résultats électoraux
@@ -19,6 +20,8 @@
         - on pourra alors prédire les valeurs des indicateurs pour les années à venir
 
 3. Optimisation et validation
+
+    - optimisation des hyperparamètres
 
     - Analyse des performances du modèle (précision, ...)
 
