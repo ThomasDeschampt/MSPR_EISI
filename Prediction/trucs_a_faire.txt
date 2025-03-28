@@ -1,5 +1,6 @@
 
 
+
         - Seconds tours
             - selection des deux candidats en tete au premier tour
             - pourcentage de votes exprimés pour les 2 candidats
@@ -7,6 +8,8 @@
 
 
 3. Optimisation et validation
+
+    - optimisation des hyperparamètres
 
     - Analyse des performances du modèle (précision, ...)
 
