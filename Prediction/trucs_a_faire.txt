@@ -1,6 +1,3 @@
-
-
-
         - Seconds tours
             - selection des deux candidats en tete au premier tour
             - pourcentage de votes exprimés pour les 2 candidats
