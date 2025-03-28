@@ -1,41 +1,70 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-import xgboost as xgb  # XGBoost
-from sklearn.metrics import accuracy_score, classification_report
-import joblib
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score
 
-# Charger les données à partir du fichier CSV
-df = pd.read_csv("Prediction/data/donnees_preparees.csv", sep=",")
+# Charger les données
+df = pd.read_csv('./Prediction/data/donnees_preparees.csv')
 
-# Préparer les variables d'entrée et de sortie
-X = df.drop(columns=["Annee", "Bord_Centre", "Bord_Droite", "Bord_Extrêmedroite", 
-                     "Bord_Extrêmegauche", "Bord_Gauche"])  # Supprimer les colonnes inutiles
-y = df[["Bord_Centre", "Bord_Droite", "Bord_Extrêmedroite", "Bord_Extrêmegauche", "Bord_Gauche"]].idxmax(axis=1)
+# Filtrer les données pour le tour 1
+df_tour1 = df[df['Tour'] == 1]
 
-# Encoder la variable cible
-encoder = LabelEncoder()
-y = encoder.fit_transform(y)
+# Variables d'entrée (features) et variables de sortie (targets)
+X = df_tour1.drop(columns=['Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime'])
+y = df_tour1[['Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime']]
 
-# Standardiser les variables numériques
+# Séparation des données en entraînement et test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Normalisation des données
 scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
 
-# Séparer en train/test
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+# Modèle Random Forest
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+model.fit(X_train_scaled, y_train)
 
-# Entraîner le modèle XGBoost
-model = xgb.XGBClassifier(random_state=42)
-model.fit(X_train, y_train)
+# Prédictions sur le jeu de test
+y_pred = model.predict(X_test_scaled)
 
-# Prédictions et évaluation
-y_pred = model.predict(X_test)
-print("Accuracy:", accuracy_score(y_test, y_pred))
+# Évaluation du modèle
+mae = mean_absolute_error(y_test, y_pred)
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
 
-# Passer les prédictions et les valeurs réelles à classification_report
-print(classification_report(y_test, y_pred))
+print(f'Erreur absolue moyenne: {mae}')
+print(f'Erreur quadratique moyenne: {mse}')
+print(f'Coefficient de détermination R²: {r2}')
 
-# Sauvegarder le modèle
-joblib.dump(model, "modele_elections_xgboost.pkl")
 
-print("Modèle de prédiction des élections (XGBoost) entraîné et sauvegardé avec succès")
+# Charger les données de prédiction (2025-2027)
+df_pred = pd.read_csv('./Prediction/data/predictions_2025_2027.csv')
+
+# Filtrer et préparer les variables d'entrée (en prenant les mêmes colonnes que pour l'entraînement)
+X_pred = df_pred.drop(columns=['Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime'])
+
+# Normalisation des données (utiliser le même scaler que celui utilisé pendant l'entraînement)
+X_pred_scaled = scaler.transform(X_pred)
+
+# Effectuer les prédictions avec le modèle entraîné
+y_pred_2025_2027 = model.predict(X_pred_scaled)
+
+# Convertir les prédictions en DataFrame pour les afficher ou les sauvegarder
+df_pred_predictions = pd.DataFrame(y_pred_2025_2027, columns=['Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime'])
+
+# Ajouter les prédictions au DataFrame original si vous souhaitez sauvegarder le fichier complet
+df_pred = pd.concat([df_pred, df_pred_predictions], axis=1)
+
+# Sauvegarder les prédictions dans un fichier CSV
+df_pred.to_csv('./Prediction/data/predictions_2025_2027_with_predictions.csv', index=False)
+
+# Afficher les premières lignes du résultat
+print(df_pred.head())
+
+# Charger les données avec prédictions
+df_pred = pd.read_csv('./Prediction/data/predictions_2025_2027_with_predictions.csv')
+
+
