@@ -3,7 +3,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import accuracy_score
 
 # Charger les données
 df = pd.read_csv('./Prediction/data/donnees_preparees.csv')
@@ -66,5 +65,3 @@ print(df_pred.head())
 
 # Charger les données avec prédictions
 df_pred = pd.read_csv('./Prediction/data/predictions_2025_2027_with_predictions.csv')
-
-
