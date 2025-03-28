@@ -88,7 +88,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Charger les données
-df = pd.read_csv('./Prediction/data/predictions_2025_2027_with_predictions_adjusted.csv')  # Remplacez par le chemin de votre fichier
+df = pd.read_csv('./Prediction/data/predictions_2025_2027_with_predictions_adjusted.csv')
 
 # Créer un dictionnaire pour mapper les colonnes booléennes aux noms de partis
 partis = {
