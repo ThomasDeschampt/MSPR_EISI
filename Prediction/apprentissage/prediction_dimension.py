@@ -99,16 +99,7 @@ for annee in results['Annee'].unique():
 cols = ['Annee', 'Tour'] + [c for c in results.columns if c not in ['Annee', 'Tour']] + bords_politiques
 results_expanded = results_expanded[cols]
 
-
-# On supprime les colonnes qui commence par 'Parti'
-results_expanded = results_expanded[results_expanded.columns.drop(list(results_expanded.filter(regex='Parti')))]
-
 tour_index = cols.index('Tour')
-# Insertion des nouvelles colonnes après 'Tour'
-new_cols = cols[:tour_index+1] + ['Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime'] + cols[tour_index+1:]
-
-# Réorganisation du dataframe avec les nouvelles colonnes
-results_expanded = results_expanded.reindex(columns=new_cols)
 
 #On supprime la colonne 'Bord'
 results_expanded = results_expanded.drop(columns='Bord')

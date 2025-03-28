@@ -43,7 +43,7 @@ print(f'Coefficient de détermination R²: {r2}')
 df_pred = pd.read_csv('./Prediction/data/predictions_2025_2027.csv')
 
 # Filtrer et préparer les variables d'entrée (en prenant les mêmes colonnes que pour l'entraînement)
-X_pred = df_pred.drop(columns=['Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime'])
+X_pred = df_pred
 
 # Normalisation des données (utiliser le même scaler que celui utilisé pendant l'entraînement)
 X_pred_scaled = scaler.transform(X_pred)
