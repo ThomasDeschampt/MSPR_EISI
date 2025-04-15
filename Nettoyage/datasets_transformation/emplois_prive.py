@@ -10,10 +10,10 @@ def nettoyer_emplois_prive(fichier_entree, dossier_sortie):
         df = df.dropna()
         df = df.drop_duplicates()
 
-        # Extraire l'année de la colonne "Période"
+        # on recupere l'annee de la periode
         df['Année'] = df['Période'].str.extract(r'(\d{4})').astype(int)
 
-        # Calculer la moyenne par année
+        # on calcule la moyenne par année
         moyenne_par_annee = df.groupby('Année')['Nombre de salariés'].mean().reset_index()
 
         # Régression linéaire pour estimer les années manquantes à partir de 2002
@@ -22,11 +22,11 @@ def nettoyer_emplois_prive(fichier_entree, dossier_sortie):
         annees_existantes = moyenne_par_annee['Année'].values.reshape(-1, 1)
         valeurs_existantes = moyenne_par_annee['Nombre de salariés'].values.reshape(-1, 1)
         
-        # Entraînement du modèle de régression linéaire
+        # Entraînement du modèle
         modele = LinearRegression()
         modele.fit(annees_existantes, valeurs_existantes)
         
-        # Prédire les valeurs pour les années manquantes
+        # Prédire les valeurs
         annees_manquantes = np.arange(annee_min, annee_max + 1).reshape(-1, 1)
         predictions = modele.predict(annees_manquantes)
         predictions = np.round(predictions, 2)
@@ -37,14 +37,13 @@ def nettoyer_emplois_prive(fichier_entree, dossier_sortie):
             'Nombre de salariés': predictions.flatten()
         })
         
-        # Fusionner les données existantes et les prédictions
+        # on fusionne les données existantes et les prédictions
         df_final = pd.concat([moyenne_par_annee, df_predictions]).drop_duplicates(subset=['Année']).sort_values(by='Année')
         
-        # Création du dossier de sortie si inexistant
+        # creation du nouveau csv nettoyé
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)
         
-        # Sauvegarde du fichier nettoyé
         chemin_sortie = os.path.join(dossier_sortie, "emplois_prive_nettoyer.csv")
         df_final.to_csv(chemin_sortie, index=False, sep=';')
 

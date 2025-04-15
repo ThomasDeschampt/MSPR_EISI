@@ -30,6 +30,7 @@ if __name__ == "__main__":
 
     visual.voirmodel(models)
 
+    # Sélection du meilleur modèle
     best_model_name = max(models, key=lambda name: models[name][2]['r2'])
     #model, scaler, scores = models[best_model_name]
     model, scaler, scores = models["Random_Forest"]
@@ -50,7 +51,7 @@ if __name__ == "__main__":
 
     print("Prédictions sauvegardées.")
 
-    # Ajustement
+    # Ajustement pour le ratio de voix exprimées
     df_pred = pd.read_csv('./Prediction/data/predictions_2025_2027_with_predictions.csv')
 
     sum_by_annee = df_pred.groupby('Annee')['Ratio_voix_exprime'].sum()
@@ -75,6 +76,7 @@ if __name__ == "__main__":
 
     visual.voirmodel(models2)
 
+    # Sélection du meilleur modèle
     best_model_name2 = max(models2, key=lambda name: models2[name][2]['r2'])
     #model2, scaler2, scores2 = models2[best_model_name2]
     model2, scaler2, scores2 = models2["Random_Forest"]
@@ -99,22 +101,21 @@ if __name__ == "__main__":
     X_pred = df_pred
     X_pred_scaled = scaler2.transform(X_pred)
 
-    # prediction pour 2025-2027
+    # prediction pour 2026-2028
     y_pred_2025_2027 = model2.predict(X_pred_scaled)
     df_pred_predictions = pd.DataFrame(y_pred_2025_2027, columns=['Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime'])
 
-    # Ajouter les prédictions au DataFrame original si vous souhaitez sauvegarder le fichier complet
+    # on ajoute les predictions au dataframe
     df_pred = pd.concat([df_pred, df_pred_predictions], axis=1)
 
-    # Calculer la somme des valeurs de 'Ratio_voix_exprime' par année
+    # on calcule la somme des valeurs de 'Ratio_voix_exprime' par année
     sum_by_annee = df_pred.groupby('Annee')['Ratio_voix_exprime'].sum()
 
-    # Ajuster les valeurs de 'Ratio_voix_exprime' pour chaque année en utilisant un produit en croix
+    # ajustement du ratio de voix exprimées
     df_pred['Ratio_voix_exprime_adjusted'] = df_pred.apply(
         lambda row: row['Ratio_voix_exprime'] * (100 / sum_by_annee[row['Annee']]) 
         if sum_by_annee[row['Annee']] != 0 else 0, axis=1)
 
-    # Enregistrer le dataframe ajusté dans un nouveau fichier CSV
     df_pred.to_csv('./Prediction/data/predictions_2025_2027_top_2_with_predictions_adjusted.csv', index=False)
 
     # Visualisation des résultats du second tour

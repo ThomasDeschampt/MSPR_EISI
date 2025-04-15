@@ -3,13 +3,12 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 
-# Chargement des données
 df = pd.read_csv('./Prediction/data/donnees_fusionnees.csv')
 
-# Liste des variables à ne pas prédire
+# liste des variables à ne pas prédire
 variables_a_ne_pas_predire = ['Tour', 'Pourcentage_Abstention', 'Pourcentage_Votants', 'Ratio_voix_exprime']
 
-# Préparation du dataframe pour les prédictions futures
+# on prepare du dataframe pour les prédictions futures
 future_years = pd.DataFrame({'Annee': [2025, 2026, 2027, 2028]})
 results = future_years.copy()
 
@@ -25,17 +24,17 @@ for colonne in df.columns:
             # On ne garde que la première ligne de chaque année
             prophet_df = prophet_df.groupby('Annee').first().reset_index()
             
-            # Vérifier qu'il y a assez de données
+            # on vérifie qu'il y a assez de données
             if len(prophet_df) < 2:
                 print(f"Pas assez de données pour {colonne} - seulement {len(prophet_df)} points")
                 results[colonne] = np.nan
                 continue
                 
-            # Convertir l'année en datetime
+            # on converti l'année en datetime
             prophet_df['ds'] = pd.to_datetime(prophet_df['Annee'], format='%Y')
             prophet_df['y'] = prophet_df[colonne]
             
-            # Création et entraînement du modèle
+            # on créé et on entraine le modèle
             model = Prophet(
                 yearly_seasonality=True,
                 seasonality_mode='additive',
@@ -51,12 +50,12 @@ for colonne in df.columns:
             # Prédiction
             forecast = model.predict(future)
             
-            # Filtrer spécifiquement pour les années 2025-2027
+            # Filtrer spécifiquement pour les années 2025-2028
             forecast['year'] = forecast['ds'].dt.year
             predictions = forecast[forecast['year'].isin([2025, 2026, 2027, 2028])].copy()
             print(predictions)
             
-            # Vérifier que nous avons bien 4 prédictions
+            # Vérifier que nous avons bien les 4 prédictions
             if len(predictions) != 4:
                 print(f"Problème avec les années de prédiction - obtenu {predictions['year'].tolist()}")
                 results[colonne] = np.nan
@@ -103,7 +102,7 @@ tour_index = cols.index('Tour')
 
 #On supprime la colonne 'Bord'
 results_expanded = results_expanded.drop(columns='Bord')
-#On supprime la colonne 'Bord'
+#On supprime la colonne 'PArti'
 results_expanded = results_expanded.drop(columns='Parti')
 
 results_expanded = results_expanded.round(2)

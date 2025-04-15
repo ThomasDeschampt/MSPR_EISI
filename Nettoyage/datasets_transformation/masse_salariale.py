@@ -5,17 +5,16 @@ def nettoyer_masse_salariale(fichier_entree, dossier_sortie):
     try:
         print(f"Début du traitement du fichier : {fichier_entree}")
         
-        # Charger le fichier CSV avec le bon séparateur
         df = pd.read_csv(fichier_entree, delimiter=';', dtype=str)
         
-        # Supprimer les espaces inutiles dans les colonnes et les valeurs
+        # on supprime les espaces inutiles dans les colonnes et les valeurs
         df.columns = df.columns.str.strip()
         df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
         
-        # Supprimer les doublons
+        # on supprime les doublons
         df.drop_duplicates(inplace=True)
         
-        # Convertir les colonnes numériques avec des virgules en float
+        # on converti les colonnes numériques avec des virgules en float
         colonnes_a_convertir = [
             'Masse salariale à T+50 jours (brut)', 'Masse salariale à T+70 jours (brut)',
             'Masse salariale à T+50 jours (cvs)', 'Masse salariale à T+70 jours (cvs)',
@@ -30,20 +29,19 @@ def nettoyer_masse_salariale(fichier_entree, dossier_sortie):
         # Convertir la colonne Année en int
         df['Année'] = df['Année'].astype(int)
         
-        # Supprimer les entrées avant 2002
+        # on supprime les entrées avant 2002
         df = df[df['Année'] >= 2002]
 
-        # Regrouper les trimestres par année et faire la moyenne des valeurs
+        # on regroupe par année et on calcule la moyenne des colonnes numériques
         df_moyenne_par_annee = df.groupby('Année', as_index=False).mean(numeric_only=True)
 
-        # Définir le chemin de sortie
+        # creation du nouveau csv nettoyé
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)
         
         nom_fichier = "masse_salariale_nettoyee.csv"
         chemin_sortie = os.path.join(dossier_sortie, nom_fichier)
         
-        # Sauvegarder le fichier nettoyé
         df_moyenne_par_annee.to_csv(chemin_sortie, index=False, sep=';')
         print(f"Fichier nettoyé et sauvegardé : {chemin_sortie}")
     except Exception as e:

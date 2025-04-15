@@ -11,7 +11,7 @@ def nettoyer_insecurite(fichier_entree,dossier_sortie):
         df = df.dropna()
         df = df.drop_duplicates()
         
-        # On supprime la colonne non pertinentes
+        # On supprime les colonnes non pertinentes
         df = df.drop(columns=['Code_region'])
         df = df.drop(columns=['insee_pop_millesime'])
         df = df.drop(columns=['insee_log'])
@@ -32,7 +32,7 @@ def nettoyer_insecurite(fichier_entree,dossier_sortie):
         colonnes_a_predire = ['taux_pour_mille', 'nombre', 'insee_pop']
         predictions_dict = {}
 
-        # Entraîner des modèles de régression linéaire pour chaque colonne à prédire
+        # entrianement des modèles de régression linéaire
         for colonne in colonnes_a_predire:
             valeurs_existantes = moyenne_par_annee[colonne].values.reshape(-1, 1)
             modele = LinearRegression()
@@ -53,18 +53,16 @@ def nettoyer_insecurite(fichier_entree,dossier_sortie):
             'insee_pop': predictions_dict['insee_pop']
         })
 
-        # Fusionner les données existantes et les prédictions
+        # on fusionne les données existantes et les prédictions
         moyenne_par_annee = pd.concat([moyenne_par_annee, df_predictions]).drop_duplicates(subset=['annee']).sort_values(by='annee')
 
-        # Création du dossier de sortie si nécessaire
+        # creation du nouveau csv nettoyé
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)
 
-        # Définir le chemin de sortie
         nom_fichier = "insecurite.csv"
         chemin_sortie = os.path.join(dossier_sortie, nom_fichier)
 
-        # Sauvegarder le DataFrame nettoyé et avec les prédictions
         moyenne_par_annee.to_csv(chemin_sortie, index=False, sep=';')
         print(f"Le fichier a été sauvegardé sous {chemin_sortie}")
 

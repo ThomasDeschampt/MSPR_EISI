@@ -18,6 +18,7 @@ dossier_sortie = "Nettoyage/datasets_nettoyer"
 if not os.path.exists(dossier_sortie):
     os.makedirs(dossier_sortie)
 
+# on definit les fichiers à traiter et leurs fonctions de nettoyage
 fichiers_a_traiter = {
     "chomage.csv": nettoyer_chomage,
     "demographie.csv": nettoyer_demographie,
@@ -32,6 +33,7 @@ fichiers_a_traiter = {
     "valeurs_mensuelles.csv" : nettoyer_valeurs_annuelles
 }
 
+# on traite chaque fichier avec la fonction correspondante
 for fichier, fonction in fichiers_a_traiter.items():
     chemin_fichier = os.path.join(dossier_entree,fichier)
     if os.path.exists(chemin_fichier):

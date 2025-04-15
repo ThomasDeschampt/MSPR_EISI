@@ -8,7 +8,6 @@ from sklearn.preprocessing import StandardScaler
 
 
 def train_and_evaluate():
-    # chargement des données
     df = pd.read_csv('./Prediction/data/donnees_preparees.csv')
 
     # on filtre le tour 1

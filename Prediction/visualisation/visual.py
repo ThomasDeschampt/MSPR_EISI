@@ -3,10 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def voirtour1 ():
-    # Charger les données
     df = pd.read_csv('./Prediction/data/predictions_2025_2027_with_predictions_adjusted.csv')
 
-    # Créer un dictionnaire pour mapper les colonnes booléennes aux noms de partis
+    # Dictionnaire pour mapper les colonnes booléennes aux noms de partis
     partis = {
         'Bord_Centre': 'Centre',
         'Bord_Droite': 'Droite',
@@ -15,7 +14,7 @@ def voirtour1 ():
         'Bord_Gauche': 'Gauche'
     }
 
-    # Préparer les données
+    # on prépare les données
     data = []
     for annee in df['Annee'].unique():
         if annee == 2025:
@@ -34,31 +33,30 @@ def voirtour1 ():
 
     # Créer un DataFrame à partir des données préparées
     df_plot = pd.DataFrame(data)
+    # couleur en fonction du parti
     colors = {
-        'Droite': '#000066',            # Bleu très foncé
-        'Extrême Droite': '#2A3CB0',    # Bleu un peu plus clair et plus saturé
-        'Gauche': '#B0B0B0',            # Gris moyen
-        'Extrême Gauche': '#888888',    # Gris plus foncé
-        'Centre': '#E1000F'             # Rouge vif, inchangé
+        'Droite': '#000066',            
+        'Extrême Droite': '#2A3CB0',    
+        'Gauche': '#B0B0B0',           
+        'Extrême Gauche': '#888888',    
+        'Centre': '#E1000F'           
     }
 
-
-
-    # Pivoter les données pour avoir les partis en colonnes
+    # On met en mode colonne
     pivot_df = df_plot.pivot(index='Annee', columns='Parti', values='Voix_exprimees')
 
-    # Créer le graphique
+    # creation du graphique
     plt.figure(figsize=(12, 7))
     ax = pivot_df.plot(kind='bar', stacked=False, width=0.8, color=[colors[col] for col in pivot_df.columns])
 
-    # Personnalisation du graphique
+    # personnalisation du graphique
     plt.title('Voix exprimées par parti politique et par année', fontsize=14)
     plt.xlabel('Année', fontsize=12)
     plt.ylabel('Pourcentage de voix exprimées (ajusté)', fontsize=12)
     plt.xticks(rotation=0)
     plt.grid(axis='y', linestyle='--', alpha=0.7)
 
-    # Ajouter les valeurs sur les barres
+    # on ajoute les valeurs sur les barres
     for p in ax.patches:
         ax.annotate(f"{p.get_height():.1f}%", 
                     (p.get_x() + p.get_width() / 2., p.get_height()), 
@@ -72,10 +70,9 @@ def voirtour1 ():
 
 
 def voirtour2 ():
-    # Charger les données
     df = pd.read_csv('./Prediction/data/predictions_2025_2027_top_2_with_predictions_adjusted.csv')
 
-    # Créer un dictionnaire pour mapper les colonnes booléennes aux noms de partis
+    # Dictionnaire pour mapper les colonnes booléennes aux noms de partis
     partis = {
         'Bord_Centre': 'Centre',
         'Bord_Droite': 'Droite',
@@ -84,7 +81,7 @@ def voirtour2 ():
         'Bord_Gauche': 'Gauche'
     }
 
-    # Préparer les données
+    # on prepare les données
     data = []
     for annee in df['Annee'].unique():
         if annee == 2025:
@@ -104,11 +101,12 @@ def voirtour2 ():
     # Créer un DataFrame à partir des données préparées
     df_plot = pd.DataFrame(data)
 
-    # Pivoter les données pour avoir les partis en colonnes
+    # on met en mode colonne
     pivot_df = df_plot.pivot(index='Annee', columns='Parti', values='Voix_exprimees')
 
-    # Créer le graphique
+    # creation du graphique
     plt.figure(figsize=(12, 7))
+    # couleur en fonction du parti
     colors = {
         'Droite': '#000091',
         'Extrême Droite': '#000091',
@@ -119,14 +117,14 @@ def voirtour2 ():
     ax = pivot_df.plot(kind='bar', stacked=False, width=0.8, color=[colors[col] for col in pivot_df.columns])
 
 
-    # Personnalisation du graphique
+    # on personnalise le graphique
     plt.title('Voix exprimées par parti politique et par année', fontsize=14)
     plt.xlabel('Année', fontsize=12)
     plt.ylabel('Pourcentage de voix exprimées', fontsize=12)
     plt.xticks(rotation=0)
     plt.grid(axis='y', linestyle='--', alpha=0.7)
 
-    # Ajouter les valeurs sur les barres
+    # on ajoute les valeurs sur les barres
     for p in ax.patches:
         ax.annotate(f"{p.get_height():.1f}%", 
                     (p.get_x() + p.get_width() / 2., p.get_height()), 
@@ -139,7 +137,7 @@ def voirtour2 ():
     plt.show()
 
 def voirmodel(models):
-    # Extraire les scores pour chaque modèle
+    # on extrait les scores pour chaque modèle
     maes = {name: model_data[2]['mae'] for name, model_data in models.items()}
     mses = {name: model_data[2]['mse'] for name, model_data in models.items()}
     r2s  = {name: model_data[2]['r2']  for name, model_data in models.items()}
@@ -155,7 +153,7 @@ def voirmodel(models):
         'R²': '#E1000f'
     }
 
-    # Fonction utilitaire pour dessiner les barres avec valeurs et axe resserré
+    # fonction pour tracer les barres
     def plot_metric(ax, data, title, color, ylabel):
         values = [data[label] for label in labels]
         ax.bar(x, values, color=color, edgecolor='black')
@@ -165,11 +163,12 @@ def voirmodel(models):
         ax.set_ylabel(ylabel)
         ax.grid(axis='y', linestyle='--', alpha=0.6)
 
-        # Afficher les valeurs sur les barres
+        # on affiche les valeurs sur les barres
         for i, v in enumerate(values):
             ax.text(i, v, f"{v:.3f}", ha='center', va='bottom', fontsize=9)
 
-        # Ajuster les limites pour mieux voir les petites différences
+        # on ajuste les limites de l'axe y
+        # pour éviter que les barres soient trop proches du haut du graphique
         min_val = min(values)
         max_val = max(values)
         margin = (max_val - min_val) * 0.2 if max_val != min_val else 0.1

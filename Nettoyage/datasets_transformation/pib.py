@@ -27,7 +27,7 @@ def nettoyer_pib(fichier_entree,dossier_sortie):
         annees_existantes = df['Année'].values.reshape(-1, 1)
         valeurs_existantes = df['PIB'].values.reshape(-1, 1)
 
-        # Entraînement du modèle de régression linéaire
+        # Entraînement du modèle
         modele = LinearRegression()
         modele.fit(annees_existantes, valeurs_existantes)
 
@@ -41,13 +41,13 @@ def nettoyer_pib(fichier_entree,dossier_sortie):
             'PIB': predictions.flatten()
         })
 
-        # Fusionner les données existantes et les prédictions
+        # on fusionne les données existantes et les prédictions
         df = pd.concat([df, df_predictions]).drop_duplicates(subset=['Année']).sort_values(by='Année')
 
-        #On prend pas les valeurs apres la virgule
+        # on prend pas les valeurs apres la virgule
         df['PIB'] = df['PIB'].astype(int)
 
-        # Création du nouveau csv nettoyé
+        # creation du nouveau csv nettoyé
         dossier_sortie = "Nettoyage/datasets_nettoyer"
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)

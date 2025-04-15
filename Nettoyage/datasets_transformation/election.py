@@ -8,10 +8,10 @@ def nettoyer_election(fichier_entree,dossier_sortie):
         print(df.info())
         df = df.drop_duplicates()
 
-        # Remplacement des virgules par des points et conversion en float
+        # on remplace des virgules par des points et conversion en float
         df = df.apply(lambda x: x.str.replace(',', '.', regex=False) if x.dtype == "object" else x)
 
-        # Création du nouveau csv nettoyé
+        # creation du nouveau csv nettoyé
         dossier_sortie = "Nettoyage/datasets_nettoyer"
         if not os.path.exists(dossier_sortie):
             os.makedirs(dossier_sortie)
