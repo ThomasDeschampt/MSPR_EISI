@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     best_model_name = max(models, key=lambda name: models[name][2]['r2'])
     #model, scaler, scores = models[best_model_name]
-    model, scaler, scores = models["modele1"]
+    model, scaler, scores = models["Random_Forest"]
 
     # Prédiction pour 2026–2028
     df_pred = pd.read_csv('./Prediction/data/predictions_2025_2027.csv')
@@ -77,7 +77,7 @@ if __name__ == "__main__":
 
     best_model_name2 = max(models2, key=lambda name: models2[name][2]['r2'])
     #model2, scaler2, scores2 = models2[best_model_name2]
-    model2, scaler2, scores2 = models2["modele1"]
+    model2, scaler2, scores2 = models2["Random_Forest"]
 
 
     # filtrage et tri des données

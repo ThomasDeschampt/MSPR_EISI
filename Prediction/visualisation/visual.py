@@ -34,13 +34,22 @@ def voirtour1 ():
 
     # Créer un DataFrame à partir des données préparées
     df_plot = pd.DataFrame(data)
+    colors = {
+        'Droite': '#000066',            # Bleu très foncé
+        'Extrême Droite': '#2A3CB0',    # Bleu un peu plus clair et plus saturé
+        'Gauche': '#B0B0B0',            # Gris moyen
+        'Extrême Gauche': '#888888',    # Gris plus foncé
+        'Centre': '#E1000F'             # Rouge vif, inchangé
+    }
+
+
 
     # Pivoter les données pour avoir les partis en colonnes
     pivot_df = df_plot.pivot(index='Annee', columns='Parti', values='Voix_exprimees')
 
     # Créer le graphique
     plt.figure(figsize=(12, 7))
-    ax = pivot_df.plot(kind='bar', stacked=False, width=0.8)
+    ax = pivot_df.plot(kind='bar', stacked=False, width=0.8, color=[colors[col] for col in pivot_df.columns])
 
     # Personnalisation du graphique
     plt.title('Voix exprimées par parti politique et par année', fontsize=14)
@@ -100,12 +109,20 @@ def voirtour2 ():
 
     # Créer le graphique
     plt.figure(figsize=(12, 7))
-    ax = pivot_df.plot(kind='bar', stacked=False, width=0.8)
+    colors = {
+        'Droite': '#000091',
+        'Extrême Droite': '#000091',
+        'Gauche': '#ffffff',
+        'Extrême Gauche': '#ffffff',
+        'Centre': '#E1000f'
+    }
+    ax = pivot_df.plot(kind='bar', stacked=False, width=0.8, color=[colors[col] for col in pivot_df.columns])
+
 
     # Personnalisation du graphique
     plt.title('Voix exprimées par parti politique et par année', fontsize=14)
     plt.xlabel('Année', fontsize=12)
-    plt.ylabel('Pourcentage de voix exprimées (ajusté)', fontsize=12)
+    plt.ylabel('Pourcentage de voix exprimées', fontsize=12)
     plt.xticks(rotation=0)
     plt.grid(axis='y', linestyle='--', alpha=0.7)
 
@@ -133,15 +150,15 @@ def voirmodel(models):
     fig, axs = plt.subplots(1, 3, figsize=(15, 5))
 
     colors = {
-        'MAE': 'skyblue',
-        'MSE': 'salmon',
-        'R²': 'lightgreen'
+        'MAE': '#000091',
+        'MSE': '#ffffff',
+        'R²': '#E1000f'
     }
 
     # Fonction utilitaire pour dessiner les barres avec valeurs et axe resserré
     def plot_metric(ax, data, title, color, ylabel):
         values = [data[label] for label in labels]
-        ax.bar(x, values, color=color)
+        ax.bar(x, values, color=color, edgecolor='black')
         ax.set_title(title)
         ax.set_xticks(x)
         ax.set_xticklabels(labels)
